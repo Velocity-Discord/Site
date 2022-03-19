@@ -100,6 +100,7 @@ html {
     }
 
     .hero-logo {
+        transition: all 0.2s ease;
         path {
             stroke: $accent;
             stroke-width: 0.2px;
@@ -112,24 +113,49 @@ html {
         }
     }
     .hero-title {
+        transition: all 0.2s ease;
         margin-bottom: 5px;
         display: flex;
 
         animation: fadeIn 1.5s ease-out forwards, growIn 2s ease-out;
 
         h1 {
+            transition: all 0.2s ease;
             color: $accent;
             font-size: 85px;
         }
     }
     .hero-subtitle {
+        transition: all 0.2s ease;
         animation: fadeIn 1.5s ease-out forwards 1.8s;
         opacity: 0;
         margin-bottom: 20px;
 
         h2 {
+            transition: all 0.2s ease;
             color: $accent;
             font-size: 25px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 621px) {
+    .hero {
+        .hero-logo {
+            width: 300px;
+            height: 300px;
+        }
+        .hero-title {
+            h1 {
+                font-size: 65px;
+            }
+        }
+
+        .hero-subtitle {
+            h2 {
+                font-size: 15px;
+            }
         }
     }
 }
