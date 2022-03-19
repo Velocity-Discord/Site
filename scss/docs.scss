@@ -87,6 +87,7 @@ html {
     height: 100vh;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     .hero-buttons {
         display: flex;
@@ -99,20 +100,8 @@ html {
         }
     }
 
-    .hero-logo {
-        path {
-            stroke: $accent;
-            stroke-width: 0.2px;
-            fill: $accent;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            animation: mainLogo 10s ease, mainLogoFill 8s ease;
-            transform: translateX(-0.5px);
-            transition: fill 0.3s ease;
-        }
-    }
     .hero-title {
-        margin-bottom: 5px;
+        margin-bottom: 20px;
         display: flex;
 
         animation: fadeIn 1.5s ease-out forwards, growIn 2s ease-out;
@@ -120,16 +109,6 @@ html {
         h1 {
             color: $accent;
             font-size: 85px;
-        }
-    }
-    .hero-subtitle {
-        animation: fadeIn 1.5s ease-out forwards 1.8s;
-        opacity: 0;
-        margin-bottom: 20px;
-
-        h2 {
-            color: $accent;
-            font-size: 25px;
         }
     }
 }
