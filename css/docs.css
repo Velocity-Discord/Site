@@ -135,6 +135,7 @@ section {
   transition: all 0.2s ease;
   height: 100%;
   padding: 20px;
+  padding-left: 0;
   width: 100%;
 }
 
