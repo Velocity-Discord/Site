@@ -15,6 +15,8 @@ toRender.forEach(ele => {
     toID.forEach(e => {
         let i = e.innerHTML.replace(/ .*/, "").toLowerCase()
 
+        if (i === "the") i = e.innerHTML.charAt(4).toLowerCase()
+
         e.id = i
     })
     hljs.highlightAll();
