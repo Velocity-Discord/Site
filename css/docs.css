@@ -213,17 +213,19 @@ section .background {
   background: currentColor;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  -webkit-transform-origin: left;
-          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transform-origin: right bottom 0px;
+          transform-origin: right bottom 0px;
 }
 
 .markdown a:hover::after {
   -webkit-transform: scaleX(1) !important;
           transform: scaleX(1) !important;
-  -webkit-transform-origin: left;
-          transform-origin: left;
+  -webkit-transform-origin: left bottom 0px;
+          transform-origin: left bottom 0px;
 }
 
 .markdown li,
@@ -301,12 +303,14 @@ section .background {
 @media (max-width: 925px) {
   aside {
     position: absolute;
-    height: 115px;
+    height: 110px;
     overflow: hidden;
     width: 100%;
   }
   section {
-    margin-top: 115px;
+    padding-left: 20px;
+    padding-top: 0;
+    margin-top: 110px;
   }
 }
 /*# sourceMappingURL=docs.css.map */

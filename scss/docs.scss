@@ -183,12 +183,12 @@ section {
             bottom: -3px;
             background: currentColor;
             transform: scaleX(0);
-            transition: all 0.2s ease;
-            transform-origin: left;
+            transition: transform 0.2s ease;
+            transform-origin: right bottom 0px;
         }
         &:hover::after {
             transform: scaleX(1) !important;
-            transform-origin: left;
+            transform-origin: left bottom 0px;
         }
     }
 
@@ -261,11 +261,13 @@ section {
 @media (max-width: 925px) {
     aside {
         position: absolute;
-        height: 115px;
+        height: 110px;
         overflow: hidden;
         width: 100%;
     }
     section {
-        margin-top: 115px;
+        padding-left: 20px;
+        padding-top: 0;
+        margin-top: 110px;
     }
 }
