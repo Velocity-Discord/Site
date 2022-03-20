@@ -1,26 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("/css/buttons.css");
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
+button {
+  border: none;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #a5a5a5;
+  display: flex;
+  gap: 5px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+button:hover {
+  color: #dadada;
+}
+button:hover .arrow {
+  transform: translateX(25%);
+}
+button .arrow {
+  transition: all 0.2s ease;
+}
+button.look-vibrant {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+button.look-empty {
+  background-color: transparent;
+}
+
+nav {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
 @-webkit-keyframes growIn {
   from {
-    -webkit-transform: scale(0.7) translateY(5px);
-            transform: scale(0.7) translateY(5px);
+    transform: scale(0.7) translateY(5px);
   }
   100% {
-    -webkit-transform: scale(1) translateY(0);
-            transform: scale(1) translateY(0);
-  }
-}
-@keyframes growIn {
-  from {
-    -webkit-transform: scale(0.7) translateY(5px);
-            transform: scale(0.7) translateY(5px);
-  }
-  100% {
-    -webkit-transform: scale(1) translateY(0);
-            transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
   }
 }
 
+@keyframes growIn {
+  from {
+    transform: scale(0.7) translateY(5px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -29,7 +65,6 @@
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -38,35 +73,28 @@
     opacity: 1;
   }
 }
-
 @-webkit-keyframes mainLogo {
   from {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    -webkit-filter: drop-shadow(0px 0px 0.7px #2f3dbb);
-            filter: drop-shadow(0px 0px 0.7px #2f3dbb);
+    filter: drop-shadow(0px 0px 0.7px #2f3dbb);
   }
   to {
     stroke-dashoffset: 800;
-    -webkit-filter: drop-shadow(0px 0px 0 #2f3dbb);
-            filter: drop-shadow(0px 0px 0 #2f3dbb);
+    filter: drop-shadow(0px 0px 0 #2f3dbb);
   }
 }
-
 @keyframes mainLogo {
   from {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    -webkit-filter: drop-shadow(0px 0px 0.7px #2f3dbb);
-            filter: drop-shadow(0px 0px 0.7px #2f3dbb);
+    filter: drop-shadow(0px 0px 0.7px #2f3dbb);
   }
   to {
     stroke-dashoffset: 800;
-    -webkit-filter: drop-shadow(0px 0px 0 #2f3dbb);
-            filter: drop-shadow(0px 0px 0 #2f3dbb);
+    filter: drop-shadow(0px 0px 0 #2f3dbb);
   }
 }
-
 @-webkit-keyframes mainLogoFill {
   0% {
     fill: transparent;
@@ -78,7 +106,6 @@
     fill: #2d3aaf;
   }
 }
-
 @keyframes mainLogoFill {
   0% {
     fill: transparent;
@@ -90,10 +117,8 @@
     fill: #2d3aaf;
   }
 }
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -124,33 +149,19 @@ html {
 
 .hero {
   background-image: linear-gradient(10deg, #040404, #16133c);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 .hero.center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .hero .hero-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
-
 .hero .hero-buttons button {
   opacity: 0;
   -webkit-animation: fadeIn 1s ease-in forwards;
@@ -158,12 +169,9 @@ html {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
-
 .hero .hero-logo {
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
 .hero .hero-logo path {
   stroke: #2d3aaf;
   stroke-width: 0.2px;
@@ -172,41 +180,29 @@ html {
   stroke-linejoin: round;
   -webkit-animation: mainLogo 10s ease, mainLogoFill 8s ease;
           animation: mainLogo 10s ease, mainLogoFill 8s ease;
-  -webkit-transform: translateX(-0.5px);
-          transform: translateX(-0.5px);
-  -webkit-transition: fill 0.3s ease;
+  transform: translateX(-0.5px);
   transition: fill 0.3s ease;
 }
-
 .hero .hero-title {
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   margin-bottom: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-animation: fadeIn 1.5s ease-out forwards, growIn 2s ease-out;
           animation: fadeIn 1.5s ease-out forwards, growIn 2s ease-out;
 }
-
 .hero .hero-title h1 {
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   color: #2d3aaf;
   font-size: 85px;
 }
-
 .hero .hero-subtitle {
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   -webkit-animation: fadeIn 1.5s ease-out forwards 1.8s;
           animation: fadeIn 1.5s ease-out forwards 1.8s;
   opacity: 0;
   margin-bottom: 20px;
 }
-
 .hero .hero-subtitle h2 {
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   color: #2d3aaf;
   font-size: 25px;
@@ -225,8 +221,6 @@ html {
     font-size: 15px;
   }
 }
-
 :focus {
   outline-color: #2d3aaf;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

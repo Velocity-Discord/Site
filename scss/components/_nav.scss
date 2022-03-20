@@ -1,0 +1,5 @@
+@use "../abstracts/mixins";
+
+nav {
+    @include mixins.vibrancy;
+}

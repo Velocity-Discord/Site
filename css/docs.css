@@ -1,9 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("/css/buttons.css");
+button {
+  border: none;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #a5a5a5;
+  display: flex;
+  gap: 5px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+button:hover {
+  color: #dadada;
+}
+button:hover .arrow {
+  transform: translateX(25%);
+}
+button .arrow {
+  transition: all 0.2s ease;
+}
+button.look-vibrant {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+button.look-empty {
+  background-color: transparent;
+}
+
+nav {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -19,26 +58,19 @@ html {
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
   height: 100%;
 }
 
 aside {
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   height: 100%;
   width: 22%;
   min-width: 300px;
   padding: 20px;
 }
-
 aside .background {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.05);
@@ -46,24 +78,16 @@ aside .background {
   border-radius: 10px;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 aside .background ul {
   padding-inline: 10px;
 }
-
 aside .background ul li {
   list-style: none;
   margin-bottom: 5px;
 }
-
 aside .background ul li a {
   outline-color: transparent;
   color: #fff;
@@ -71,74 +95,49 @@ aside .background ul li a {
   padding: 6px 8px;
   cursor: pointer;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
 aside .background ul li:hover a {
   outline: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.05);
 }
-
 aside .background ul li.selected a {
   outline: 1px solid rgba(255, 255, 255, 0.1);
   background-color: #5f6fff;
 }
-
 aside .background .header {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 12px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: #fff;
   font-weight: 500;
   font-size: 20px;
 }
-
 aside .background .header .name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 6px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 aside .background .header .name h1 {
   font-size: 20px;
   color: #5f6fff;
 }
 
 section {
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   height: 100%;
   padding: 20px;
   padding-left: 0;
   width: 100%;
 }
-
 section .background {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.05);
@@ -146,8 +145,6 @@ section .background {
   border-radius: 10px;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 20px;
   color: #fff;
@@ -175,34 +172,25 @@ section .background {
 
 .markdown {
   gap: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .markdown .notice {
   background: #474551;
   padding: 10px;
   border-radius: 5px;
 }
-
 .markdown .notice::before {
   content: "Notice";
   font-weight: 600;
   font-size: 20px;
   display: block;
 }
-
 .markdown a {
   color: #5f6fff;
   text-decoration: none;
   position: relative;
 }
-
 .markdown a::after {
   content: "";
   position: absolute;
@@ -211,91 +199,68 @@ section .background {
   left: 0;
   bottom: -3px;
   background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 0.2s ease;
-  transition: -webkit-transform 0.2s ease;
+  transform: scaleX(0);
   transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
-  -webkit-transform-origin: right bottom 0px;
-          transform-origin: right bottom 0px;
+  transform-origin: right bottom 0px;
 }
-
 .markdown a:hover::after {
-  -webkit-transform: scaleX(1) !important;
-          transform: scaleX(1) !important;
-  -webkit-transform-origin: left bottom 0px;
-          transform-origin: left bottom 0px;
+  transform: scaleX(1) !important;
+  transform-origin: left bottom 0px;
 }
-
 .markdown li,
 .markdown p {
   line-height: 27px;
 }
-
 .markdown h1 {
   font-size: 30px;
 }
-
 .markdown h2 {
   font-size: 25px;
 }
-
 .markdown h3 {
   font-size: 20px;
 }
-
 .markdown h4 {
   font-size: 15px;
 }
-
 .markdown h5 {
   font-size: 12.5px;
 }
-
 .markdown hr {
   color: #6f6f6f61;
 }
-
 .markdown code {
   background-color: #34343a;
   padding: 4px 6px;
   font-family: "Source Code Pro";
   border-radius: 4px;
 }
-
 .markdown table {
   border: 1px solid #494949;
   border-radius: 5px;
   border-collapse: collapse;
   width: 100%;
 }
-
 .markdown table td,
 .markdown table th {
   border: 1px solid #494949;
   padding: 3px;
 }
-
 .markdown table tr {
   background: transparent;
 }
-
 .markdown table tr:nth-child(odd) {
   background: #1d1d1d;
 }
-
 .markdown blockquote p {
   border-left: 3px solid #82828252;
   padding: 1rem;
 }
-
 .markdown ol,
 .markdown ul {
   left: 25px;
   position: relative;
 }
-
 .markdown pre code.hljs {
   padding: 7px;
 }
@@ -307,10 +272,10 @@ section .background {
     overflow: hidden;
     width: 100%;
   }
+
   section {
     padding-left: 20px;
     padding-top: 0;
     margin-top: 110px;
   }
-}
-/*# sourceMappingURL=docs.css.map */
+}/*# sourceMappingURL=docs.css.map */
