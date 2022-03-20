@@ -1,14 +1,9 @@
 @use "components/buttons";
 @use "components/nav";
+@use "components/features";
 @use "abstracts/mixins";
+@use "abstracts/variables";
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
-
-$primary: #202020;
-$secondary: #333333;
-$tertiary: #2b2b2e;
-$bgColor: #22203c;
-$accent: #2d3aaf;
-$accentGlow: #2f3dbb;
 
 @keyframes growIn {
     from {
@@ -32,11 +27,11 @@ $accentGlow: #2f3dbb;
     from {
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
-        filter: drop-shadow(0px 0px 0.7px $accentGlow);
+        filter: drop-shadow(0px 0px 0.7px variables.$accentGlow);
     }
     to {
         stroke-dashoffset: 800;
-        filter: drop-shadow(0px 0px 0 $accentGlow);
+        filter: drop-shadow(0px 0px 0 variables.$accentGlow);
     }
 }
 
@@ -48,7 +43,7 @@ $accentGlow: #2f3dbb;
         fill: transparent;
     }
     50% {
-        fill: $accent;
+        fill: variables.$accent;
     }
 }
 
@@ -82,6 +77,28 @@ html {
     border: 3.4px solid #2e2e2e;
 }
 
+.fade-in {
+    transition: all 0.8s ease;
+    opacity: 0;
+    * {
+        transition: all 0.8s ease;
+        transform: translateX(-300px);
+    }
+
+    &.right {
+        * {
+            transform: translateX(300px);
+        }
+    }
+
+    &.appear {
+        * {
+            transform: translateX(0);
+        }
+        opacity: 1;
+    }
+}
+
 .hero {
     background-image: linear-gradient(10deg, #040404, #16133c);
     display: flex;
@@ -89,6 +106,15 @@ html {
     height: 100vh;
     flex-direction: column;
     align-items: center;
+
+    &.features {
+        background-image: linear-gradient(0deg, #040404, #16133c);
+        height: 70vh;
+
+        .hero-title {
+            margin-top: 100px;
+        }
+    }
 
     &.center {
         justify-content: center;
@@ -108,9 +134,9 @@ html {
     .hero-logo {
         transition: all 0.2s ease;
         path {
-            stroke: $accent;
+            stroke: variables.$accent;
             stroke-width: 0.2px;
-            fill: $accent;
+            fill: variables.$accent;
             stroke-linecap: round;
             stroke-linejoin: round;
             animation: mainLogo 10s ease, mainLogoFill 8s ease;
@@ -127,7 +153,7 @@ html {
 
         h1 {
             transition: all 0.2s ease;
-            color: $accent;
+            color: variables.$accent;
             font-size: 85px;
         }
     }
@@ -139,7 +165,7 @@ html {
 
         h2 {
             transition: all 0.2s ease;
-            color: $accent;
+            color: variables.$accent;
             font-size: 25px;
             text-align: center;
         }
@@ -167,5 +193,5 @@ html {
 }
 
 :focus {
-    outline-color: $accent;
+    outline-color: variables.$accent;
 }

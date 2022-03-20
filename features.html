@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Velocity</title>
         <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/tokyo-night-dark.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
 
         <meta property="og:url" content="https://velocity-discord.netlify.app/" />
         <meta property="og:type" content="website" />
@@ -15,48 +17,106 @@
         <meta name="theme-color" content="#2d3aaf" />
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </nav>
-        <div id="hero" class="hero">
-            <svg tag="svg" viewBox="0 0 22 22" width="430" class="hero-logo" height="430">
-                <path
-                    tag="path"
-                    d="M 11.5,18.788687 C 9.2628645,14.634721 4.7885936,9.4422626 3.670026,9.4422626 c 3.3557031,-4.1539661 0,0 3.3557031,-4.1539661 0,3.1154747 2.2371354,4.1539661 4.4742709,7.2694405 2.237135,-3.1154744 4.474271,-4.1539658 4.474271,-7.2694405 3.355703,4.1539661 0,0 3.355703,4.1539661 -1.118568,0 -5.592839,5.1924584 -7.829974,9.3464244 m 0,-9.3464244 c 1.118568,-1.0384914 2.237135,-2.076983 3.355703,-5.1924577 L 13.737135,3.2113134 C 12.618568,6.326788 11.5,6.326788 11.5,7.3652796 11.5,6.326788 10.381432,6.326788 9.2628645,3.2113134 L 8.1442968,4.2498049 C 9.2628645,7.3652796 10.381432,8.4037712 11.5,9.4422626 Z"
-                ></path>
-            </svg>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="/docs/">Docs</a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="hero" class="hero center features">
             <div class="hero-title">
-                <h1>V</h1>
-                <h1>e</h1>
-                <h1>l</h1>
-                <h1>o</h1>
-                <h1>c</h1>
-                <h1>i</h1>
-                <h1>t</h1>
-                <h1>y</h1>
+                <h1>Features</h1>
             </div>
             <div class="hero-subtitle">
-                <h2>Supercharge your Discord today.</h2>
+                <h2>All about Velocity.</h2>
             </div>
             <div class="hero-buttons">
-                <button class="look-vibrant external" onClick="location.href = '/docs'">
-                    Docs
-                    <div class="arrow">→</div>
-                </button>
-                <button class="look-vibrant external" onClick="location.href = '/docs/installation.html'">
-                    Installation
-                    <div class="arrow">→</div>
-                </button>
-                <button class="look-vibrant external" onClick="location.href = '/features.html'">
-                    Features
+                <button class="look-vibrant external" onClick="location.href = '/'">
+                    Home
                     <div class="arrow">→</div>
                 </button>
             </div>
         </div>
+        <section class="feature fade-in" id="themes">
+            <div class="preview">
+                <pre>
+                    <code>
+.layout-1qmrhw {
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    margin-block: 3px;
+}
+
+.wrapper-NhbLHG .content-1gYQeQ {
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    margin-block: 3px;
+}
+
+.panels-3wFtMD {
+    border-radius: 4px;
+    margin: 0 7px 7px 7px;
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="desc">
+                <h1>Themes</h1>
+                <p>
+                    Our Theme system allow you to customise the look of your Discord however you want, just using plain CSS. Velocity kills Discord's CSP so you can import Stylesheets from almost
+                    anywhere!
+                </p>
+            </div>
+        </section>
+        <section class="feature fade-in right" id="plugins">
+            <div class="desc">
+                <h1>Plugins</h1>
+                <p>Plugins can make use of <code>VApi</code> and Discord's internal functions to extend what Discord can do and add functionality.</p>
+            </div>
+            <div class="preview">
+                <pre>
+                    <code class="language-javascript">
+const { React, showToast } = VApi 
+
+React.createElement("button", {
+    className: "my-cool-button",
+    style: {width: "20px"},
+    onClick: () => {
+        showToast("Clicked", {type: "info"})
+    },
+}, "text!")
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <section class="feature fade-in" id="design">
+            <div class="preview">
+                <pre>
+                    <code class="language-javascript">
+const win = new BrowserWindow({
+    webPreferences: {
+        preload: path.join(__dirname, "preload.js"),
+        nodeIntegration: true,
+        transparent: true,
+        backgroundColor: "#00000000",
+        vibrancy: "dark",
+    },
+});
+                    </code>
+                </pre>
+            </div>
+            <div class="desc">
+                <h1>Custom Window</h1>
+                <p>Velocity adds a selection of settings that custominse the DIscord window itself. On MacOS, you can even use Vibrancy effects!</p>
+            </div>
+        </section>
+        <script defer src="/js/observer.js"></script>
+        <script defer>
+            hljs.highlightAll();
+        </script>
     </body>
 </html>

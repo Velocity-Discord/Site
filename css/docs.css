@@ -33,12 +33,21 @@ button.look-empty {
   background-color: transparent;
 }
 
-nav {
+header {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.05);
   border-width: 1px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  background-color: #211f44;
+  padding: 30px 10%;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li a {
+  color: #2d3aaf;
 }
 
 * {
