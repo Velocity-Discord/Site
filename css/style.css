@@ -138,6 +138,12 @@ html {
           align-items: center;
 }
 
+.hero.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .hero .hero-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
