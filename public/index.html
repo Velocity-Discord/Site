@@ -7,6 +7,8 @@
         <title>Velocity</title>
         <link rel="stylesheet" href="/css/style.css" />
 
+        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
         <meta property="og:url" content="https://velocity-discord.netlify.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Velocity" />
@@ -43,5 +45,17 @@
                 </button>
             </div>
         </div>
+
+        <script>
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", (user) => {
+                    if (!user) {
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "/admin/";
+                        });
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
