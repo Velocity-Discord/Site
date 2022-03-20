@@ -33,6 +33,7 @@ body {
 }
 
 aside {
+    transition: all 0.2s ease;
     height: 100%;
     width: 22%;
     min-width: 300px;
@@ -110,6 +111,7 @@ aside {
 }
 
 section {
+    transition: all 0.2s ease;
     height: 100%;
     padding: 20px;
     width: 100%;
@@ -168,7 +170,7 @@ section {
             background: currentColor;
             transform: scaleX(0);
             transition: all 0.2s ease;
-            transform-origin: right;
+            transform-origin: left;
         }
         &:hover::after {
             transform: scaleX(1) !important;
@@ -239,5 +241,17 @@ section {
     }
     pre code.hljs {
         padding: 7px;
+    }
+}
+
+@media (max-width: 925px) {
+    aside {
+        position: absolute;
+        height: 115px;
+        overflow: hidden;
+        width: 100%;
+    }
+    section {
+        margin-top: 115px;
     }
 }

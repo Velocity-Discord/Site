@@ -31,6 +31,8 @@ body {
 }
 
 aside {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   height: 100%;
   width: 22%;
   min-width: 300px;
@@ -129,6 +131,8 @@ aside .background .header .name h1 {
 }
 
 section {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   height: 100%;
   padding: 20px;
   width: 100%;
@@ -197,8 +201,8 @@ section .background {
           transform: scaleX(0);
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-transform-origin: right;
-          transform-origin: right;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .markdown a:hover::after {
@@ -278,5 +282,17 @@ section .background {
 
 .markdown pre code.hljs {
   padding: 7px;
+}
+
+@media (max-width: 925px) {
+  aside {
+    position: absolute;
+    height: 115px;
+    overflow: hidden;
+    width: 100%;
+  }
+  section {
+    margin-top: 115px;
+  }
 }
 /*# sourceMappingURL=docs.css.map */
