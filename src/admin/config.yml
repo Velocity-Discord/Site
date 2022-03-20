@@ -5,7 +5,7 @@ media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
 collections:
     - name: "docs"
-      label: "Docs"
+      label: "Documentation"
       folder: "src/docs"
       create: true
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
