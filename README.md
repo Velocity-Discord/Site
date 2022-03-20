@@ -1,4 +1,4 @@
 # Site
 Velocity website.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/15eda28e-2cdc-4a9d-94f1-af1ea44e7b36/deploy-status)](https://app.netlify.com/sites/velocity-discord/deploys)
+[![Netlify](https://img.shields.io/netlify/15eda28e-2cdc-4a9d-94f1-af1ea44e7b36?logo=netlify&logoColor=white&style=for-the-badge)](https://velocity-discord.netlify.app/)
