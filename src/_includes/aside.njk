@@ -1,0 +1,23 @@
+<aside>
+    <div class="background">
+        <div class="header">
+            <div class="name">
+                <h1>Velocity</h1>
+                Docs
+            </div>
+            <button class="look-empty external" onClick="location.href = '/'">
+                Home
+                <div class="arrow">→</div>
+            </button>
+        </div>
+        <ul>
+            {%- for post in collections.post -%}
+
+            <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+
+            {%- endfor -%}
+
+            {# <li><a href="/docs">Intro</a></li> #}
+        </ul>
+    </div>
+</aside>

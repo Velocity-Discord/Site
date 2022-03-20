@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap");
+button {
+  border: none;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #a5a5a5;
+  display: flex;
+  gap: 5px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+button:hover {
+  color: #dadada;
+}
+button:hover .arrow {
+  transform: translateX(25%);
+}
+button .arrow {
+  transition: all 0.2s ease;
+}
+button.look-vibrant {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+button.look-empty {
+  background-color: transparent;
+}
+
+header {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: #211f42;
+  padding: 30px 10%;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+header nav ul li a {
+  font-size: 12.5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+header nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.96);
+}
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: right bottom 0px;
+}
+header nav ul li a:hover::after {
+  transform: scaleX(1) !important;
+  transform-origin: left bottom 0px;
+}
+
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  header {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-width: 1px;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #1a1a1a;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: Inter, SF Pro Display, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-color: #757575 #2e2e2e;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+aside {
+  transition: all 0.2s ease;
+  height: 100%;
+  width: 22%;
+  min-width: 300px;
+  padding: 20px;
+}
+aside .background {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+aside .background ul {
+  padding-inline: 10px;
+}
+aside .background ul li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+aside .background ul li a {
+  outline-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  transition: all 0.2s ease;
+}
+aside .background ul li:hover a {
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+aside .background ul li.selected a {
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #5f6fff;
+}
+aside .background .header {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  flex-direction: column;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+}
+aside .background .header .name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+aside .background .header .name h1 {
+  font-size: 20px;
+  color: #5f6fff;
+}
+
+section {
+  transition: all 0.2s ease;
+  height: 100%;
+  padding: 20px;
+  padding-left: 0;
+  width: 100%;
+}
+section .background {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  color: #fff;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #757575;
+  border-radius: 50px;
+  border: 3.4px solid #2e2e2e;
+}
+
+:focus {
+  outline-color: #2d3aaf;
+}
+
+.markdown {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.markdown .notice {
+  background: #474551;
+  padding: 10px;
+  border-radius: 5px;
+}
+.markdown .notice::before {
+  content: "Notice";
+  font-weight: 600;
+  font-size: 20px;
+  display: block;
+}
+.markdown a {
+  color: #5f6fff;
+  text-decoration: none;
+  position: relative;
+}
+.markdown a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  transform-origin: right bottom 0px;
+}
+.markdown a:hover::after {
+  transform: scaleX(1) !important;
+  transform-origin: left bottom 0px;
+}
+.markdown li,
+.markdown p {
+  line-height: 27px;
+}
+.markdown h1 {
+  font-size: 30px;
+}
+.markdown h2 {
+  font-size: 25px;
+}
+.markdown h3 {
+  font-size: 20px;
+}
+.markdown h4 {
+  font-size: 15px;
+}
+.markdown h5 {
+  font-size: 12.5px;
+}
+.markdown hr {
+  color: #6f6f6f61;
+}
+.markdown code {
+  background-color: #34343a;
+  padding: 4px 6px;
+  font-family: "Source Code Pro";
+  border-radius: 4px;
+}
+.markdown table {
+  border: 1px solid #494949;
+  border-radius: 5px;
+  border-collapse: collapse;
+  width: 100%;
+}
+.markdown table td,
+.markdown table th {
+  border: 1px solid #494949;
+  padding: 3px;
+}
+.markdown table tr {
+  background: transparent;
+}
+.markdown table tr:nth-child(odd) {
+  background: #1d1d1d;
+}
+.markdown blockquote p {
+  border-left: 3px solid #82828252;
+  padding: 1rem;
+}
+.markdown ol,
+.markdown ul {
+  left: 25px;
+  position: relative;
+}
+.markdown pre code.hljs {
+  padding: 7px;
+}
+
+@media (max-width: 925px) {
+  aside {
+    position: absolute;
+    height: 110px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  section {
+    padding-left: 20px;
+    padding-top: 0;
+    margin-top: 110px;
+  }
+}/*# sourceMappingURL=docs.css.map */

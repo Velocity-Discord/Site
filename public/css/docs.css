@@ -39,17 +39,54 @@ header {
   border-width: 1px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  background-color: #211f44;
+  background-color: #211f42;
   padding: 30px 10%;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
 }
 header nav ul {
   display: flex;
   list-style: none;
+  gap: 20px;
 }
 header nav ul li a {
-  color: #2d3aaf;
+  font-size: 12.5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+header nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.96);
+}
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: right bottom 0px;
+}
+header nav ul li a:hover::after {
+  transform: scaleX(1) !important;
+  transform-origin: left bottom 0px;
 }
 
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  header {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-width: 1px;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

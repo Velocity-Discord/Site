@@ -1,0 +1,24 @@
+{
+    "name": "velocity-site",
+    "version": "1.0.0",
+    "description": "Velocity website.",
+    "main": "index.js",
+    "scripts": {
+        "start": "eleventy --serve",
+        "build": "eleventy"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Velocity-Discord/Site.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Velocity-Discord/Site/issues"
+    },
+    "homepage": "https://github.com/Velocity-Discord/Site#readme",
+    "devDependencies": {
+        "@11ty/eleventy": "^1.0.0"
+    }
+}

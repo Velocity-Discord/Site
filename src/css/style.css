@@ -1,0 +1,367 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
+button {
+  border: none;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #a5a5a5;
+  display: flex;
+  gap: 5px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+button:hover {
+  color: #dadada;
+}
+button:hover .arrow {
+  transform: translateX(25%);
+}
+button .arrow {
+  transition: all 0.2s ease;
+}
+button.look-vibrant {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+button.look-empty {
+  background-color: transparent;
+}
+
+header {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: #211f42;
+  padding: 30px 10%;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+header nav ul li a {
+  font-size: 12.5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+header nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.96);
+}
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: right bottom 0px;
+}
+header nav ul li a:hover::after {
+  transform: scaleX(1) !important;
+  transform-origin: left bottom 0px;
+}
+
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  header {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-width: 1px;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+.feature {
+  height: 50vh;
+  margin-block: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.feature h1 {
+  color: #cccccc;
+}
+.feature p {
+  color: #95989d;
+  font-size: 16px;
+  font-weight: 500;
+}
+.feature .preview {
+  transition: all 0.2s ease;
+  margin: 50px;
+}
+.feature .desc {
+  transition: all 0.2s ease;
+  max-width: 450px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.feature .desc code {
+  background-color: #34343a;
+  padding: 2px 4px;
+  font-family: "Source Code Pro";
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.feature .desc * {
+  transition: all 0.2s ease;
+}
+.feature .desc h1 {
+  font-size: 50px;
+}
+.feature .preview {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0.7;
+}
+.feature .preview pre {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 350px;
+}
+.feature .preview pre code {
+  border-radius: 5px;
+  box-shadow: 2px 2px 15px #000;
+}
+
+@media (max-width: 850px) {
+  .feature {
+    height: 35vh;
+  }
+  .feature .preview {
+    display: none;
+  }
+  .feature .desc {
+    max-width: 400px;
+  }
+}
+@-webkit-keyframes growIn {
+  from {
+    transform: scale(0.7) translateY(5px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes growIn {
+  from {
+    transform: scale(0.7) translateY(5px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes mainLogo {
+  from {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    filter: drop-shadow(0px 0px 0.7px #2f3dbb);
+  }
+  to {
+    stroke-dashoffset: 800;
+    filter: drop-shadow(0px 0px 0 #2f3dbb);
+  }
+}
+@keyframes mainLogo {
+  from {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    filter: drop-shadow(0px 0px 0.7px #2f3dbb);
+  }
+  to {
+    stroke-dashoffset: 800;
+    filter: drop-shadow(0px 0px 0 #2f3dbb);
+  }
+}
+@-webkit-keyframes mainLogoFill {
+  0% {
+    fill: transparent;
+  }
+  25% {
+    fill: transparent;
+  }
+  50% {
+    fill: #2d3aaf;
+  }
+}
+@keyframes mainLogoFill {
+  0% {
+    fill: transparent;
+  }
+  25% {
+    fill: transparent;
+  }
+  50% {
+    fill: #2d3aaf;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #040404;
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  font-family: Inter, SF Pro Display, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-color: #757575 #2e2e2e;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #757575;
+  border-radius: 50px;
+  border: 3.4px solid #2e2e2e;
+}
+
+.fade-in {
+  transition: all 0.8s ease;
+  opacity: 0;
+}
+.fade-in * {
+  transition: all 0.8s ease;
+  transform: translateX(-300px);
+}
+.fade-in.right * {
+  transform: translateX(300px);
+}
+.fade-in.appear {
+  opacity: 1;
+}
+.fade-in.appear * {
+  transform: translateX(0);
+}
+
+.hero {
+  background-image: linear-gradient(10deg, #040404, #16133c);
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+.hero.features {
+  background-image: linear-gradient(0deg, #040404, #16133c);
+  height: 70vh;
+}
+.hero.features .hero-title {
+  margin-top: 100px;
+}
+.hero.center {
+  justify-content: center;
+}
+.hero .hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+.hero .hero-buttons button {
+  opacity: 0;
+  -webkit-animation: fadeIn 1s ease-in forwards;
+          animation: fadeIn 1s ease-in forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.hero .hero-logo {
+  transition: all 0.2s ease;
+}
+.hero .hero-logo path {
+  stroke: #2d3aaf;
+  stroke-width: 0.2px;
+  fill: #2d3aaf;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  -webkit-animation: mainLogo 10s ease, mainLogoFill 8s ease;
+          animation: mainLogo 10s ease, mainLogoFill 8s ease;
+  transform: translateX(-0.5px);
+  transition: fill 0.3s ease;
+}
+.hero .hero-title {
+  transition: all 0.2s ease;
+  margin-bottom: 5px;
+  display: flex;
+  -webkit-animation: fadeIn 1.5s ease-out forwards, growIn 2s ease-out;
+          animation: fadeIn 1.5s ease-out forwards, growIn 2s ease-out;
+}
+.hero .hero-title h1 {
+  transition: all 0.2s ease;
+  color: #2d3aaf;
+  font-size: 85px;
+}
+.hero .hero-subtitle {
+  transition: all 0.2s ease;
+  -webkit-animation: fadeIn 1.5s ease-out forwards 1.8s;
+          animation: fadeIn 1.5s ease-out forwards 1.8s;
+  opacity: 0;
+  margin-bottom: 20px;
+}
+.hero .hero-subtitle h2 {
+  transition: all 0.2s ease;
+  color: #2d3aaf;
+  font-size: 25px;
+  text-align: center;
+}
+
+@media (max-width: 621px) {
+  .hero .hero-logo {
+    width: 300px;
+    height: 300px;
+  }
+  .hero .hero-title h1 {
+    font-size: 65px;
+  }
+  .hero .hero-subtitle h2 {
+    font-size: 15px;
+  }
+}
+:focus {
+  outline-color: #2d3aaf;
+}/*# sourceMappingURL=style.css.map */
