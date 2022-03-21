@@ -10,7 +10,9 @@ if (urlParams.has("beta") && window.location.href.includes("installation")) {
     let p = document.querySelector(".markdown");
 
     let input = `
- # BETA Installation
+# BETA Installation
+---
+
 <div class="notice">
     This guide assumes you already have GitHub access to the project.
 </div>
