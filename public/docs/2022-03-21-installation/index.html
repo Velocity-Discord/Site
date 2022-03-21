@@ -40,6 +40,12 @@
 
     <section>
     <div class="background">
+      <div class="timestamp">Created on 
+            <strong>21 Mar 2022</strong>
+            by 
+            <strong></strong>
+          </div>
+          
         <div class="markdown">
             <h1>Installation</h1>
 <hr>
@@ -63,7 +69,7 @@
 <li>Inside, create a <code>index.js</code> and a <code>package.json</code></li>
 <li>inside <code>package.json</code> enter:</li>
 </ol>
-<pre><code>{
+<pre><code class="language-json">{
     &quot;name&quot;: &quot;velocity&quot;,
     &quot;main&quot;: &quot;./index.js&quot;
 }
@@ -105,6 +111,8 @@
 <script defer src="/js/docs.js"></script>
 
 <script>
+  hljs.highlightAll()
+
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
       if (!user) {

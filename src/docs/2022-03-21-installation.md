@@ -27,12 +27,14 @@ You will need to download [git](https://git-scm.com/download/).
 6. Create a folder called `app`
 7. Inside, create a `index.js` and a `package.json`
 8. inside `package.json` enter:
-```
+
+```json
 {
     "name": "velocity",
     "main": "./index.js"
 }
 ```
+
 9. inside `index.js` enter:
 ```
 require("/FULL/PATH/TO/Velocity/FOLDER");

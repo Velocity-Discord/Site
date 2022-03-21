@@ -25,6 +25,12 @@
 
     <section>
     <div class="background">
+      <div class="timestamp">Created on 
+            <strong>{{ date | postDate }}</strong>
+            by 
+            <strong>{{ author }}</strong>
+          </div>
+          
         <div class="markdown">
             {{ content | safe }}
         </div>
@@ -33,6 +39,8 @@
 <script defer src="/js/docs.js"></script>
 
 <script>
+  hljs.highlightAll()
+
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
       if (!user) {

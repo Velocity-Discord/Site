@@ -290,7 +290,7 @@ html {
   align-items: center;
 }
 .hero.features {
-  background-image: linear-gradient(10deg, #040404, #16133c);
+  background-image: linear-gradient(0deg, #040404, #16133c);
   height: 70vh;
 }
 .hero.features .hero-title {
