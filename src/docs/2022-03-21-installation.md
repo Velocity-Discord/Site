@@ -1,5 +1,6 @@
 ---
 title: Installation
+author: TheCommieAxolotl
 date: 2022-03-21T00:14:26.279Z
 ---
 
