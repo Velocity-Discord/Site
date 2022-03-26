@@ -1,5 +1,6 @@
 @use "components/buttons";
 @use "components/nav";
+@use "components/footer";
 @use "components/features";
 @use "abstracts/mixins";
 @use "abstracts/variables";
@@ -180,7 +181,7 @@ html {
         }
         .hero-title {
             h1 {
-                font-size: 65px;
+                font-size: 56px;
             }
         }
 

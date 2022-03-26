@@ -19,15 +19,7 @@
         <meta name="theme-color" content="#2d3aaf" />
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="">Features</a></li>
-                    <li><a href="../docs/">Docs</a></li>
-                </ul>
-            </nav>
-        </header>
+        {% include "header.njk" %}
         <div id="hero" class="hero center features">
             <div class="hero-title">
                 <h1>Features</h1>
@@ -43,7 +35,7 @@
             </div>
         </div>
         <section class="feature fade-in" id="themes">
-            <div class="preview">
+            <div class="preview dim">
                 <pre>
                     <code>
 .layout-1qmrhw {
@@ -78,7 +70,7 @@
                 <h1>Plugins</h1>
                 <p>Plugins can make use of <code>VApi</code> and Discord's internal functions to extend what Discord can do and add functionality.</p>
             </div>
-            <div class="preview">
+            <div class="preview dim">
                 <pre>
                     <code class="language-javascript">
 const { React, showToast } = VApi 
@@ -95,7 +87,7 @@ React.createElement("button", {
             </div>
         </section>
         <section class="feature fade-in" id="design">
-            <div class="preview">
+            <div class="preview dim">
                 <pre>
                     <code class="language-javascript">
 const win = new BrowserWindow({
@@ -115,6 +107,7 @@ const win = new BrowserWindow({
                 <p>Velocity adds a selection of settings that customise the DIscord window itself. On MacOS, you can even use Vibrancy effects!</p>
             </div>
         </section>
+        {% include "footer.njk" %}
         <script defer src="/js/observer.js"></script>
         <script defer>
             hljs.highlightAll();

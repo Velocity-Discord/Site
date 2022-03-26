@@ -31,10 +31,10 @@
 </header>
         <div id="hero" class="hero center features">
             <div class="hero-title">
-                <h1>Features</h1>
+                <h1>Promotional</h1>
             </div>
             <div class="hero-subtitle">
-                <h2>All about Velocity.</h2>
+                <h2>Velocity Promotional Material.</h2>
             </div>
             <div class="hero-buttons">
                 <button class="look-vibrant external" onClick="location.href = '/'">
@@ -43,77 +43,31 @@
                 </button>
             </div>
         </div>
-        <section class="feature fade-in" id="themes">
-            <div class="preview dim">
-                <pre>
-                    <code>
-.layout-1qmrhw {
-    border-radius: 50px;
-    transition: all 0.2s ease;
-    margin-block: 3px;
-}
-
-.wrapper-NhbLHG .content-1gYQeQ {
-    border-radius: 50px;
-    transition: all 0.2s ease;
-    margin-block: 3px;
-}
-
-.panels-3wFtMD {
-    border-radius: 4px;
-    margin: 0 7px 7px 7px;
-}
-                    </code>
-                </pre>
-            </div>
-            <div class="desc">
-                <h1>Themes</h1>
-                <p>
-                    Our Theme system allow you to customise the look of your Discord however you want, just using plain CSS. Velocity kills Discord's CSP so you can import Stylesheets from almost
-                    anywhere!
-                </p>
-            </div>
-        </section>
-        <section class="feature fade-in right" id="plugins">
-            <div class="desc">
-                <h1>Plugins</h1>
-                <p>Plugins can make use of <code>VApi</code> and Discord's internal functions to extend what Discord can do and add functionality.</p>
-            </div>
-            <div class="preview dim">
-                <pre>
-                    <code class="language-javascript">
-const { React, showToast } = VApi 
-
-React.createElement("button", {
-    className: "my-cool-button",
-    style: {width: "20px"},
-    onClick: () => {
-        showToast("Clicked", {type: "info"})
-    },
-}, "text!")
-                    </code>
-                </pre>
-            </div>
-        </section>
         <section class="feature fade-in" id="design">
-            <div class="preview dim">
-                <pre>
-                    <code class="language-javascript">
-const win = new BrowserWindow({
-    webPreferences: {
-        preload: path.join(__dirname, "preload.js"),
-        nodeIntegration: true,
-        transparent: true,
-        backgroundColor: "#00000000",
-        vibrancy: "dark",
-    },
-});
-                    </code>
-                </pre>
+            <div class="preview">
+                <img src="../assets/icon.png" alt="" onclick="location.href = '../assets/icon.png'"">
+                <figcaption>
+                    Logo 
+                    <div class="dimensions">512 x 512</div> 
+                </figcaption>
             </div>
-            <div class="desc">
-                <h1>Custom Window</h1>
-                <p>Velocity adds a selection of settings that customise the DIscord window itself. On MacOS, you can even use Vibrancy effects!</p>
+        </section>
+        <section class="feature right fade-in" id="design">
+            <div class="preview">
+                <img src="../assets/1.png" alt="" onclick="location.href = '../assets/1.png'"">
+                <figcaption>
+                    Velocity Settings 
+                    <div class="dimensions">1920 x 1920</div> 
+                </figcaption>
+            </div>
+        </section>
+        <section class="feature right fade-in" id="design">
+            <div class="preview">
+                <img src="../assets/2.png" alt="" onclick="location.href = '../assets/2.png'"">
+                <figcaption>
+                    Velocity Toasts 
+                    <div class="dimensions">1920 x 1920</div> 
+                </figcaption>
             </div>
         </section>
         <footer>
