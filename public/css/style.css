@@ -157,10 +157,6 @@ footer .copyright a::after {
   font-size: 16px;
   font-weight: 500;
 }
-.feature .preview {
-  transition: all 0.2s ease;
-  margin: 50px;
-}
 .feature .desc {
   transition: all 0.2s ease;
   max-width: 450px;
@@ -183,18 +179,26 @@ footer .copyright a::after {
 .feature .desc h1 {
   font-size: 50px;
 }
+.feature#promo .preview {
+  width: 600px;
+}
 .feature .preview {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .feature .preview.dim {
   opacity: 0.7;
 }
 .feature .preview img {
   transition: all 0.2s ease;
-  width: 600px;
   height: 600px;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.05);
@@ -204,6 +208,7 @@ footer .copyright a::after {
   cursor: pointer;
 }
 .feature .preview img ~ figcaption {
+  width: 100%;
   padding: 12px 16px;
   margin-top: 5px;
   margin-bottom: 20px;
@@ -246,7 +251,6 @@ footer .copyright a::after {
     margin: 0;
   }
   .feature .preview img {
-    width: 300px;
     height: 300px;
   }
   .feature .preview pre {
