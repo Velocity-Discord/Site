@@ -43,6 +43,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 99;
+  top: 0;
 }
 header nav ul {
   display: flex;
@@ -320,6 +321,36 @@ footer .copyright a::after {
   color: #4653ce;
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+#readme {
+  margin: 10% 30% 2.5% 5%;
+  border-radius: 8px;
+  padding: 0.5% 1.2%;
+  color: rgb(204, 204, 204);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+#readme .path {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.3490196078);
+}
+#readme img {
+  width: 435px;
+  border-radius: 4px;
+}
+#readme a {
+  color: #4653ce;
+  text-decoration: none;
 }
 
 @-webkit-keyframes growIn {

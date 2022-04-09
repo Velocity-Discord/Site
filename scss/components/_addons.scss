@@ -64,3 +64,32 @@
         }
     }
 }
+
+#readme {
+    margin: 10% 30% 2.5% 5%;
+    border-radius: 8px;
+    padding: 0.5% 1.2%;
+    color: variables.$text;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: all 0.2s ease;
+    @include mixins.vibrancy;
+
+    .path {
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 10px;
+        color: #ffffff59;
+    }
+
+    img {
+        width: 435px;
+        border-radius: 4px;
+    }
+
+    a {
+        color: variables.$linkAccent;
+        text-decoration: none;
+    }
+}

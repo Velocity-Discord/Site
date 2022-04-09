@@ -14,7 +14,7 @@ async function getReadme() {
         .then((response) => response.text())
         .then((data) => input = data);
 
-    console.log(input)
+    input = '<h1 class="path">' + readmeURL.match(mainRegex)[2] + " / " + readmeURL.match(mainRegex)[3] + " / " + readmeURL.match(mainRegex)[5] + " / README.md </h1> \n\n" + input;
 
     p.innerHTML = md.render(input);
 }
