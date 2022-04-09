@@ -44,12 +44,23 @@
             font-size: 1rem;
             font-weight: 400;
             margin-bottom: 0.5rem;
+            color: variables.$textSecondary;
         }
 
         .addon-card-button {
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
+        }
+
+        .addon-card-footer {
+            margin-top: auto;
+
+            .addon-card-author {
+                color: variables.$linkAccent;
+                font-size: 0.8rem;
+                font-weight: 500;
+            }
         }
     }
 }

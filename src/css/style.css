@@ -306,11 +306,20 @@ footer .copyright a::after {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
+  color: rgb(153, 153, 153);
 }
 .addons-grid .addon-card .addon-card-button {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+}
+.addons-grid .addon-card .addon-card-footer {
+  margin-top: auto;
+}
+.addons-grid .addon-card .addon-card-footer .addon-card-author {
+  color: #4653ce;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 @-webkit-keyframes growIn {
