@@ -8,10 +8,11 @@ const mainRegex = /.*github(usercontent)?.com\/(.*)\/(.*)\/(.*)\/(.*)\//i;
 async function getReadme() {
     let p = document.querySelector("#readme");
 
-    fetch(readmeURL)
-        .then((response) => response.json())
-        .then((data) => console.log(data));
+    let input
 
-    const input = p.innerHTML;
+    fetch(readmeURL)
+        .then((response) => response.text())
+        .then((data) => input = data);
+
     p.innerHTML = md.render(input);
 }
