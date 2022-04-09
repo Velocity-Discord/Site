@@ -2,6 +2,7 @@
 name: OSX
 description: Theme that brings some of the best and most memorable parts of
   MacOS and OSX into 1 theme.
+version: v1.0.0
 author: TheCommieAxolotl
 source: https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/OSX/
 readme: https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/OSX/README.md
