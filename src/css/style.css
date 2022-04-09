@@ -3,7 +3,7 @@ button {
   border: none;
   padding: 12px 14px;
   border-radius: 10px;
-  color: #a5a5a5;
+  color: rgb(165, 165, 165);
   display: flex;
   gap: 5px;
   transition: all 0.2s ease;
@@ -13,7 +13,7 @@ button {
   height: fit-content;
 }
 button:hover {
-  color: #dadada;
+  color: rgb(218, 218, 218);
 }
 button:hover .arrow {
   transform: translateX(25%);
@@ -53,11 +53,11 @@ header nav ul li a {
   font-size: 12.5px;
   transition: all 0.3s ease;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
+  color: hsla(0deg, 0%, 100%, 0.6);
   position: relative;
 }
 header nav ul li a:hover {
-  color: rgba(255, 255, 255, 0.96);
+  color: hsla(0deg, 0%, 100%, 0.96);
 }
 header nav ul li a::after {
   content: "";
@@ -99,7 +99,7 @@ footer {
   display: flex;
   width: 100%;
   z-index: 99;
-  color: #cccccc;
+  color: rgb(204, 204, 204);
 }
 footer h1 {
   color: #2d3aaf;
@@ -150,7 +150,7 @@ footer .copyright a::after {
   padding: 40px;
 }
 .feature h1 {
-  color: #cccccc;
+  color: rgb(204, 204, 204);
 }
 .feature p {
   color: #95989d;
@@ -212,7 +212,7 @@ footer .copyright a::after {
   padding: 12px 16px;
   margin-top: 5px;
   margin-bottom: 20px;
-  color: #cccccc;
+  color: rgb(204, 204, 204);
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.05);
@@ -260,6 +260,59 @@ footer .copyright a::after {
     max-width: 400px;
   }
 }
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 0.5% 15%;
+}
+.addons-grid .addon-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: rgb(204, 204, 204);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  min-height: 350px;
+  -webkit-animation: fadeIn 0.5s ease-in-out;
+          animation: fadeIn 0.5s ease-in-out;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  gap: 5px;
+}
+.addons-grid .addon-card:hover {
+  transform: translateY(-5px);
+}
+.addons-grid .addon-card .addon-card-image {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  margin-bottom: 1rem;
+}
+.addons-grid .addon-card .addon-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+.addons-grid .addon-card .addon-card-description {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.addons-grid .addon-card .addon-card-button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
 @-webkit-keyframes growIn {
   from {
     transform: scale(0.7) translateY(5px);
@@ -268,6 +321,7 @@ footer .copyright a::after {
     transform: scale(1) translateY(0);
   }
 }
+
 @keyframes growIn {
   from {
     transform: scale(0.7) translateY(5px);
