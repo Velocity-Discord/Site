@@ -30,7 +30,9 @@
         {%- for addon in collections.themes -%}
 
             <div class="addon-card" onClick="location.href = '{{ addon.url }}'">
-                <img class="addon-card-image" src="{{addon.data.image}}" />
+                {%- if addon.data.image -%}
+                    <img class="addon-card-image" src="{{addon.data.image}}" />
+                {%- endif -%}
                 <div class="addon-card-title"> {{addon.data.name}} </div>
                 <div class="addon-card-description"> {{addon.data.description}} </div>
             </div>
