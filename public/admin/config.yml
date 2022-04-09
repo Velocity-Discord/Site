@@ -26,3 +26,15 @@ collections:
           - { label: "Source", name: "source", widget: "string" }
           - { label: "Image", name: "image", widget: "image", required: false }
           - { label: "Date", name: "date", widget: "datetime" }
+    - name: "plugins"
+      label: "Plugin"
+      folder: "src/store/plugin"
+      slug: "{{name}}"
+      create: true
+      fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Author", name: "author", widget: "string" }
+          - { label: "Source", name: "source", widget: "string" }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Date", name: "date", widget: "datetime" }

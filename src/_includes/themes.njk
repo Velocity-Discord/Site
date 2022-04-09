@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Velocity | Plugins</title>
+        <title>Velocity | {{ title }}</title>
         <meta name="description" content="A small client mod for Discord">
         <link rel="stylesheet" href="/css/style.css" />
         <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
@@ -16,44 +16,34 @@
 
         <meta property="og:url" content="https://velocity-discord.netlify.app/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Velocity | Plugins" />
+        <meta property="og:title" content="Velocity | {{ title }}" />
         <meta property="og:description" content="A small Client Modification for Discord." />
         <meta property="og:image" content="https://velocity-discord.netlify.app/assets/favicon.png" />
         <meta name="theme-color" content="#2d3aaf" />
     </head>
 <body>
-    <header>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/store">Store</a></li>
-            <li><a href="/features">Features</a></li>
-            <li><a href="/docs">Docs</a></li>
-        </ul>
-    </nav>
-</header>
+    {% include "header.njk" %}
 
-    
-<main>
-    <div id="hero" class="hero center features">
-        <div class="hero-title">
-            <h1>Plugins</h1>
-        </div>
-        <div class="hero-subtitle">
-            <h2>Velocity Plugins.</h2>
-        </div>
-        <div class="hero-buttons">
-            <button class="look-vibrant external" onClick="location.href = '/store'">
-                Store
-                <div class="arrow">→</div>
-            </button>
-        </div>
+    {{ content | safe }}
+
+    <div class="addons-grid">
+        {%- for addon in collections.themes -%}
+
+            <div class="addon-card" onClick="location.href = '{{ addon.url }}'">
+                {%- if addon.data.image -%}
+                    <img class="addon-card-image" src="{{addon.data.image}}" />
+                {%- endif -%}
+                <div class="addon-card-title"> {{addon.data.name}} </div>
+                <div class="addon-card-description"> {{addon.data.description}} </div>
+                <div class="addon-card-footer">
+                    <div class="addon-card-author"> {{addon.data.author}} </div>
+                </div>
+            </div>
+
+        {%- endfor -%}
     </div>
-</main>
-
-    <div class="addons-grid"></div>
     <script>
-        console.log("collections.plugins")
+        console.log("{{ selection }}")
     </script>
 </body>
 </html>

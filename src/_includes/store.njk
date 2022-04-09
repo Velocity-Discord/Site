@@ -27,7 +27,7 @@
     {{ content | safe }}
 
     <div class="addons-grid">
-        {%- for addon in collections.themes -%}
+        {%- for addon in collections.store -%}
 
             <div class="addon-card" onClick="location.href = '{{ addon.url }}'">
                 {%- if addon.data.image -%}
