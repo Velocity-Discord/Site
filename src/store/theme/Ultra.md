@@ -1,6 +1,7 @@
 ---
 name: Ultra
 description: A Smooth and Dark theme that is complimented with a touch of colour.
+version: v1.0.5
 author: TheCommieAxolotl
 source: https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/Ultra/
 readme: https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/Ultra/README.md
