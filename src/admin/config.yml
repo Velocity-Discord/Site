@@ -18,7 +18,6 @@ collections:
       label: "Theme"
       folder: "src/store/theme"
       create: true
-      slug: "{{slug}}"
       fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Description", name: "description", widget: "string" }
