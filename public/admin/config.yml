@@ -25,6 +25,7 @@ collections:
           - { label: "Version", name: "version", widget: "string" }
           - { label: "Author", name: "author", widget: "string" }
           - { label: "GitHub Raw Source", name: "source", widget: "string" }
+          - { label: "GitHub Source", name: "sourceURL", widget: "string" }
           - { label: "GitHub Readme", name: "readme", widget: "string" }
           - { label: "Image", name: "image", widget: "image", required: false }
           - { label: "Tags", name: "tags", widget: "list", required: false }
@@ -40,6 +41,7 @@ collections:
           - { label: "Version", name: "version", widget: "string" }
           - { label: "Author", name: "author", widget: "string" }
           - { label: "GitHub Raw Source", name: "source", widget: "string" }
+          - { label: "GitHub Source", name: "sourceURL", widget: "string" }
           - { label: "GitHub Readme", name: "readme", widget: "string" }
           - { label: "Image", name: "image", widget: "image", required: false }
           - { label: "Tags", name: "tags", widget: "list", required: false }
