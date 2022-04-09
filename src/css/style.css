@@ -293,7 +293,7 @@ footer .copyright a::after {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 0.5rem;
+  border-radius: 4px;
   transition: all 0.2s ease;
   margin-bottom: 1rem;
 }
