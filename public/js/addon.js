@@ -10,9 +10,13 @@ async function getReadme() {
 
     let input
 
-    fetch(readmeURL)
+    await fetch(readmeURL)
         .then((response) => response.text())
         .then((data) => input = data);
 
+    console.log(input)
+
     p.innerHTML = md.render(input);
 }
+
+getReadme()
