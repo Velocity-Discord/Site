@@ -22,6 +22,7 @@ collections:
       fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Description", name: "description", widget: "string" }
+          - { label: "Version", name: "version", widget: "string" }
           - { label: "Author", name: "author", widget: "string" }
           - { label: "GitHub Raw Source", name: "source", widget: "string" }
           - { label: "GitHub Readme", name: "readme", widget: "string" }
@@ -36,6 +37,7 @@ collections:
       fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Description", name: "description", widget: "string" }
+          - { label: "Version", name: "version", widget: "string" }
           - { label: "Author", name: "author", widget: "string" }
           - { label: "GitHub Raw Source", name: "source", widget: "string" }
           - { label: "GitHub Readme", name: "readme", widget: "string" }

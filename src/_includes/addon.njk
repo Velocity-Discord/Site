@@ -26,6 +26,44 @@
 
     {{ content | safe }}
 
+    <div class="addon-header">
+        <div>
+            <div class="addon-title">{{ name }}</div>
+            <div class="addon-description">
+                <div class="addon-description-text">{{ description }}</div>
+            </div>
+            <div class="addon-data">
+                <div class="addon-author">
+                    <div class="addon-author-name">Author: <a href="https://github.com/{{ author }}">{{ author }}</a></div>
+                </div>
+                |
+                <div class="addon-version">
+                    <div class="addon-version-name">Version: {{ version }}</div>
+                </div>
+                |
+                <div class="addon-source">
+                    <div class="addon-source-link">Source: <a href="{{ source }}">/{{ name }}/</a></div>
+                </div>
+            </div>
+
+            <div class="addon-button-container">
+                <button class="look-vibrant external" onClick="location.href = '/store/themes'">
+                    Themes
+                    <div class="arrow">→</div>
+                </button>
+                <button class="look-vibrant external" onClick="location.href = '/store/plugins'">
+                    Plugins
+                    <div class="arrow">→</div>
+                </button>
+            </div>
+        </div>
+
+        {%- if image -%}
+            <img class="addon-header-image" src="{{image}}" />
+        {%- endif -%}
+    </div>
+
+
     <div id="readme"></div>
 
     <script>
