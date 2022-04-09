@@ -25,7 +25,7 @@ collections:
           - { label: "Author", name: "author", widget: "string" }
           - { label: "Source", name: "source", widget: "string" }
           - { label: "Image", name: "image", widget: "image", required: false }
-          - { label: "Tags", name: "tags", widget: "list" }
+          - { label: "Tags", name: "tags", widget: "list", required: false }
           - { label: "Date", name: "date", widget: "datetime" }
     - name: "plugins"
       label: "Plugin"
@@ -38,5 +38,5 @@ collections:
           - { label: "Author", name: "author", widget: "string" }
           - { label: "Source", name: "source", widget: "string" }
           - { label: "Image", name: "image", widget: "image", required: false }
-          - { label: "Tags", name: "tags", widget: "list" }
+          - { label: "Tags", name: "tags", widget: "list", required: false }
           - { label: "Date", name: "date", widget: "datetime" }
