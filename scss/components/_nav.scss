@@ -4,6 +4,8 @@
 header {
     @include mixins.vibrancy;
     background-color: #211f42;
+    border-inline: none;
+    border-top: none;
 
     padding: 30px 5%;
     display: flex;
