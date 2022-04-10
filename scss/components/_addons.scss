@@ -208,8 +208,11 @@
 }
 
 @media screen and (max-width: 768px) {
+    .addon-description {
+        margin-bottom: 5px !important;
+    }
     .addon-data {
-        display: none;
+        display: none !important;
     }
     .addon-main {
         flex-direction: column-reverse;
