@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap");
 button,
 a.button {
+  font-family: Inter, SF Pro Display, -apple-system, sans-serif;
   border: none;
   padding: 12px 14px;
   border-radius: 10px;
