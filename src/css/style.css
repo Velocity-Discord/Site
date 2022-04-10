@@ -550,6 +550,11 @@ html {
   flex-direction: column;
   align-items: center;
 }
+.hero.absolute {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
 .hero.features {
   background-image: linear-gradient(0deg, #040404, #16133c);
   height: 70vh;
