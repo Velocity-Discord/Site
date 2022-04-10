@@ -62,6 +62,8 @@ header {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   background-color: #211f42;
+  border-inline: none !important;
+  border-top: none !important;
   padding: 30px 5%;
   display: flex;
   align-items: center;
