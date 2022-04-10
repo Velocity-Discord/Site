@@ -29,11 +29,11 @@
     from {
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
-        filter: drop-shadow(0px 0px 0.7px variables.$accentGlow);
+        filter: drop-shadow(0 0 0.7px variables.$accentGlow);
     }
     to {
         stroke-dashoffset: 800;
-        filter: drop-shadow(0px 0px 0 variables.$accentGlow);
+        filter: drop-shadow(0 0 0px variables.$accentGlow);
     }
 }
 
