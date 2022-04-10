@@ -1,6 +1,8 @@
 @use "../abstracts/mixins";
+@use "../abstracts/variables";
 
-button {
+button,
+a.button {
     border: none;
     padding: 12px 14px;
     border-radius: 10px;
@@ -29,6 +31,10 @@ button {
 
     &.look-filled {
         @include mixins.filled;
+
+        &.hover {
+            background-color: variables.$accentGlow;
+        }
     }
 
     &.look-vibrant {

@@ -29,15 +29,22 @@
     <div class="addons-grid">
         {%- for addon in collections.plugins -%}
 
-            <div class="addon-card" onClick="location.href = '{{ addon.url }}'">
-                {%- if addon.data.image -%}
-                    <img class="addon-card-image" src="{{addon.data.image}}" />
-                {%- endif -%}
-                <div class="addon-card-title"> {{addon.data.name}} </div>
-                <div class="addon-card-description"> {{addon.data.description}} </div>
-                <div class="addon-card-footer">
-                    <div class="addon-card-author"> {{addon.data.author}} </div>
-                </div>
+            <div class="addon-wrapper">
+                <a href="{{ addon.url }}" class="addon-link">
+                    <div class="addon-card">
+                        {%- if addon.data.image -%}
+                            <img class="addon-card-image" src="{{addon.data.image}}" />
+                        {%- endif -%}
+                        <div class="addon-card-title"> {{addon.data.name}} </div>
+                        <div class="addon-card-author"> {{addon.data.author}} </div>
+                        <div class="addon-card-description"> {{addon.data.description}} </div>
+                        <div class="addon-card-footer">
+                            <a class="button look-filled" onClick="location.href = '{{addon.url }}?download'">
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </a>
             </div>
 
         {%- endfor -%}

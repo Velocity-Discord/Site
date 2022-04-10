@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap");
-button {
+button,
+a.button {
   border: none;
   padding: 12px 14px;
   border-radius: 10px;
@@ -13,33 +14,44 @@ button {
   height: -moz-fit-content;
   height: fit-content;
 }
-button:hover {
+button:hover,
+a.button:hover {
   color: rgb(218, 218, 218);
 }
-button:hover .arrow {
+button:hover .arrow,
+a.button:hover .arrow {
   transform: translateX(25%);
 }
-button .arrow {
+button .arrow,
+a.button .arrow {
   transition: all 0.2s ease;
 }
-button.full {
+button.full,
+a.button.full {
   width: 100%;
   justify-content: center;
 }
-button.look-filled {
+button.look-filled,
+a.button.look-filled {
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: #4653ce;
   border-width: 1px;
 }
-button.look-vibrant {
+button.look-filled.hover,
+a.button.look-filled.hover {
+  background-color: #2f3dbb;
+}
+button.look-vibrant,
+a.button.look-vibrant {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.05);
   border-width: 1px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
-button.look-empty {
+button.look-empty,
+a.button.look-empty {
   background-color: transparent;
 }
 

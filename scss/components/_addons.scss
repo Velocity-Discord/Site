@@ -19,6 +19,11 @@
     margin-bottom: 2rem;
     padding: 0.5% 15%;
 
+    .addon-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
     .addon-card {
         display: flex;
         flex-direction: column;
@@ -64,14 +69,15 @@
             margin-bottom: 0.5rem;
         }
 
+        .addon-card-author {
+            color: variables.$linkAccent;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
         .addon-card-footer {
             margin-top: auto;
-
-            .addon-card-author {
-                color: variables.$linkAccent;
-                font-size: 0.8rem;
-                font-weight: 500;
-            }
+            display: flex;
         }
     }
 }
