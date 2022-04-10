@@ -104,6 +104,12 @@
         flex-direction: row;
         gap: 10px;
 
+        .separator {
+            color: variables.$textSecondary;
+            font-weight: 400;
+            opacity: 0.4;
+        }
+
         a {
             color: variables.$linkAccent;
             text-decoration: none;
@@ -202,6 +208,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .addon-data {
+        display: none;
+    }
     .addon-main {
         flex-direction: column-reverse;
 

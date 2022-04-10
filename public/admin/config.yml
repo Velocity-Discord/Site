@@ -31,6 +31,7 @@ collections:
           - { label: "Image", name: "image", widget: "image", required: false }
           - { label: "Tags", name: "tags", widget: "list", required: false }
           - { label: "Date", name: "date", widget: "datetime" }
+          - { label: "Date Updated", name: "updated", widget: "datetime" }
     - name: "plugins"
       label: "Plugin"
       folder: "src/store/plugin"
@@ -48,3 +49,4 @@ collections:
           - { label: "Image", name: "image", widget: "image", required: false }
           - { label: "Tags", name: "tags", widget: "list", required: false }
           - { label: "Date", name: "date", widget: "datetime" }
+          - { label: "Date Updated", name: "updated", widget: "datetime" }

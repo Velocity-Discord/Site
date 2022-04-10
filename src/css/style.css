@@ -391,6 +391,11 @@ footer .copyright a::after {
   flex-direction: row;
   gap: 10px;
 }
+.addon-header .addon-data .separator {
+  color: rgb(153, 153, 153);
+  font-weight: 400;
+  opacity: 0.4;
+}
 .addon-header .addon-data a {
   color: #4653ce;
   text-decoration: none;
@@ -486,6 +491,10 @@ footer .copyright a::after {
   }
 }
 @media screen and (max-width: 768px) {
+  .addon-data {
+    display: none;
+  }
+
   .addon-main {
     flex-direction: column-reverse;
   }

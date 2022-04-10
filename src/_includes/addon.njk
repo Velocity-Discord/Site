@@ -43,15 +43,19 @@
             </div>
             <div class="addon-data">
                 <div class="addon-author">
-                    <div class="addon-author-name">Author: <a href="https://github.com/{{ author }}">{{ author }}</a></div>
+                    <div class="addon-author-name">By <a href="https://github.com/{{ author }}">{{ author }}</a></div>
                 </div>
-                |
+                <div class="separator">|</div>
                 <div class="addon-version">
                     <div class="addon-version-name">Version: {{ version }}</div>
                 </div>
-                |
-                <div class="addon-source">
-                    <div class="addon-source-link">Source: <a href="{{ sourceURL }}">/{{ name }}/</a></div>
+                <div class="separator">|</div>
+                <div class="addon-added-date">
+                    <div class="addon-added-date-time">Added: {{ date | postDate }}</div>
+                </div>
+                <div class="separator">|</div>
+                <div class="addon-updated-date">
+                    <div class="addon-updated-date-time">Updated: {{ updated | postDate }}</div>
                 </div>
             </div>
 
