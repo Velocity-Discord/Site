@@ -65,12 +65,23 @@
         {%- endif -%}
     </div>
 
-
-    <div id="readme"></div>
+    <div class="addon-main">
+        <div id="readme"></div>
+        <aside class="addon-actions">
+            <button class="look-filled full" onClick="location.href = '?download'">
+                Download
+            </button>
+            <button class="look-vibrant full external" onClick="location.href = '{{ sourceURL }}'">
+                Source
+                <div class="arrow">→</div>
+            </button>
+        </aside>
+    </div>
 
     <script>
         const readmeURL = "{{ readme }}"
         const sourceURL = "{{ source }}"
+        const sourceFileURL = "{{ sourceFile }}"
     </script>
     <script src="/js/addon.js"></script>
 </body>

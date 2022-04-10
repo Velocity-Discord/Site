@@ -5,7 +5,10 @@ header {
     @include mixins.vibrancy;
     background-color: #211f42;
 
-    padding: 30px 10%;
+    padding: 30px 5%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     position: fixed;
     width: 100%;
     z-index: 99;

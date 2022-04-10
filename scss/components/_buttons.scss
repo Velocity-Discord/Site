@@ -22,6 +22,15 @@ button {
         transition: all 0.2s ease;
     }
 
+    &.full {
+        width: 100%;
+        justify-content: center;
+    }
+
+    &.look-filled {
+        @include mixins.filled;
+    }
+
     &.look-vibrant {
         @include mixins.vibrancy;
     }

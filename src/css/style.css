@@ -21,6 +21,16 @@ button:hover .arrow {
 button .arrow {
   transition: all 0.2s ease;
 }
+button.full {
+  width: 100%;
+  justify-content: center;
+}
+button.look-filled {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #4653ce;
+  border-width: 1px;
+}
 button.look-vibrant {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.05);
@@ -39,7 +49,10 @@ header {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   background-color: #211f42;
-  padding: 30px 10%;
+  padding: 30px 5%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   position: fixed;
   width: 100%;
   z-index: 99;
@@ -362,8 +375,27 @@ footer .copyright a::after {
   border-radius: 4px;
 }
 
-#readme {
-  margin: 2.5% 30% 2.5% 5%;
+.addon-main {
+  display: flex;
+  padding: 2% 5% 5% 5%;
+  gap: 2%;
+}
+.addon-main .addon-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+  height: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-width: 1px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.addon-main #readme {
+  width: 70%;
   border-radius: 8px;
   padding: 0.5% 1.2%;
   color: rgb(204, 204, 204);
@@ -377,39 +409,40 @@ footer .copyright a::after {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
-#readme .path {
+.addon-main #readme .path {
   font-size: 12px;
   font-weight: 400;
   margin-top: 10px;
+  margin-bottom: 15px;
   color: rgba(255, 255, 255, 0.3490196078);
 }
-#readme img {
+.addon-main #readme img {
   width: 435px;
   border-radius: 4px;
 }
-#readme a {
+.addon-main #readme a {
   color: #4653ce;
   text-decoration: none;
 }
-#readme h1 {
+.addon-main #readme h1 {
   font-size: 30px;
 }
-#readme h2 {
+.addon-main #readme h2 {
   font-size: 19px;
 }
-#readme h3 {
+.addon-main #readme h3 {
   font-size: 16px;
 }
-#readme h4 {
+.addon-main #readme h4 {
   font-size: 10px;
 }
-#readme h5 {
+.addon-main #readme h5 {
   font-size: 7px;
 }
-#readme p {
+.addon-main #readme p {
   font-size: 13px;
 }
-#readme code {
+.addon-main #readme code {
   background: #262626;
   padding: 5px 7px;
   border-radius: 4px;
@@ -417,6 +450,20 @@ footer .copyright a::after {
   font-size: 10px;
 }
 
+@media screen and (max-width: 1000px) {
+  .addon-header {
+    margin-top: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .addon-main {
+    flex-direction: column-reverse;
+  }
+  .addon-main > * {
+    width: 100% !important;
+    margin-bottom: 5%;
+  }
+}
 @-webkit-keyframes growIn {
   from {
     transform: scale(0.7) translateY(5px);
@@ -425,7 +472,6 @@ footer .copyright a::after {
     transform: scale(1) translateY(0);
   }
 }
-
 @keyframes growIn {
   from {
     transform: scale(0.7) translateY(5px);
