@@ -1,6 +1,17 @@
 @use "../abstracts/mixins";
 @use "../abstracts/variables";
 
+.featured {
+    color: variables.$text;
+    font-size: 30px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in-out;
+    margin-bottom: 5px;
+}
+
 .addons-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -16,7 +27,7 @@
         border-radius: 0.5rem;
         padding: 1rem;
         min-height: 350px;
-        animation: fadeIn 0.5s ease-in-out;
+        animation: fadeIn 0.7s ease-in-out;
         transition: all 0.2s ease;
         cursor: pointer;
         gap: 5px;

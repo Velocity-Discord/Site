@@ -274,6 +274,18 @@ footer .copyright a::after {
     max-width: 400px;
   }
 }
+.featured {
+  color: rgb(204, 204, 204);
+  font-size: 30px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: fadeIn 1.5s ease-in-out;
+          animation: fadeIn 1.5s ease-in-out;
+  margin-bottom: 5px;
+}
+
 .addons-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -293,8 +305,8 @@ footer .copyright a::after {
   border-radius: 0.5rem;
   padding: 1rem;
   min-height: 350px;
-  -webkit-animation: fadeIn 0.5s ease-in-out;
-          animation: fadeIn 0.5s ease-in-out;
+  -webkit-animation: fadeIn 0.7s ease-in-out;
+          animation: fadeIn 0.7s ease-in-out;
   transition: all 0.2s ease;
   cursor: pointer;
   gap: 5px;
