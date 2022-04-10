@@ -86,6 +86,13 @@
                 Source
                 <div class="arrow">→</div>
             </button>
+
+            <h2>About</h2>
+            <div class="addon-author-name">Author: <a href="https://github.com/{{ author }}">{{ author }}</a></div>
+            <div class="addon-version-name">Version: {{ version }}</div>
+            <div class="addon-added-date-time">Added: {{ date | postDate }}</div>
+            <div class="addon-updated-date-time">Updated: {{ updated | postDate }}</div>
+            <div class="addon-raw">Raw: <a href="{{ sourceFile }}">{{ name }}</a></div>
         </aside>
     </div>
 

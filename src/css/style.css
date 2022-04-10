@@ -420,7 +420,9 @@ footer .copyright a::after {
   flex-direction: column;
   gap: 10px;
   width: 30%;
-  height: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 20px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -428,6 +430,11 @@ footer .copyright a::after {
   border-width: 1px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  color: rgb(204, 204, 204);
+}
+.addon-main .addon-actions a {
+  color: #4653ce;
+  text-decoration: none;
 }
 .addon-main #readme {
   width: 70%;
