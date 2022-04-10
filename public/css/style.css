@@ -500,8 +500,12 @@ footer .copyright a::after {
   }
 }
 @media screen and (max-width: 768px) {
+  .addon-header-image {
+    height: 60px !important;
+  }
+
   .addon-description {
-    margin-bottom: 5px !important;
+    margin-bottom: 10px !important;
   }
 
   .addon-data {
@@ -514,6 +518,13 @@ footer .copyright a::after {
   .addon-main > * {
     width: 100% !important;
     margin-bottom: 5%;
+  }
+
+  #readme {
+    overflow: hidden;
+  }
+  #readme img {
+    width: 200px !important;
   }
 }
 @-webkit-keyframes growIn {
