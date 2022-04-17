@@ -115,6 +115,40 @@ header nav ul li a:hover::after {
     background-color: rgba(255, 255, 255, 0.05);
   }
 }
+.notice {
+  color: rgb(204, 204, 204);
+  background-color: #2c2a3c;
+  padding: 20px 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notice .notice-info {
+  display: flex;
+  font-size: 16px;
+  gap: 10px;
+}
+.notice .notice-info .notice-title {
+  font-weight: 700;
+}
+.notice .notice-info .notice-description {
+  font-weight: 400;
+}
+.notice + * {
+  margin-top: 80px;
+}
+.notice + header + * {
+  margin-top: 170px;
+}
+.notice + header ~ .addon-header {
+  margin-top: 220px;
+}
+
 footer {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.05);
