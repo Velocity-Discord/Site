@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Velocity | Installation</title>
-        <meta name="description" content="A small client mod for Discord">
+        <meta name="description" content="An Upcoming Client Modification for Discord enhanced by Plugins and Themes!" />
+        <meta name="keywords" content="Velocity, Discord, Velocity-Discord, Discord Mod, Client Mod, Discord Hack" />
         <link rel="stylesheet" href="/css/docs.css" />
         <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark.min.css" />
@@ -21,109 +22,107 @@
         <meta property="og:image" content="https://velocity-discord.netlify.app/assets/favicon.png" />
         <meta name="theme-color" content="#2d3aaf" />
     </head>
-<body>
-    <aside>
-    <div class="background">
-        <div class="header">
-            <div class="name">
-                <h1>Velocity</h1>
-                Docs
+    <body>
+        <aside>
+            <div class="background">
+                <div class="header">
+                    <div class="name">
+                        <h1>Velocity</h1>
+                        Docs
+                    </div>
+                    <button class="look-empty external" onClick="location.href = '/'">
+                        Home
+                        <div class="arrow">→</div>
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="/docs/">Intro</a></li>
+                    <li><a href="/docs/2022-03-21-api/">API</a></li>
+                    <li><a href="/docs/2022-03-21-plugins/">Plugins</a></li>
+                    <li><a href="/docs/2022-03-21-themes/">Themes</a></li>
+                    <li class="selected"><a href="/docs/2022-03-21-installation/">Installation</a></li>
+                </ul>
             </div>
-            <button class="look-empty external" onClick="location.href = '/'">
-                Home
-                <div class="arrow">→</div>
-            </button>
-        </div>
-        <ul><li   ><a href="/docs/">Intro</a></li><li   ><a href="/docs/2022-03-21-api/">API</a></li><li   ><a href="/docs/2022-03-21-plugins/">Plugins</a></li><li   ><a href="/docs/2022-03-21-themes/">Themes</a></li><li class="selected"  ><a href="/docs/2022-03-21-installation/">Installation</a></li>
-        </ul>
-    </div>
-</aside>
+        </aside>
 
-    <section>
-    <div class="background">
-      <div class="timestamp">Created on 
-            <strong>21 Mar 2022</strong>
-            by 
-            <strong>TheCommieAxolotl</strong>
-          </div>
-          
-        <div class="markdown">
-            <h1>Installation</h1>
-<hr>
-<div class="notice">
-    Velocity is currently a beta project. the instructions labeled <a href="#a">here</a> will not work until it is Released.
-</div>
-<h1>Required Programs</h1>
-<p>You will need to download <a href="https://git-scm.com/download/">git</a>.
-(node install script implementation is planned)
-<br /></p>
-<h1>The Actual Installation</h1>
-<h3>MacOS</h3>
-<ol>
-<li>Open Terminal</li>
-<li>Paste in
-<code>git clone https://github.com/velocity-discord/Velocity</code></li>
-<li>Open Finder and navigate to your <code>[Discord Version].app</code></li>
-<li>Right-Click on it and select &quot;Show Package Contents&quot;</li>
-<li>Go to  <code>Contents/Resources</code></li>
-<li>Create a folder called <code>app</code></li>
-<li>Inside, create a <code>index.js</code> and a <code>package.json</code></li>
-<li>inside <code>package.json</code> enter:</li>
-</ol>
-<pre><code class="language-json">{
+        <section>
+            <div class="background">
+                <div class="timestamp">
+                    Created on
+                    <strong>21 Mar 2022</strong>
+                    by
+                    <strong>TheCommieAxolotl</strong>
+                </div>
+
+                <div class="markdown">
+                    <h1>Installation</h1>
+                    <hr />
+                    <div class="notice">Velocity is currently a beta project. the instructions labeled <a href="#a">here</a> will not work until it is Released.</div>
+                    <h1>Required Programs</h1>
+                    <p>You will need to download <a href="https://git-scm.com/download/">git</a>. (node install script implementation is planned) <br /></p>
+                    <h1>The Actual Installation</h1>
+                    <h3>MacOS</h3>
+                    <ol>
+                        <li>Open Terminal</li>
+                        <li>Paste in <code>git clone https://github.com/velocity-discord/Velocity</code></li>
+                        <li>Open Finder and navigate to your <code>[Discord Version].app</code></li>
+                        <li>Right-Click on it and select &quot;Show Package Contents&quot;</li>
+                        <li>Go to <code>Contents/Resources</code></li>
+                        <li>Create a folder called <code>app</code></li>
+                        <li>Inside, create a <code>index.js</code> and a <code>package.json</code></li>
+                        <li>inside <code>package.json</code> enter:</li>
+                    </ol>
+                    <pre><code class="language-json">{
     &quot;name&quot;: &quot;velocity&quot;,
     &quot;main&quot;: &quot;./index.js&quot;
 }
 </code></pre>
-<ol start="9">
-<li>inside <code>index.js</code> enter:</li>
-</ol>
-<pre><code>require(&quot;/FULL/PATH/TO/Velocity/FOLDER&quot;);
+                    <ol start="9">
+                        <li>inside <code>index.js</code> enter:</li>
+                    </ol>
+                    <pre><code>require(&quot;/FULL/PATH/TO/Velocity/FOLDER&quot;);
 </code></pre>
-<p>(replace <code>&quot;/FULL/PATH/TO/Velocity/FOLDER&quot;</code> with the path)</p>
-<h3>Windows</h3>
-<ol>
-<li>Open Command Prompt</li>
-<li>Paste in
-<code>git clone https://github.com/velocity-discord/Velocity</code></li>
-<li>Press <code>Win+R</code> and paste in <code>%appdata%</code> then open the folder for your discord version</li>
-<li>Go down the file levels until you get into <code>Resources</code></li>
-<li>Create a folder called <code>app</code></li>
-<li>Inside, create a <code>index.js</code> and a <code>package.json</code></li>
-<li>inside <code>package.json</code> enter:</li>
-</ol>
-<pre><code>{
+                    <p>(replace <code>&quot;/FULL/PATH/TO/Velocity/FOLDER&quot;</code> with the path)</p>
+                    <h3>Windows</h3>
+                    <ol>
+                        <li>Open Command Prompt</li>
+                        <li>Paste in <code>git clone https://github.com/velocity-discord/Velocity</code></li>
+                        <li>Press <code>Win+R</code> and paste in <code>%appdata%</code> then open the folder for your discord version</li>
+                        <li>Go down the file levels until you get into <code>Resources</code></li>
+                        <li>Create a folder called <code>app</code></li>
+                        <li>Inside, create a <code>index.js</code> and a <code>package.json</code></li>
+                        <li>inside <code>package.json</code> enter:</li>
+                    </ol>
+                    <pre><code>{
     &quot;name&quot;: &quot;velocity&quot;,
     &quot;main&quot;: &quot;./index.js&quot;
 }
 </code></pre>
-<ol start="9">
-<li>inside <code>index.js</code> enter:</li>
-</ol>
-<pre><code>require(&quot;/FULL/PATH/TO/Velocity/FOLDER&quot;);
+                    <ol start="9">
+                        <li>inside <code>index.js</code> enter:</li>
+                    </ol>
+                    <pre><code>require(&quot;/FULL/PATH/TO/Velocity/FOLDER&quot;);
 </code></pre>
-<p>(replace <code>&quot;/FULL/PATH/TO/Velocity/FOLDER&quot;</code> with the path)</p>
-<h3>Linux</h3>
-<p>Coming Soon</p>
+                    <p>(replace <code>&quot;/FULL/PATH/TO/Velocity/FOLDER&quot;</code> with the path)</p>
+                    <h3>Linux</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+        </section>
+        <script defer src="/js/docs.js"></script>
 
-        </div>
-    </div>
-</section>
-<script defer src="/js/docs.js"></script>
+        <script>
+            hljs.highlightAll();
 
-<script>
-  hljs.highlightAll()
-
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-
-</body>
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", (user) => {
+                    if (!user) {
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "/admin/";
+                        });
+                    }
+                });
+            }
+        </script>
+    </body>
 </html>
