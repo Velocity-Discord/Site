@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Velocity | Plugins</title>
-        <meta name="description" content="An Upcoming Client Modification for Discord enhanced by Plugins and Themes!" />
+        <meta name="description" content="An Upcoming Client Modification for Discord enhanced by Plugins and Themes!">
         <meta name="keywords" content="Velocity, Discord, Velocity Discord, Velocity-Discord, Discord Mod, Client Mod, Discord Hack" />
         <link rel="stylesheet" href="/css/style.css" />
         <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
@@ -22,45 +22,41 @@
         <meta property="og:image" content="https://velocity-discord.netlify.app/assets/favicon.png" />
         <meta name="theme-color" content="#2d3aaf" />
     </head>
-    <body>
-        <div class="notice">
-            <div class="notice-info">
-                <div class="notice-title">🇺🇦 We Support Ukraine</div>
-            </div>
-            <button class="button look-filled notice-action" onClick="window.open('https://war.ukraine.ua/support-ukraine/')">See How You Can Help</button>
+<body>
+    
+    <header>
+    <img src="/assets/icon.png" alt="logo" width="40">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/docs">Docs</a></li>
+        </ul>
+    </nav>
+</header>
+
+    
+<main>
+    <div id="hero" class="hero center features">
+        <div class="hero-title">
+            <h1>Plugins</h1>
         </div>
-        <header>
-            <img src="/assets/icon.png" alt="logo" width="40" />
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/store">Store</a></li>
-                    <li><a href="/features">Features</a></li>
-                    <li><a href="/docs">Docs</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div class="hero-subtitle">
+            <h2>Velocity Plugins.</h2>
+        </div>
+        <div class="hero-buttons">
+            <button class="look-vibrant external" onClick="location.href = '/store'">
+                Store
+                <div class="arrow">→</div>
+            </button>
+        </div>
+    </div>
+</main>
 
-        <main>
-            <div id="hero" class="hero center features">
-                <div class="hero-title">
-                    <h1>Plugins</h1>
-                </div>
-                <div class="hero-subtitle">
-                    <h2>Velocity Plugins.</h2>
-                </div>
-                <div class="hero-buttons">
-                    <button class="look-vibrant external" onClick="location.href = '/store'">
-                        Store
-                        <div class="arrow">→</div>
-                    </button>
-                </div>
-            </div>
-        </main>
-
-        <div class="addons-grid"></div>
-        <script>
-            console.log("collections.plugins");
-        </script>
-    </body>
+    <div class="addons-grid"></div>
+    <script>
+        console.log("collections.plugins")
+    </script>
+</body>
 </html>
