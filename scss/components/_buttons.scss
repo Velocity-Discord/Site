@@ -1,5 +1,4 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use "../abstracts";
 
 button,
 a.button {
@@ -31,15 +30,15 @@ a.button {
     }
 
     &.look-filled {
-        @include mixins.filled;
+        @include abstracts.filled;
 
         &.hover {
-            background-color: variables.$accentGlow;
+            background-color: abstracts.$accentGlow;
         }
     }
 
     &.look-vibrant {
-        @include mixins.vibrancy;
+        @include abstracts.vibrancy;
     }
 
     &.look-empty {

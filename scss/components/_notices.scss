@@ -1,8 +1,7 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use "../abstracts";
 
 .notice {
-    color: variables.$text;
+    color: abstracts.$text;
     background-color: #2c2a3c;
     padding: 20px 60px;
     position: fixed;

@@ -1,8 +1,51 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use "../abstracts";
+
+.footer-notice {
+    @include abstracts.vibrancyTop;
+    padding: 15px 10%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    z-index: 99;
+    color: abstracts.$text;
+
+    .footer-notice-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+
+        a {
+            text-decoration: none;
+            color: abstracts.$linkAccent;
+            position: relative;
+
+            &:hover::after {
+                transform: scaleX(1) !important;
+                transform-origin: left bottom 0px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                bottom: -3px;
+                background: currentColor;
+                transform: scaleX(0);
+                transition: transform 0.4s ease;
+                transform-origin: right bottom 0px;
+            }
+        }
+    }
+}
 
 footer {
-    @include mixins.vibrancy;
+    @include abstracts.vibrancy;
     background-color: rgba(255, 255, 255, 0.05);
 
     padding: 30px 10%;
@@ -11,20 +54,28 @@ footer {
     display: flex;
     width: 100%;
     z-index: 99;
-    color: variables.$text;
+    color: abstracts.$text;
 
     h1 {
-        color: variables.$accent;
+        color: abstracts.$accentText;
+    }
+
+    .cy {
+        display: flex;
+        width: fit-content;
+        gap: 2.5px;
     }
 
     .copyright {
+        font-size: 0.8rem;
         display: flex;
         flex-direction: column;
+        align-items: end;
         text-align: end;
 
         a {
             text-decoration: none;
-            color: variables.$linkAccent;
+            color: abstracts.$linkAccent;
             position: relative;
 
             &:hover::after {
@@ -55,6 +106,7 @@ footer {
         .copyright {
             margin-top: 5px;
             flex-direction: column;
+            align-items: center;
             text-align: center;
         }
     }

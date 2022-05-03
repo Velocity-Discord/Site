@@ -1,8 +1,7 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use "../abstracts";
 
 header {
-    @include mixins.vibrancy;
+    @include abstracts.vibrancy;
     background-color: #211f42;
     border-inline: none !important;
     border-top: none !important;
@@ -58,7 +57,7 @@ header {
 
 @supports (backdrop-filter: blur(10px)) {
     header {
-        @include mixins.vibrancy;
+        @include abstracts.vibrancy;
         background-color: rgba(255, 255, 255, 0.05);
     }
 }

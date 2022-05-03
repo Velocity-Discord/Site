@@ -82,14 +82,25 @@
                 </figcaption>
             </div>
         </section>
-        <footer>
+        <div class="footer-notice">
+    <h1>🇺🇦</h1>
+    <div class="footer-notice-body">
+        We Support Ukraine. <a target="_blank" href="https://war.ukraine.ua/support-ukraine/">See how you can help.</a>
+    </div>
+</div>
+<footer>
     <h1>Velocity</h1>
     <div class="copyright">
-        © 2022 Velocity <br>
-        <p>Logos and images created by <a href="https://github.com/thecommieaxolotl">TheCommieAxolotl</a></p>
+        <div class="cy">© <div class="year">2022</div> Velocity</div> <br>
+        <p>Velocity is not affiliated with Discord. Discord is a trademark of Discord Inc.</p>
     </div>
 
 </footer>
+
+<script>
+    var year = document.querySelector(".year");
+    year.innerHTML = new Date().getFullYear();
+</script>
         <script defer src="/js/observer.js"></script>
         <script defer>
             hljs.highlightAll();

@@ -1,8 +1,7 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use "../abstracts";
 
 .featured {
-    color: variables.$text;
+    color: abstracts.$text;
     font-size: 30px;
     display: flex;
     width: 100%;
@@ -27,8 +26,8 @@
     .addon-card {
         display: flex;
         flex-direction: column;
-        @include mixins.vibrancy;
-        color: variables.$text;
+        @include abstracts.vibrancy;
+        color: abstracts.$text;
         border-radius: 0.5rem;
         padding: 1rem;
         min-height: 350px;
@@ -60,7 +59,7 @@
             font-size: 1rem;
             font-weight: 400;
             margin-bottom: 0.5rem;
-            color: variables.$textSecondary;
+            color: abstracts.$textSecondary;
         }
 
         .addon-card-button {
@@ -70,7 +69,7 @@
         }
 
         .addon-card-author {
-            color: variables.$linkAccent;
+            color: abstracts.$linkAccent;
             font-size: 0.8rem;
             font-weight: 500;
         }
@@ -90,8 +89,8 @@
     border-radius: 8px;
     justify-content: space-between;
     padding: 15px;
-    color: variables.$text;
-    @include mixins.vibrancy;
+    color: abstracts.$text;
+    @include abstracts.vibrancy;
 
     .addon-title {
         font-size: 40px;
@@ -105,13 +104,13 @@
         gap: 10px;
 
         .separator {
-            color: variables.$textSecondary;
+            color: abstracts.$textSecondary;
             font-weight: 400;
             opacity: 0.4;
         }
 
         a {
-            color: variables.$linkAccent;
+            color: abstracts.$linkAccent;
             text-decoration: none;
             font-weight: 600;
         }
@@ -141,11 +140,11 @@
         height: fit-content;
         padding: 20px;
         border-radius: 8px;
-        @include mixins.vibrancy;
-        color: variables.$text;
+        @include abstracts.vibrancy;
+        color: abstracts.$text;
 
         a {
-            color: variables.$linkAccent;
+            color: abstracts.$linkAccent;
             text-decoration: none;
         }
     }
@@ -154,12 +153,12 @@
         width: 70%;
         border-radius: 8px;
         padding: 0.5% 1.2%;
-        color: variables.$text;
+        color: abstracts.$text;
         font-size: 1.2rem;
         font-weight: 400;
         line-height: 1.5;
         transition: all 0.2s ease;
-        @include mixins.vibrancy;
+        @include abstracts.vibrancy;
 
         .path {
             font-size: 12px;
@@ -175,7 +174,7 @@
         }
 
         a {
-            color: variables.$linkAccent;
+            color: abstracts.$linkAccent;
             text-decoration: none;
         }
 
