@@ -13,6 +13,14 @@ a.button {
     cursor: pointer;
     height: fit-content;
 
+    &:focus {
+        color: rgb(218, 218, 218);
+        .arrow {
+            transform: translateX(25%);
+        }
+        outline: 2px solid abstracts.$accentText;
+    }
+
     &:hover {
         color: rgb(218, 218, 218);
         .arrow {

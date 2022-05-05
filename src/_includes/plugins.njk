@@ -32,8 +32,8 @@
         {%- for addon in collections.plugins -%}
 
             <div class="addon-wrapper">
-                <a href="{{ addon.url }}" class="addon-link">
-                    <div class="addon-card">
+                <a tabindex="0" href="{{ addon.url }}" class="addon-link">
+                    <div tabindex="0" class="addon-card">
                         {%- if addon.data.image -%}
                             <img class="addon-card-image" src="{{addon.data.image}}" />
                         {%- endif -%}

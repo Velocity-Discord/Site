@@ -54,6 +54,10 @@
             justify-content: center;
             min-height: 200px;
 
+            &:focus {
+                outline: 2px solid abstracts.$accentText;
+            }
+
             h1 {
                 font-size: 50px;
                 color: abstracts.$text;
