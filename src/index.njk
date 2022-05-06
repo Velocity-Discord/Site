@@ -48,8 +48,11 @@
                     <div class="arrow">→</div>
                 </button>
             </div>
+            <div tabindex="0" class="scroll-prompt">
+                <div class="mouse-wheel"></div>
+            </div>
         </div>
-        <section class="details">
+        <section id="details" class="details">
             <div class="details-header">
                 <h1>Who doesn't love Statistics and Features?</h1>
             </div>
@@ -85,6 +88,18 @@
         {% include "footer.njk" %}
 
         <script>
+            const scrollIndicator = document.querySelector(".scroll-prompt");
+
+            scrollIndicator.addEventListener("click", () => {
+                details.scrollIntoView()
+            })
+            
+            scrollIndicator.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                    details.scrollIntoView()
+                }
+            })
+
             if (window.netlifyIdentity) {
                 window.netlifyIdentity.on("init", (user) => {
                     if (!user) {
