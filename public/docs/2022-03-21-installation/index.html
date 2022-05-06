@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Velocity | Installation</title>
-        <meta name="description" content="An Upcoming Client Modification for Discord enhanced by Plugins and Themes!">
+        <meta name="description" content="An Upcoming Client Modification for Discord enhanced by Plugins and Themes!" />
         <meta name="keywords" content="Velocity, Discord, Velocity Discord, Velocity-Discord, Discord Mod, Client Mod, Discord Hack" />
         <link rel="stylesheet" href="/css/docs.css" />
         <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
@@ -18,84 +18,89 @@
         <meta property="og:url" content="https://velocity-discord.netlify.app/docs" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Velocity | Docs" />
-        <meta property="og:description" content="A small Client Modification for Discord." />
+        <meta property="og:description" content="An upcoming Client Modification for Discord." />
         <meta property="og:image" content="https://velocity-discord.netlify.app/assets/favicon.png" />
         <meta name="theme-color" content="#2d3aaf" />
     </head>
-<body>
-    <aside>
-    <div class="background">
-        <div class="header">
-            <div class="name">
-                <h1>Velocity</h1>
-                Docs
+    <body>
+        <aside>
+            <div class="background">
+                <div class="header">
+                    <div class="name">
+                        <h1>Velocity</h1>
+                        Docs
+                    </div>
+                    <button class="look-empty external" onClick="location.href = '/'">
+                        Home
+                        <div class="arrow">→</div>
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="/docs/">Intro</a></li>
+                    <li><a href="/docs/2022-03-21-api/">API</a></li>
+                    <li><a href="/docs/2022-03-21-plugins/">Plugins</a></li>
+                    <li><a href="/docs/2022-03-21-themes/">Themes</a></li>
+                    <li class="selected"><a href="/docs/2022-03-21-installation/">Installation</a></li>
+                </ul>
             </div>
-            <button class="look-empty external" onClick="location.href = '/'">
-                Home
-                <div class="arrow">→</div>
-            </button>
-        </div>
-        <ul><li   ><a href="/docs/">Intro</a></li><li   ><a href="/docs/2022-03-21-api/">API</a></li><li   ><a href="/docs/2022-03-21-plugins/">Plugins</a></li><li   ><a href="/docs/2022-03-21-themes/">Themes</a></li><li class="selected"  ><a href="/docs/2022-03-21-installation/">Installation</a></li>
-        </ul>
-    </div>
-</aside>
+        </aside>
 
-    <section>
-    <div class="background">
-      <div class="timestamp">Updated at 
-            <strong>6 May 2022</strong>
-            by 
-            <strong>TheCommieAxolotl</strong>
-          </div>
-          
-        <div class="markdown">
-            <h1>Installation</h1>
-<hr>
-<div class="notice">
-    Velocity is currently a beta project. the instructions labeled here will not work until it is Released.
-</div>
-<h1>Required Programs</h1>
-<p>You will need to install <a href="https://git-scm.com/download/">git</a> and <a href="https://nodejs.org/">node</a> (LTS is recommended).
-<br /></p>
-<h1>The Actual Installation</h1>
-<h3>MacOS</h3>
-<ol>
-<li>Open Terminal</li>
-<li>Paste in
-<code>git clone https://github.com/velocity-discord/Velocity</code></li>
-<li>Run <code>npm run install -- --mac</code> (if you want to install to Canary or PTB add a <code>--canary</code> or <code>--ptb</code> flag)</li>
-</ol>
-<h3>Windows</h3>
-<ol>
-<li>Open Command Prompt</li>
-<li>Paste in
-<code>git clone https://github.com/velocity-discord/Velocity</code></li>
-<li>Run <code>npm run install -- --win</code> (if you want to install to Canary or PTB add a <code>--canary</code> or <code>--ptb</code> flag)</li>
-</ol>
-<h3>Linux</h3>
-<p>Coming Soon</p>
+        <section>
+            <div class="background">
+                <div class="timestamp">
+                    Updated at
+                    <strong>6 May 2022</strong>
+                    by
+                    <strong>TheCommieAxolotl</strong>
+                </div>
 
-        </div>
-    </div>
-</section>
-<script defer src="/js/docs.js"></script>
+                <div class="markdown">
+                    <h1>Installation</h1>
+                    <hr />
+                    <div class="notice">Velocity is currently a beta project. the instructions labeled here will not work until it is Released.</div>
+                    <h1>Required Programs</h1>
+                    <p>You will need to install <a href="https://git-scm.com/download/">git</a> and <a href="https://nodejs.org/">node</a> (LTS is recommended). <br /></p>
+                    <h1>The Actual Installation</h1>
+                    <h3>MacOS</h3>
+                    <ol>
+                        <li>Open Terminal</li>
+                        <li>Paste in <code>git clone https://github.com/velocity-discord/Velocity</code></li>
+                        <li>Run <code>npm run install -- --mac</code> (if you want to install to Canary or PTB add a <code>--canary</code> or <code>--ptb</code> flag)</li>
+                    </ol>
+                    <h3>Windows</h3>
+                    <ol>
+                        <li>Open Command Prompt</li>
+                        <li>Paste in <code>git clone https://github.com/velocity-discord/Velocity</code></li>
+                        <li>Run <code>npm run install -- --win</code> (if you want to install to Canary or PTB add a <code>--canary</code> or <code>--ptb</code> flag)</li>
+                    </ol>
+                    <h3>Linux</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+        </section>
+        <script defer src="/js/docs.js"></script>
 
-<script>
-  hljs.highlightAll()
-  document.querySelectorAll(".markdown h1").forEach((e) => {e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "")})
-  document.querySelectorAll(".markdown h2").forEach((e) => {e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "")})
-  document.querySelectorAll(".markdown h3").forEach((e) => {e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "")})
+        <script>
+            hljs.highlightAll();
+            document.querySelectorAll(".markdown h1").forEach((e) => {
+                e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "");
+            });
+            document.querySelectorAll(".markdown h2").forEach((e) => {
+                e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "");
+            });
+            document.querySelectorAll(".markdown h3").forEach((e) => {
+                e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "");
+            });
 
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-
-</body>
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", (user) => {
+                    if (!user) {
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "/admin/";
+                        });
+                    }
+                });
+            }
+        </script>
+    </body>
 </html>
