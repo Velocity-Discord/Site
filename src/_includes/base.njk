@@ -42,6 +42,9 @@
 
 <script>
   hljs.highlightAll()
+  document.querySelectorAll(".markdown h1").forEach((e) => {e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "")})
+  document.querySelectorAll(".markdown h2").forEach((e) => {e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "")})
+  document.querySelectorAll(".markdown h3").forEach((e) => {e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "")})
 
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
