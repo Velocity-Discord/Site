@@ -20,6 +20,7 @@
         <meta name="theme-color" content="#2d3aaf" />
     </head>
     <body>
+        
         <div id="hero" class="hero">
             <svg tag="svg" viewBox="0 0 22 22" width="430" class="hero-logo" height="430">
                 <path
@@ -62,7 +63,7 @@
                     <h2>External NPM Dependencies.</h2>
                 </div>
                 <div tabindex="0" class="details-grid-item">
-                    <h1>300kb <</h1>
+                    <h1>300kb ></h1>
                     <h2>Unbundled.</h2>
                 </div>
                 <div tabindex="0" class="details-grid-item">
@@ -85,39 +86,37 @@
         </section>
 
         <div class="footer-notice">
-            <h1>🇺🇦</h1>
-            <div class="footer-notice-body">We Support Ukraine. <a target="_blank" tabindex="0" href="https://war.ukraine.ua/support-ukraine/">See how you can help.</a></div>
-        </div>
-        <footer>
-            <h1>Velocity</h1>
-            <div class="copyright">
-                <div class="cy">
-                    ©
-                    <div class="year">2022</div>
-                    Velocity
-                </div>
-                <br />
-                <p>Velocity is not affiliated with Discord. Discord is a trademark of Discord Inc.</p>
-            </div>
-        </footer>
+    <h1>🇺🇦</h1>
+    <div class="footer-notice-body">
+        We Support Ukraine. <a target="_blank" tabindex="0" href="https://war.ukraine.ua/support-ukraine/">See how you can help.</a>
+    </div>
+</div>
+<footer>
+    <h1>Velocity</h1>
+    <div class="copyright">
+        <div class="cy">© <div class="year">2022</div> Velocity</div> <br>
+        <p>Velocity is not affiliated with Discord. Discord is a trademark of Discord Inc.</p>
+    </div>
 
-        <script>
-            var year = document.querySelector(".year");
-            year.innerHTML = new Date().getFullYear();
-        </script>
+</footer>
+
+<script>
+    var year = document.querySelector(".year");
+    year.innerHTML = new Date().getFullYear();
+</script>
 
         <script>
             const scrollIndicator = document.querySelector(".scroll-prompt");
 
             scrollIndicator.addEventListener("click", () => {
-                details.scrollIntoView();
-            });
-
+                details.scrollIntoView()
+            })
+            
             scrollIndicator.addEventListener("keydown", (e) => {
                 if (e.key === "Enter") {
-                    details.scrollIntoView();
+                    details.scrollIntoView()
                 }
-            });
+            })
 
             if (window.netlifyIdentity) {
                 window.netlifyIdentity.on("init", (user) => {

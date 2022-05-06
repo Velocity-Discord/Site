@@ -20,17 +20,18 @@
         <meta name="theme-color" content="#2d3aaf" />
     </head>
     <body>
+        
         <header>
-            <img src="/assets/icon.png" alt="logo" width="40" />
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/store">Store</a></li>
-                    <li><a href="/features">Features</a></li>
-                    <li><a href="/docs">Docs</a></li>
-                </ul>
-            </nav>
-        </header>
+    <img src="/assets/icon.png" alt="logo" width="40">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/docs">Docs</a></li>
+        </ul>
+    </nav>
+</header>
         <div id="hero" class="hero center features">
             <div class="hero-title">
                 <h1>Promotional</h1>
@@ -49,8 +50,8 @@
             <div class="preview">
                 <img src="/assets/icon.png" alt="" onclick="location.href = '/assets/icon.png'"">
                 <figcaption>
-                    Logo
-                    <div class="dimensions">512 x 512</div>
+                    Logo 
+                    <div class="dimensions">512 x 512</div> 
                 </figcaption>
             </div>
         </section>
@@ -58,8 +59,8 @@
             <div class="preview">
                 <img src="../assets/1.png" alt="" onclick="location.href = '../assets/1.png'"">
                 <figcaption>
-                    Velocity Settings
-                    <div class="dimensions">1920 x 1920</div>
+                    Velocity Settings 
+                    <div class="dimensions">1920 x 1920</div> 
                 </figcaption>
             </div>
         </section>
@@ -67,8 +68,8 @@
             <div class="preview">
                 <img src="../assets/2.png" alt="" onclick="location.href = '../assets/2.png'"">
                 <figcaption>
-                    Velocity Toasts
-                    <div class="dimensions">1920 x 1920</div>
+                    Velocity Toasts 
+                    <div class="dimensions">1920 x 1920</div> 
                 </figcaption>
             </div>
         </section>
@@ -77,31 +78,29 @@
                 <img src="../assets/3.png" alt="" onclick="location.href = '../assets/3.png'"">
                 <figcaption>
                     Stylised Window
-                    <div class="dimensions">2000 x 1268</div>
+                    <div class="dimensions">2000 x 1268</div> 
                 </figcaption>
             </div>
         </section>
         <div class="footer-notice">
-            <h1>🇺🇦</h1>
-            <div class="footer-notice-body">We Support Ukraine. <a target="_blank" tabindex="0" href="https://war.ukraine.ua/support-ukraine/">See how you can help.</a></div>
-        </div>
-        <footer>
-            <h1>Velocity</h1>
-            <div class="copyright">
-                <div class="cy">
-                    ©
-                    <div class="year">2022</div>
-                    Velocity
-                </div>
-                <br />
-                <p>Velocity is not affiliated with Discord. Discord is a trademark of Discord Inc.</p>
-            </div>
-        </footer>
+    <h1>🇺🇦</h1>
+    <div class="footer-notice-body">
+        We Support Ukraine. <a target="_blank" tabindex="0" href="https://war.ukraine.ua/support-ukraine/">See how you can help.</a>
+    </div>
+</div>
+<footer>
+    <h1>Velocity</h1>
+    <div class="copyright">
+        <div class="cy">© <div class="year">2022</div> Velocity</div> <br>
+        <p>Velocity is not affiliated with Discord. Discord is a trademark of Discord Inc.</p>
+    </div>
 
-        <script>
-            var year = document.querySelector(".year");
-            year.innerHTML = new Date().getFullYear();
-        </script>
+</footer>
+
+<script>
+    var year = document.querySelector(".year");
+    year.innerHTML = new Date().getFullYear();
+</script>
         <script defer src="/js/observer.js"></script>
         <script defer>
             hljs.highlightAll();
