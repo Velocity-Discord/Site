@@ -188,32 +188,32 @@
 <h3><code>Logger.error(title, ...errors)</code></h3>
 <p>Logs an error with the given title and errors</p>
 <hr>
-<h2><code>getModule</code></h2>
+<h2><code>WebpackModules</code></h2>
 <p>Get and interact with Discord's internal Modules</p>
-<h3><code>getModule.find(query)</code></h3>
+<h3><code>WebpackModules.find(query)</code></h3>
 <p>Shorthand method for finding a module by the given query</p>
-<p><code>VApi.getModule.find(&quot;UserStore&quot;)</code></p>
+<p><code>VApi.WebpackModules.find(&quot;UserStore&quot;)</code></p>
 <ul>
 <li>Will find a module with the <code>displayName</code> of <code>&quot;UserStore&quot;</code></li>
 </ul>
-<p><code>VApi.getModule.find([&quot;UserStore&quot;])</code></p>
+<p><code>VApi.WebpackModules.find([&quot;UserStore&quot;])</code></p>
 <ul>
 <li>Will find a module with props titled <code>&quot;UserStore&quot;</code></li>
 </ul>
-<p><code>VApi.getModule.find((m) =&gt; m.default?.displayName === &quot;UserStore&quot;])</code></p>
+<p><code>VApi.WebpackModules.find((m) =&gt; m.default?.displayName === &quot;UserStore&quot;])</code></p>
 <ul>
 <li>Will filter modules with a <code>displayName</code> of <code>&quot;UserStore&quot;</code></li>
 </ul>
 <hr>
-<h3><code>getModule.findByDisplayName(query)</code></h3>
+<h3><code>WebpackModules.findByDisplayName(query)</code></h3>
 <p>Method for finding a module by the given displayName</p>
-<h4><code>getModule.findByDisplayNameDefault(query)</code></h4>
-<p>Equivalent to <code>getModule.findByDisplayName(query).default</code></p>
+<h4><code>WebpackModules.findByDisplayNameDefault(query)</code></h4>
+<p>Equivalent to <code>WebpackModules.findByDisplayName(query).default</code></p>
 <hr>
-<h3><code>getModule.findByProps([queries])</code></h3>
+<h3><code>WebpackModules.findByProps([queries])</code></h3>
 <p>Method for finding a module by the given props</p>
-<h4><code>getModule.findByPropsDefault([queries])</code></h4>
-<p>Equivalent to <code>getModule.findByProps([queries]).default</code></p>
+<h4><code>WebpackModules.findByPropsDefault([queries])</code></h4>
+<p>Equivalent to <code>WebpackModules.findByProps([queries]).default</code></p>
 <hr>
 <h2><code>Utilities</code></h2>
 <p>Random Utilities</p>
