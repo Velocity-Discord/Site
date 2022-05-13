@@ -68,6 +68,10 @@
             opacity: 0.7;
         }
 
+        figure {
+            width: 600px;
+        }
+
         img {
             transition: all 0.2s ease;
             height: 600px;
@@ -117,9 +121,15 @@
 
         .preview {
             margin: 0;
+
+            figure {
+                width: 300px;
+            }
+
             img {
                 height: 300px;
             }
+
             pre {
                 display: none;
             }
