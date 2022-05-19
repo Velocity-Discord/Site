@@ -3,6 +3,7 @@
 .details {
     @include abstracts.vibrancyTop;
     padding: 10%;
+    padding-bottom: 2.5%;
     display: flex;
     flex-direction: column;
     align-items: center;

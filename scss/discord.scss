@@ -1,0 +1,533 @@
+$interactive-normal: #b9bbbe;
+$interactive-hover: #dcddde;
+$interactive-active: #fff;
+$interactive-muted: #4f545c;
+$background-primary: #36393f;
+$background-secondary: #2f3136;
+$background-secondary-alt: #292b2f;
+$background-tertiary: #202225;
+$background-accent: #4f545c;
+$background-floating: #18191c;
+$background-nested-floating: #2f3136;
+$background-modifier-hover: rgba(79, 84, 92, 0.4);
+$background-modifier-active: rgba(79, 84, 92, 0.48);
+$background-modifier-selected: rgba(79, 84, 92, 0.6);
+$background-modifier-accent: rgba(79, 84, 92, 0.48);
+$background-message-hover: rgba(4, 4, 5, 0.07);
+$header-primary: #fff;
+$header-secondary: #b9bbbe;
+$text-link: hsl(197, calc(var(--saturation-factor, 1) * 100%), 47.8%);
+$text-link-low-saturation: hsl(197, calc(var(--saturation-factor, 1) * 100%), 52.9%);
+$text-positive: hsl(139, calc(var(--saturation-factor, 1) * 51.6%), 52.2%);
+$text-warning: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
+$text-danger: hsl(359, calc(var(--saturation-factor, 1) * 82%), 73.9%);
+$text-brand: hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 77.5%);
+$text-normal: #dcddde;
+$text-muted: #a3a6aa;
+$spoiler-hidden: #202225;
+$spoiler-revealed: hsla(0, 0%, 100%, 0.1);
+$brand-experiment-100: hsl(240, calc(var(--saturation-factor, 1) * 77.8%), 98.2%);
+$brand-experiment-130: hsl(236, calc(var(--saturation-factor, 1) * 87.5%), 96.9%);
+$brand-experiment-160: hsl(235, calc(var(--saturation-factor, 1) * 84.6%), 94.9%);
+$brand-experiment-200: hsl(236, calc(var(--saturation-factor, 1) * 83.3%), 92.9%);
+$brand-experiment-230: hsl(236, calc(var(--saturation-factor, 1) * 87%), 91%);
+$brand-experiment-260: hsl(235, calc(var(--saturation-factor, 1) * 86.2%), 88.6%);
+$brand-experiment-300: hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 85.9%);
+$brand-experiment-330: hsl(235, calc(var(--saturation-factor, 1) * 85.1%), 81.6%);
+$brand-experiment-360: hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 77.5%);
+$brand-experiment-400: hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 71.8%);
+$brand-experiment-430: hsl(235, calc(var(--saturation-factor, 1) * 85.7%), 69.8%);
+$brand-experiment-460: hsl(235, calc(var(--saturation-factor, 1) * 85.5%), 67.5%);
+$brand-experiment: hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%);
+$brand-experiment-500: hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%);
+$brand-experiment-530: hsl(235, calc(var(--saturation-factor, 1) * 66.7%), 58.8%);
+$brand-experiment-560: hsl(235, calc(var(--saturation-factor, 1) * 51.4%), 52.4%);
+$brand-experiment-600: hsl(235, calc(var(--saturation-factor, 1) * 46.7%), 44.1%);
+$brand-experiment-630: hsl(235, calc(var(--saturation-factor, 1) * 46.7%), 38.2%);
+$brand-experiment-660: hsl(235, calc(var(--saturation-factor, 1) * 47.1%), 33.3%);
+$brand-experiment-700: hsl(235, calc(var(--saturation-factor, 1) * 47%), 25.9%);
+$brand-experiment-730: hsl(235, calc(var(--saturation-factor, 1) * 46.8%), 24.3%);
+$brand-experiment-760: hsl(234, calc(var(--saturation-factor, 1) * 46.9%), 22.2%);
+$brand-experiment-800: hsl(235, calc(var(--saturation-factor, 1) * 47.5%), 19.4%);
+$brand-experiment-830: hsl(235, calc(var(--saturation-factor, 1) * 47.4%), 14.9%);
+$brand-experiment-860: hsl(235, calc(var(--saturation-factor, 1) * 46.9%), 9.6%);
+$brand-experiment-900: hsl(233, calc(var(--saturation-factor, 1) * 50%), 3.1%);
+$brand-experiment-05a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.05);
+$brand-experiment-10a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.1);
+$brand-experiment-15a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.15);
+$brand-experiment-20a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.2);
+$brand-experiment-25a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.25);
+$brand-experiment-30a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.3);
+$brand-experiment-35a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.35);
+$brand-experiment-40a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.4);
+$brand-experiment-45a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.45);
+$brand-experiment-50a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.5);
+$brand-experiment-55a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.55);
+$brand-experiment-60a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.6);
+$brand-experiment-65a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.65);
+$brand-experiment-70a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.7);
+$brand-experiment-75a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.75);
+$brand-experiment-80a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.8);
+$brand-experiment-85a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.85);
+$brand-experiment-90a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.9);
+$brand-experiment-95a: hsla(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%, 0.95);
+$status-positive-background: hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%);
+$status-positive-text: #fff;
+$status-warning-background: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
+$status-warning-text: #000;
+$status-danger-background: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
+$status-danger-text: #fff;
+$status-danger: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
+$status-positive: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);
+$status-warning: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
+$button-danger-background: hsl(359, calc(var(--saturation-factor, 1) * 66.7%), 54.1%);
+$button-danger-background-hover: hsl(359, calc(var(--saturation-factor, 1) * 56.3%), 40.4%);
+$button-danger-background-active: hsl(359, calc(var(--saturation-factor, 1) * 56.4%), 35.1%);
+$button-danger-background-disabled: hsl(359, calc(var(--saturation-factor, 1) * 66.7%), 54.1%);
+$button-positive-background: hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%);
+$button-positive-background-hover: hsl(138, calc(var(--saturation-factor, 1) * 46.8%), 24.3%);
+$button-positive-background-active: hsl(138, calc(var(--saturation-factor, 1) * 46.9%), 22.2%);
+$button-positive-background-disabled: hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%);
+$button-secondary-background: #4f545c;
+$button-secondary-background-hover: #686d73;
+$button-secondary-background-active: #72767d;
+$button-secondary-background-disabled: #4f545c;
+$button-outline-danger-text: #fff;
+$button-outline-danger-border: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
+$button-outline-danger-background: hsla(0, 0%, 100%, 0);
+$button-outline-danger-background-hover: hsl(359, calc(var(--saturation-factor, 1) * 66.7%), 54.1%);
+$button-outline-danger-text-hover: #fff;
+$button-outline-danger-border-hover: hsl(359, calc(var(--saturation-factor, 1) * 66.7%), 54.1%);
+$button-outline-danger-background-active: hsl(359, calc(var(--saturation-factor, 1) * 56.7%), 48%);
+$button-outline-danger-text-active: #fff;
+$button-outline-danger-border-active: hsl(359, calc(var(--saturation-factor, 1) * 66.7%), 54.1%);
+$button-outline-positive-text: #fff;
+$button-outline-positive-border: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);
+$button-outline-positive-background: hsla(0, 0%, 100%, 0);
+$button-outline-positive-background-hover: hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%);
+$button-outline-positive-text-hover: #fff;
+$button-outline-positive-border-hover: hsl(139, calc(var(--saturation-factor, 1) * 47.1%), 33.3%);
+$button-outline-positive-background-active: hsl(138, calc(var(--saturation-factor, 1) * 46.8%), 24.3%);
+$button-outline-positive-text-active: #fff;
+$button-outline-positive-border-active: hsl(138, calc(var(--saturation-factor, 1) * 46.8%), 24.3%);
+$button-outline-brand-text: #fff;
+$button-outline-brand-border: hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%);
+$button-outline-brand-background: hsla(0, 0%, 100%, 0);
+$button-outline-brand-background-hover: hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%);
+$button-outline-brand-text-hover: #fff;
+$button-outline-brand-border-hover: hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%);
+$button-outline-brand-background-active: hsl(235, calc(var(--saturation-factor, 1) * 51.4%), 52.4%);
+$button-outline-brand-text-active: #fff;
+$button-outline-brand-border-active: hsl(235, calc(var(--saturation-factor, 1) * 51.4%), 52.4%);
+$button-outline-primary-text: #fff;
+$button-outline-primary-border: #4f545c;
+$button-outline-primary-background: hsla(0, 0%, 100%, 0);
+$button-outline-primary-background-hover: #4f545c;
+$button-outline-primary-text-hover: #fff;
+$button-outline-primary-border-hover: #4f545c;
+$button-outline-primary-background-active: #686d73;
+$button-outline-primary-text-active: #fff;
+$button-outline-primary-border-active: #686d73;
+
+$font-primary: Whitney, sans-serif;
+$font-display: "ABC Ginto Normal", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 300;
+    src: url(/assets/whitneybook.otf);
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 300;
+    font-style: italic;
+    src: url(/assets/whitneybookitalic.otf);
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 400;
+    src: url(/assets/whitneylight.otf);
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 400;
+    font-style: italic;
+    src: url(/assets/whitneylightitalic.otf);
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 500;
+    src: url(/assets/whitneymedium.otf);
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 500;
+    font-style: italic;
+    src: url(/assets/whitneymediumitalic.otf);
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 600;
+    src: url(/assets/whitneysemibold.otf);
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 600;
+    font-style: italic;
+    src: url(/assets/WhitneySemiboldItalic.otf);
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 700;
+    src: url(/assets/whitneybold.otf);
+}
+
+:root {
+    --saturation-factor: 1;
+}
+
+.discord {
+    background-color: $background-primary;
+    width: 100vw;
+    display: flex;
+    color: $text-link;
+    padding-block: 20px;
+    flex-direction: column;
+    font-family: $font-primary;
+    accent-color: $brand-experiment;
+
+    .center-container {
+        width: fit-content;
+
+        > * {
+            justify-content: center;
+        }
+    }
+
+    .invite-container {
+        display: flex;
+
+        .invite {
+            margin-top: 0.16rem;
+            background-color: $background-secondary;
+            border-radius: 4px;
+            padding: 16px;
+            width: 432px;
+            box-sizing: border-box;
+
+            .header {
+                font-size: 12px;
+                line-height: 16px;
+                font-weight: 700;
+                margin-bottom: 12px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-transform: uppercase;
+                overflow: hidden;
+                color: $interactive-normal;
+            }
+
+            .content {
+                display: flex;
+                flex-flow: row nowrap;
+
+                .icon {
+                    background-image: url("https://cdn.discordapp.com/icons/959035496707817502/6d4b5ec0c9d0cf28ba16470bea3ad118.webp?size=4096");
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 15px;
+                    margin-right: 16px;
+                    position: relative;
+                    background-clip: padding-box;
+                    background-color: none;
+                    background-position: 50%;
+                    background-size: 100% 100%;
+                }
+
+                .flex {
+                    flex: 1 1 auto;
+                    min-width: 1px;
+
+                    .invite-title {
+                        color: $header-primary;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        margin-bottom: 4px;
+                        font-weight: 600;
+                        font-family: $font-display;
+                        font-size: 17px;
+                        line-height: 22px;
+                    }
+
+                    .invite-details {
+                        flex: 0 1 auto;
+                        margin-right: 8px;
+                        color: $interactive-normal;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        line-height: 16px;
+                        display: flex;
+                        align-items: center;
+
+                        &::before {
+                            content: "";
+                            display: block;
+                            margin-right: 4px;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background-color: hsl(214, calc(var(--saturation-factor, 1) * 9.9%), 50.4%);
+                        }
+                    }
+                }
+
+                .join-button {
+                    height: 40px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    color: #fff;
+                    background-color: $button-positive-background;
+                    cursor: pointer;
+                    align-self: center;
+                    margin-left: 10px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    flex: 0 0 auto;
+                    line-height: 20px;
+                    width: auto;
+                    transition: background-color 0.17s ease, color 0.17s ease;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-sizing: border-box;
+                    border: none;
+                    border-radius: 3px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    user-select: none;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: $button-positive-background-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    .message {
+        width: 100vw;
+        padding-block: 2px;
+        min-height: 2.75rem;
+        margin-top: 1.0625rem;
+        display: flex;
+
+        ~ .invite-container .invite {
+            margin-left: 84px;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $background-message-hover;
+        }
+
+        .body {
+            margin-left: 18px;
+        }
+
+        .contents {
+            position: static;
+            margin-left: 0;
+            padding-left: 0;
+            text-indent: 0;
+            display: flex;
+            width: fit-content;
+            min-width: 460px;
+
+            .avatar {
+                margin-top: calc(4px - 0.125rem);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                user-select: none;
+
+                &:hover,
+                &:focus {
+                    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.16));
+                }
+            }
+
+            .header {
+                font-weight: 400;
+                font-size: 16px;
+                display: block;
+                overflow: hidden;
+                position: relative;
+                margin-right: 0.25rem;
+                line-height: 1.375rem;
+                height: 1.375rem;
+                color: $text-muted;
+                white-space: break-spaces;
+                word-wrap: pre-wrap;
+                cursor: default;
+
+                .username {
+                    font-weight: 500;
+                    margin-right: 8px;
+
+                    &.role-0 {
+                        color: rgb(91, 136, 252);
+                    }
+                    &.role-1 {
+                        color: hsl(random($limit: 500), calc(var(--saturation-factor, 1) * 80%), 80%);
+                    }
+                    &.role-2 {
+                        color: hsl(random($limit: 600), calc(var(--saturation-factor, 1) * 80%), 50%);
+                    }
+                    &.role-3 {
+                        color: hsl(random($limit: 300), calc(var(--saturation-factor, 1) * 70%), 80%);
+                    }
+                    &.role-4 {
+                        color: hsl(random($limit: 700), calc(var(--saturation-factor, 1) * 80%), 40%);
+                    }
+                    &.role-5 {
+                        color: hsl(random($limit: 1000), calc(var(--saturation-factor, 1) * 80%), 60%);
+                    }
+                    &.role-6 {
+                        color: hsl(random($limit: 500), calc(var(--saturation-factor, 1) * 80%), 70%);
+                    }
+                }
+
+                .timestamp {
+                    font-size: 0.75rem;
+                    line-height: 1.375rem;
+                    color: $text-muted;
+                    vertical-align: baseline;
+                }
+            }
+
+            .message-content {
+                user-select: text;
+                margin-left: -72px;
+                padding-left: 72px;
+                color: $text-normal;
+
+                &.edited::after {
+                    content: " (edited)";
+                    font-size: 0.625rem;
+                    font-weight: 400;
+                    line-height: 1;
+                    user-select: none;
+                    color: $text-muted;
+                }
+
+                a {
+                    color: $text-link;
+                    word-break: break-word;
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    &:hover,
+                    &:focus {
+                        text-decoration: underline;
+                    }
+                }
+
+                .spoiler-text {
+                    border-radius: 3px;
+                    background: $spoiler-hidden;
+                    color: transparent;
+                    user-select: none;
+                    cursor: pointer;
+                    transition: all 0.1s ease;
+
+                    &:hover,
+                    &:focus {
+                        background: $spoiler-revealed;
+                        color: #dcddde;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Revert */
+    a,
+    abbr,
+    acronym,
+    address,
+    applet,
+    big,
+    blockquote,
+    body,
+    caption,
+    cite,
+    code,
+    dd,
+    del,
+    dfn,
+    div,
+    dl,
+    dt,
+    em,
+    fieldset,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    html,
+    iframe,
+    img,
+    ins,
+    kbd,
+    label,
+    legend,
+    li,
+    object,
+    ol,
+    p,
+    pre,
+    q,
+    s,
+    samp,
+    small,
+    span,
+    strike,
+    strong,
+    table,
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    tr,
+    tt,
+    ul,
+    var {
+        margin: 0;
+        margin-right: 0px;
+        padding: 0;
+        border: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-family: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
+}
