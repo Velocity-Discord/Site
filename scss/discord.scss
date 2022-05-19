@@ -203,6 +203,7 @@ $font-display: "ABC Ginto Normal", "Helvetica Neue", Helvetica, Arial, sans-seri
     flex-direction: column;
     font-family: $font-primary;
     accent-color: $brand-experiment;
+    overflow: hidden;
 
     .center-container {
         width: fit-content;
