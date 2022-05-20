@@ -29,6 +29,10 @@ header {
                     color: hsla(0, 0%, 100%, 0.6);
                     position: relative;
 
+                    &.selected {
+                        color: hsla(0, 0%, 100%, 0.96);
+                    }
+
                     &:hover {
                         color: hsla(0, 0%, 100%, 0.96);
                     }
@@ -58,6 +62,6 @@ header {
 @supports (backdrop-filter: blur(10px)) {
     header {
         @include abstracts.vibrancy;
-        background-color: rgba(255, 255, 255, 0.05);
+        background-color: rgb(255, 255, 255, 0.05);
     }
 }

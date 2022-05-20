@@ -35,8 +35,8 @@ aside {
     padding: 20px;
 
     .background {
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgb(255, 255, 255, 0.1);
+        background-color: rgb(255, 255, 255, 0.05);
         border-width: 1px;
         border-radius: 10px;
         width: 100%;
@@ -64,14 +64,14 @@ aside {
 
                 &:hover {
                     a {
-                        outline: 1px solid rgba(255, 255, 255, 0.1);
-                        background-color: rgba(255, 255, 255, 0.05);
+                        outline: 1px solid rgb(255, 255, 255, 0.1);
+                        background-color: rgb(255, 255, 255, 0.05);
                     }
                 }
 
                 &.selected {
                     a {
-                        outline: 1px solid rgba(255, 255, 255, 0.1);
+                        outline: 1px solid rgb(255, 255, 255, 0.1);
                         background-color: #5f6fff;
                     }
                 }
@@ -113,8 +113,8 @@ section {
     width: 100%;
 
     .background {
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgb(255, 255, 255, 0.1);
+        background-color: rgb(255, 255, 255, 0.05);
         border-width: 1px;
         border-radius: 10px;
         width: 100%;
@@ -130,7 +130,7 @@ section {
         .timestamp {
             margin-bottom: 22.5px;
             padding-bottom: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgb(255, 255, 255, 0.1);
         }
     }
 }

@@ -9,11 +9,11 @@ $background-tertiary: #202225;
 $background-accent: #4f545c;
 $background-floating: #18191c;
 $background-nested-floating: #2f3136;
-$background-modifier-hover: rgba(79, 84, 92, 0.4);
-$background-modifier-active: rgba(79, 84, 92, 0.48);
-$background-modifier-selected: rgba(79, 84, 92, 0.6);
-$background-modifier-accent: rgba(79, 84, 92, 0.48);
-$background-message-hover: rgba(4, 4, 5, 0.07);
+$background-modifier-hover: rgb(79, 84, 92, 0.4);
+$background-modifier-active: rgb(79, 84, 92, 0.48);
+$background-modifier-selected: rgb(79, 84, 92, 0.6);
+$background-modifier-accent: rgb(79, 84, 92, 0.48);
+$background-message-hover: rgb(4, 4, 5, 0.07);
 $header-primary: #fff;
 $header-secondary: #b9bbbe;
 $text-link: hsl(197, calc(var(--saturation-factor, 1) * 100%), 47.8%);
@@ -367,7 +367,7 @@ $font-display: "ABC Ginto Normal", "Helvetica Neue", Helvetica, Arial, sans-seri
 
                 &:hover,
                 &:focus {
-                    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.16));
+                    filter: drop-shadow(0 4px 4px rgb(0, 0, 0, 0.16));
                 }
             }
 

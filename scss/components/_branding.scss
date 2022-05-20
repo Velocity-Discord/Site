@@ -1,0 +1,98 @@
+@use "../abstracts";
+
+section.branding {
+    width: 100%;
+
+    > * + * {
+        margin-top: 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+        color: abstracts.$text;
+    }
+
+    figure {
+        img {
+            height: 200px;
+            border: 1px solid rgb(255, 255, 255, 0.1);
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+        }
+
+        figcaption {
+            a {
+                color: abstracts.$accentText;
+                text-decoration: none;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    left: 0;
+                    bottom: -3px;
+                    background: currentColor;
+                    transform: scaleX(0);
+                    transition: transform 0.2s ease;
+                    transform-origin: right bottom 0px;
+                }
+                &:hover::after {
+                    transform: scaleX(1) !important;
+                    transform-origin: left bottom 0px;
+                }
+            }
+        }
+    }
+
+    .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        width: 80%;
+
+        .color-box {
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            padding: 20px;
+            min-height: 150px;
+            color: #fff;
+            position: relative;
+
+            h2 {
+                font-size: 25px;
+                margin-bottom: 30px;
+            }
+
+            .color-codes {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                text-transform: uppercase;
+            }
+
+            &.vb {
+                background-color: #5b88fc;
+                color: #fff;
+            }
+            &.mg {
+                background-color: #61ed99;
+                color: #000;
+            }
+            &.dr {
+                background-color: #d46060;
+                color: #fff;
+            }
+            &.sy {
+                background-color: #f2e147;
+                color: #000;
+            }
+            &.ab {
+                background-color: #242121;
+                color: #fff;
+            }
+        }
+    }
+}
