@@ -20,7 +20,7 @@
 
         a {
             text-decoration: none;
-            color: abstracts.$linkAccent;
+            color: abstracts.$accent;
             position: relative;
 
             &:hover::after {
@@ -57,7 +57,7 @@ footer {
     color: abstracts.$text;
 
     h1 {
-        color: abstracts.$accentText;
+        color: abstracts.$accent;
     }
 
     .cy {
@@ -75,7 +75,7 @@ footer {
 
         a {
             text-decoration: none;
-            color: abstracts.$linkAccent;
+            color: abstracts.$accent;
             position: relative;
 
             &:hover::after {

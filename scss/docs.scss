@@ -125,6 +125,7 @@ section {
         color: #fff;
 
         overflow-y: scroll;
+        overflow-x: hidden;
         scroll-behavior: smooth;
 
         .timestamp {
@@ -172,7 +173,14 @@ section {
         }
     }
 
-    a {
+    h1 a,
+    h2 a,
+    h3 a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:not(h1 a, h2 a, h3 a) {
         color: #5f6fff;
         text-decoration: none;
         position: relative;

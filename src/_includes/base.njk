@@ -42,9 +42,18 @@
 
 <script>
   hljs.highlightAll()
-  document.querySelectorAll(".markdown h1").forEach((e) => {e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "")})
-  document.querySelectorAll(".markdown h2").forEach((e) => {e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "")})
-  document.querySelectorAll(".markdown h3").forEach((e) => {e.id = e.innerHTML.toLocaleLowerCase().replace(" ", "")})
+  document.querySelectorAll(".markdown h1").forEach((e) => {
+    e.id = e.innerHTML.replace(/^[^a-z]+|[^\w-]+/gi, "").toLowerCase();
+    e.innerHTML = `<a href="#${e.id}">${e.innerHTML}</a>`
+  })
+  document.querySelectorAll(".markdown h2").forEach((e) => {
+    e.id = e.innerHTML.replace(/^[^a-z]+|[^\w-]+/gi, "").toLowerCase();
+    e.innerHTML = `<a href="#${e.id}">${e.innerHTML}</a>`
+  })
+  document.querySelectorAll(".markdown h3").forEach((e) => {
+    e.id = e.innerHTML.replace(/^[^a-z]+|[^\w-]+/gi, "").toLowerCase();
+    e.innerHTML = `<a href="#${e.id}">${e.innerHTML}</a>`
+  })
 
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {

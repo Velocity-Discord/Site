@@ -37,7 +37,7 @@
 
         h1 {
             font-size: 40px;
-            color: abstracts.$accentText;
+            color: abstracts.$accent;
         }
 
         h2 {
@@ -69,7 +69,7 @@
             min-height: 200px;
 
             &:focus {
-                outline: 2px solid abstracts.$accentText;
+                outline: 2px solid abstracts.$accent;
             }
 
             h1 {
