@@ -14,12 +14,20 @@ async function getReadme() {
     let p = document.querySelector("#readme");
 
     let input
+    let readme
 
     await fetch(readmeURL)
         .then((response) => response.text())
-        .then((data) => input = data);
+        .then((data) => (readme = data));
 
-    input = '<h1 class="path">' + readmeURL.match(mainRegex)[2] + " / " + readmeURL.match(mainRegex)[3] + " / " + readmeURL.match(mainRegex)[5] + " / README.md </h1> \n\n" + input;
+    input = '<h1 class="path">'
+    readmeURL
+        .replace("https://raw.githubusercontent.com/", "")
+        .split("/")
+        .forEach((item) => {
+            input += item + " / ";
+        });
+    input += "</h1> \n\n" + readme;
 
     p.innerHTML = md.render(input);
 }
