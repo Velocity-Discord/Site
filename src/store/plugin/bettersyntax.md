@@ -1,4 +1,5 @@
 ---
+module: true
 name: BetterSyntax
 description: Lets you edit Syntax Highlighting with an easy interface and adds
   some useful buttons.
