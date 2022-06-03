@@ -216,6 +216,11 @@ $font-display: "ABC Ginto Normal", "Helvetica Neue", Helvetica, Arial, sans-seri
     .invite-container {
         display: flex;
 
+        &:hover,
+        &:focus {
+            background-color: $background-message-hover;
+        }
+
         .invite {
             margin-top: 0.16rem;
             background-color: $background-secondary;
@@ -343,6 +348,10 @@ $font-display: "ABC Ginto Normal", "Helvetica Neue", Helvetica, Arial, sans-seri
         &:hover,
         &:focus {
             background-color: $background-message-hover;
+
+            + .invite-container {
+                background-color: $background-message-hover;
+            }
         }
 
         .body {
