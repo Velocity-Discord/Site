@@ -11,7 +11,7 @@ sourceURL: https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/Bet
 readme: https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/README.md
 image: /assets/uploads/bettersyntax.png
 tags:
-  - themes
+  - plugins
   - store
 date: 2022-06-02T23:50:32.814Z
 updated: 2022-06-02T23:50:33.747Z
