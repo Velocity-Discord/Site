@@ -15,7 +15,7 @@ section.branding {
     figure {
         img {
             height: 200px;
-            border: 1px solid rgb(255, 255, 255, 0.1);
+            border: 1px solid abstracts.$border;
             background-color: rgb(255, 255, 255);
             border-radius: 10px;
         }
