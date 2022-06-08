@@ -35,7 +35,7 @@
         </div>
         <script>
             async function getAddons() {
-                const response = await fetch('/admin/dev/appreovals.json');
+                const response = await fetch('/admin/dev/approvals.json');
                 const data = await response.json();
                 Object.values(data).forEach(addon => {
                     document.querySelector('.review-grid').innerHTML += `
