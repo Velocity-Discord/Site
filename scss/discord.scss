@@ -135,59 +135,59 @@ $font-display: "ABC Ginto Normal", "Helvetica Neue", Helvetica, Arial, sans-seri
 @font-face {
     font-family: Whitney;
     font-weight: 300;
-    src: url(/assets/whitneybook.otf);
+    src: url(/assets/Whitney/whitneybook.otf);
 }
 
 @font-face {
     font-family: Whitney;
     font-weight: 300;
     font-style: italic;
-    src: url(/assets/whitneybookitalic.otf);
+    src: url(/assets/Whitney/whitneybookitalic.otf);
 }
 
 @font-face {
     font-family: Whitney;
     font-weight: 400;
-    src: url(/assets/whitneylight.otf);
+    src: url(/assets/Whitney/whitneylight.otf);
 }
 
 @font-face {
     font-family: Whitney;
     font-weight: 400;
     font-style: italic;
-    src: url(/assets/whitneylightitalic.otf);
+    src: url(/assets/Whitney/whitneylightitalic.otf);
 }
 
 @font-face {
     font-family: Whitney;
     font-weight: 500;
-    src: url(/assets/whitneymedium.otf);
+    src: url(/assets/Whitney/whitneymedium.otf);
 }
 
 @font-face {
     font-family: Whitney;
     font-weight: 500;
     font-style: italic;
-    src: url(/assets/whitneymediumitalic.otf);
+    src: url(/assets/Whitney/whitneymediumitalic.otf);
 }
 
 @font-face {
     font-family: Whitney;
     font-weight: 600;
-    src: url(/assets/whitneysemibold.otf);
+    src: url(/assets/Whitney/whitneysemibold.otf);
 }
 
 @font-face {
     font-family: Whitney;
     font-weight: 600;
     font-style: italic;
-    src: url(/assets/WhitneySemiboldItalic.otf);
+    src: url(/assets/Whitney/whitneySemiboldItalic.otf);
 }
 
 @font-face {
     font-family: Whitney;
     font-weight: 700;
-    src: url(/assets/whitneybold.otf);
+    src: url(/assets/Whitney/whitneybold.otf);
 }
 
 :root {
@@ -381,7 +381,7 @@ $font-display: "ABC Ginto Normal", "Helvetica Neue", Helvetica, Arial, sans-seri
             }
 
             .header {
-                font-weight: 400;
+                font-weight: 600;
                 font-size: 16px;
                 display: block;
                 overflow: hidden;
@@ -434,11 +434,12 @@ $font-display: "ABC Ginto Normal", "Helvetica Neue", Helvetica, Arial, sans-seri
                 margin-left: -72px;
                 padding-left: 72px;
                 color: $text-normal;
+                font-weight: 500;
 
                 &.edited::after {
                     content: " (edited)";
                     font-size: 0.625rem;
-                    font-weight: 400;
+                    font-weight: 500;
                     line-height: 1;
                     user-select: none;
                     color: $text-muted;
