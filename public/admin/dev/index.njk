@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Velocity - Developer</title>
+        
+        <link rel="stylesheet" href="/css/api.css" />
+        <link rel="icon" type="image/x-icon" href="/assets/icon.png" />
+
+        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </head>
+    <body>
+        <div class="api-container">
+            <div class="backdrop">
+                <section class="content">
+                    <div class="review-grid">
+                        <div class="review-card">
+                            <div class="review-card-header">THEME - OSX</div>
+                            <a class="review-card-source button look-empty" href="https://github.com">Source</a>
+                            <a href="https://velocity-discord.netlify.app/admin/#/collections/theme/new" class="review-card-approve button look-filled">Approve</a>
+
+                        </div>
+                    </div>
+                </section>
+                <aside class="sidebar">
+                    <div class="logo">
+                        <img src="/assets/icon.png" alt="Logo">
+                        <h2>Developer</h2>
+                    </div>
+                    <div class="nav-list">
+                        <li class="nav-list-item"><a href=""></a></li>
+                        <li class="nav-list-item"><a href=""></a></li>
+                        <li class="nav-list-item"><a href=""></a></li>
+                        <li class="nav-list-item"><a href=""></a></li>
+                        <li class="nav-list-item"><a href=""></a></li>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <script>
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", (user) => {
+                    if (!user) {
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "/dev/";
+                        });
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
