@@ -40,21 +40,24 @@
             </div>
         </div>
         <script>
-            if (window.netlifyIdentity) {
-                if (window.netlifyIdentity.currentUser() == null) {
-                    location.href = "/404";
-                }
-                if (!window.netlifyIdentity.currentUser().app_metadata.roles.includes("admin")) {
-                    window.location.href = '/404';
-                }
-                window.netlifyIdentity.on("init", (user) => {
-                    if (!user) {
-                        window.netlifyIdentity.on("login", () => {
-                            document.location.href = "/dev/";
-                        });
+            setTimeout(() => {
+                    
+                if (window.netlifyIdentity) {
+                    if (window.netlifyIdentity.currentUser() == null) {
+                        location.href = "/404";
                     }
-                });
-            }
+                    if (!window.netlifyIdentity.currentUser().app_metadata.roles.includes("admin")) {
+                        window.location.href = '/404';
+                    }
+                    window.netlifyIdentity.on("init", (user) => {
+                        if (!user) {
+                            window.netlifyIdentity.on("login", () => {
+                                document.location.href = "/dev/";
+                            });
+                        }
+                    });
+                }
+            }, 1000);
         </script>
     </body>
 </html>
