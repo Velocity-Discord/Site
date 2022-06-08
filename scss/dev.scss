@@ -105,6 +105,8 @@ html {
                     .addon-card-footer {
                         margin-top: auto;
                         display: flex;
+                        gap: 5px;
+                        justify-content: flex-end;
                     }
                 }
             }
