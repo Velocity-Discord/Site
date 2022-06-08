@@ -3,6 +3,7 @@ backend:
     branch: main
 media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
+logo_url: https://velocity-discord.netlify.app/assets/icon.png
 collections:
     - name: "docs"
       label: "Documentation"
