@@ -16,12 +16,6 @@
             <div class="backdrop">
                 <section class="content">
                     <div class="review-grid">
-                        <div class="review-card">
-                            <div class="review-card-header">THEME - OSX</div>
-                            <a class="review-card-source button look-empty" href="https://github.com">Source</a>
-                            <a href="https://velocity-discord.netlify.app/admin/#/collections/theme/new" class="review-card-approve button look-filled">Approve</a>
-
-                        </div>
                     </div>
                 </section>
                 <aside class="sidebar">
@@ -40,8 +34,22 @@
             </div>
         </div>
         <script>
+            async function getAddons() {
+                const response = await fetch('/admin/dev/appreovals.json');
+                const data = await response.json();
+                Object.values(data).forEach(addon => {
+                    document.querySelector('.review-grid').innerHTML += `
+                        <div class="review-card">
+                            <div class="review-card-header">${addon.name}</div>
+                            <a class="review-card-source button look-empty" href="${addon.source}">Source</a>
+                            <a href="https://velocity-discord.netlify.app/admin/#/collections/theme/new" class="review-card-approve button look-filled">Approve</a>
+
+                        </div>
+                    `;
+                })
+            }
+
             setTimeout(() => {
-                    
                 if (window.netlifyIdentity) {
                     if (!window.netlifyIdentity?.currentUser()) {
                         location.href = "/404";
