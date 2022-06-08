@@ -102,6 +102,24 @@
         const readmeURL = "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/README.md"
         const sourceURL = "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/"
         const sourceFileURL = "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/BetterSyntax/"
+
+        const downloadURL = async () => {
+            const e = await fetch(sourceFileURL)
+
+            const dataBlob = new Blob([await e.text()], {type: 'application/octet-stream'});
+            const dataURL = URL.createObjectURL(dataBlob);
+            const anchor = document.createElement("a")
+
+            anchor.href = dataURL;
+            
+            if (sourceFileURL.includes(".plugin.js")) anchor.download = "BetterSyntax.plugin.js";
+            else if (sourceFileURL.includes(".theme.css")) anchor.download = "BetterSyntax.theme.css";
+            anchor.click();
+        }
+
+        if (window.location.search.includes("download")) {
+            downloadURL()
+        }
     </script>
     <script src="/js/addon.js"></script>
 </body>

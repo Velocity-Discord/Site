@@ -81,7 +81,7 @@
 
     <div class="addon-main">
         <div id="readme"></div>
-        <aside class="addon-actions"><button class="look-filled full" onClick="location.href = '?download'">
+        <aside class="addon-actions"><button class="look-filled full" onClick="downloadURL()">
                 Download
             </button><button class="look-vibrant full external" onClick="location.href = 'https://github.com/TheCommieAxolotl/BetterDiscord-Stuff/tree/main/OSX'">
                 Source
@@ -101,6 +101,24 @@
         const readmeURL = "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/OSX/README.md"
         const sourceURL = "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/OSX/"
         const sourceFileURL = "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/OSX/OSX.theme.css"
+
+        const downloadURL = async () => {
+            const e = await fetch(sourceFileURL)
+
+            const dataBlob = new Blob([await e.text()], {type: 'application/octet-stream'});
+            const dataURL = URL.createObjectURL(dataBlob);
+            const anchor = document.createElement("a")
+
+            anchor.href = dataURL;
+            
+            if (sourceFileURL.includes(".plugin.js")) anchor.download = "OSX.plugin.js";
+            else if (sourceFileURL.includes(".theme.css")) anchor.download = "OSX.theme.css";
+            anchor.click();
+        }
+
+        if (window.location.search.includes("download")) {
+            downloadURL()
+        }
     </script>
     <script src="/js/addon.js"></script>
 </body>

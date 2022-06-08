@@ -3,13 +3,6 @@ let md = new Remarkable({
     breaks: true,
 });
 
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.has("download")) {
-    window.location.href = sourceFileURL
-}
-
-const mainRegex = /.*github(usercontent)?.com\/(.*)\/(.*)\/(.*)\/(.*)\//i;
-
 async function getReadme() {
     let p = document.querySelector("#readme");
 

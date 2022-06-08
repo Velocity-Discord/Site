@@ -86,7 +86,7 @@
                 <div class="arrow">→</div>
             </button>
             {%- else -%}
-            <button class="look-filled full" onClick="location.href = '?download'">
+            <button class="look-filled full" onClick="downloadURL()">
                 Download
             </button>
             {%- endif -%}
@@ -108,6 +108,24 @@
         const readmeURL = "{{ readme }}"
         const sourceURL = "{{ source }}"
         const sourceFileURL = "{{ sourceFile }}"
+
+        const downloadURL = async () => {
+            const e = await fetch(sourceFileURL)
+
+            const dataBlob = new Blob([await e.text()], {type: 'application/octet-stream'});
+            const dataURL = URL.createObjectURL(dataBlob);
+            const anchor = document.createElement("a")
+
+            anchor.href = dataURL;
+            
+            if (sourceFileURL.includes(".plugin.js")) anchor.download = "{{ name }}.plugin.js";
+            else if (sourceFileURL.includes(".theme.css")) anchor.download = "{{ name }}.theme.css";
+            anchor.click();
+        }
+
+        if (window.location.search.includes("download") && {{ module }} == false) {
+            downloadURL()
+        }
     </script>
     <script src="/js/addon.js"></script>
 </body>
