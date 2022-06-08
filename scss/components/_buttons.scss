@@ -46,6 +46,10 @@ a.button {
         }
     }
 
+    &.look-danger {
+        @include abstracts.danger;
+    }
+
     &.look-vibrant {
         @include abstracts.vibrancy;
     }
