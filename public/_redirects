@@ -1,3 +1,3 @@
-/* /404 404
-/api/*          200!  Role=admin
+/*      /404  404
+/api/*  200!  Role=admin
 /api/*  /404  401!
