@@ -43,10 +43,10 @@
             setTimeout(() => {
                     
                 if (window.netlifyIdentity) {
-                    if (window.netlifyIdentity.currentUser() == null) {
+                    if (!window.netlifyIdentity?.currentUser()) {
                         location.href = "/404";
                     }
-                    if (!window.netlifyIdentity.currentUser().app_metadata.roles.includes("admin")) {
+                    if (!window.netlifyIdentity.currentUser()?.app_metadata?.roles?.includes("admin")) {
                         window.location.href = '/404';
                     }
                     window.netlifyIdentity.on("init", (user) => {
@@ -57,7 +57,7 @@
                         }
                     });
                 }
-            }, 1000);
+            }, 100);
         </script>
     </body>
 </html>
