@@ -41,6 +41,9 @@
         </div>
         <script>
             if (window.netlifyIdentity) {
+                if (!netlifyIdentity.currentUser().app_metadata.roles.includes('admin')) {
+                    return window.location.href = '/404';
+                }
                 window.netlifyIdentity.on("init", (user) => {
                     if (!user) {
                         window.netlifyIdentity.on("login", () => {
@@ -48,6 +51,8 @@
                         });
                     }
                 });
+            } else {
+                document.location.href = "/404/";
             }
         </script>
     </body>
