@@ -12,6 +12,7 @@ a.button {
     transition: all 0.2s ease;
     cursor: pointer;
     height: fit-content;
+    text-decoration: none;
 
     &:focus {
         color: rgb(218, 218, 218);

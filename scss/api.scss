@@ -82,6 +82,36 @@ html {
                     transition: all 0.2s ease;
                     cursor: pointer;
                     gap: 5px;
+
+                    .review-card-title {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        margin-bottom: 0.1rem;
+                    }
+
+                    .review-card-description {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        margin-bottom: 0.5rem;
+                        color: abstracts.$textSecondary;
+                    }
+
+                    .review-card-button {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .review-card-author {
+                        color: abstracts.$accent;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    }
+
+                    .addon-card-footer {
+                        margin-top: auto;
+                        display: flex;
+                    }
                 }
             }
         }
