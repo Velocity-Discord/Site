@@ -1,2 +1,2 @@
 /api/*  200!  Role=admin
-/*      /  404
+/*      /features/  404
