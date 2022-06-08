@@ -4,6 +4,15 @@
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 html,
 body {
     height: 100vh;
@@ -107,6 +116,25 @@ html {
                         display: flex;
                         gap: 5px;
                         justify-content: flex-end;
+                    }
+
+                    .review-card-hash {
+                        display: flex;
+                        flex-direction: column;
+                        border: 1px solid abstracts.$border;
+                        border-width: 1px;
+                        color: abstracts.$accent;
+                        border-radius: 0.5rem;
+                        padding: 0.3rem;
+                        font-size: 0.8rem;
+                        animation: fadeIn 0.7s ease-in-out;
+                        transition: all 0.2s ease;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: darken(abstracts.$accent, 5%);
+                            text-decoration: underline;
+                        }
                     }
                 }
             }

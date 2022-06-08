@@ -4,6 +4,7 @@
         "name": "OSX",
         "description": "Theme that brings some of the best and most memorable parts of MacOS and OSX into 1 theme.",
         "version": "v1.0.0",
+        "commit": "71337a139dc2d97441071ab08476189042fa6427",
         "author": "TheCommieAxolotl",
         "source": "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/OSX/",
         "sourceFile": "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/OSX/OSX.theme.css",
