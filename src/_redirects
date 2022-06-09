@@ -1,4 +1,4 @@
 # Redirects from what the browser requests to what we serve
 /admin/*                     200!  Role=admin
-/admin/*  /admin/index.html  401!
+/admin/*  /403  401!
 /*        /404               404
