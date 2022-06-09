@@ -78,8 +78,16 @@ html {
                 h1 {
                     font-size: 1.5rem;
                     font-weight: 600;
-                    margin-bottom: 20px;
+                    margin-bottom: 5px;
                     color: abstracts.$text;
+                }
+
+                h2 {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                    color: darken(abstracts.$text, 10%);
+                    cursor: pointer;
                 }
 
                 .review-grid {

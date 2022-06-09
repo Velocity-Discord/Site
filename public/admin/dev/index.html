@@ -17,6 +17,7 @@
                 <section class="content">
                     <div class="reviews">
                         <h1>Awaiting Review</h1>
+                        <h2>Checking...</h2>
                         <div class="review-grid">
 
                         </div>
@@ -38,6 +39,13 @@
             </div>
         </div>
         <script>
+            const dateToShortTime = (date) => {
+                let hours = date.getHours() % 12 || 12;;
+                let minutes = date.getMinutes();
+                let seconds = date.getSeconds();
+
+                return `${hours}:${minutes}`;
+            }
             const createElementFromHTML = (string, tagName) => {
                 const div = document.createElement(tagName || 'div');
                 div.innerHTML = string.trim();
@@ -48,8 +56,11 @@
                 const response = await fetch('/admin/dev/approvals.json');
                 const data = await response.json();
                 Object.values(data).forEach(addon => {
+                    if (document.querySelector(`.review-grid .review-card.${addon.name.replace(" ", "-")}`)) {
+                        document.querySelector(`.review-grid .review-card.${addon.name.replace(" ", "-")}`).remove();
+                    }
                     document.querySelector('.review-grid').append(createElementFromHTML(`
-                        <div class="review-card">
+                        <div class="review-card ${addon.name.replace(" ", "-")}">
                             <div class="review-card-header">${addon.type.replace(/^\w/, (c) => c.toUpperCase())} - ${addon.name}</div>
                             <div class="review-card-author">${addon.author}</div>
                             <div class="review-card-description">${addon.description}</div>
@@ -62,9 +73,14 @@
                     `));
                 })
                 document.querySelector(".reviews h1").innerHTML = `Awaiting Review - ${document.querySelector(".reviews .review-grid").children.length}`
+                document.querySelector(".reviews h2").innerHTML = `Last Checked - ${dateToShortTime(new Date())}`
             }
 
             getAddons()
+
+            document.querySelector(".reviews h2").addEventListener("click", () => {
+                getAddons()
+            })
 
             setInterval(() => {
                 getAddons()
