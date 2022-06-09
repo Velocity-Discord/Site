@@ -43,7 +43,7 @@
                             <div class="review-card-header">${addon.type.replace(/^\w/, (c) => c.toUpperCase())} - ${addon.name}</div>
                             <div class="review-card-author">${addon.author}</div>
                             <div class="review-card-description">${addon.description}</div>
-                            <a class="review-card-hash" href="${addon.source}/commit/${addon.hash}">${addon.commit.substring(0, 7)}</a>
+                            <a class="review-card-hash" href="${addon.sourceURL}/commit/${addon.commit}">${addon.commit.substring(0, 7)}</a>
                             <div class="addon-card-footer">
                                 <a class="review-card-button review-card-source button look-empty" href="${addon.source}">Source</a>
                                 <a href="https://velocity-discord.netlify.app/admin/#/collections/${addon.type}/new" class="review-card-button review-card-approve button look-filled">Approve</a>
