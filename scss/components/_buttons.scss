@@ -40,10 +40,6 @@ a.button {
 
     &.look-filled {
         @include abstracts.filled;
-
-        &.hover {
-            background-color: abstracts.$accentGlow;
-        }
     }
 
     &.look-danger {

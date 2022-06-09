@@ -17,6 +17,10 @@
     border: 1px solid rgb(255, 255, 255, 0.1);
     background-color: #4653ce;
     border-width: 1px;
+
+    &:hover {
+        background-color: #4654ced1;
+    }
 }
 
 @mixin danger {
