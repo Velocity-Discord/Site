@@ -129,6 +129,7 @@ html {
                         animation: fadeIn 0.7s ease-in-out;
                         transition: all 0.2s ease;
                         cursor: pointer;
+                        text-decoration: none;
 
                         &:hover {
                             color: darken(abstracts.$accent, 5%);
