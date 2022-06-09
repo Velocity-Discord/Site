@@ -74,66 +74,75 @@ html {
             width: 100%;
             height: 100%;
 
-            .review-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                grid-gap: 1.5rem;
-
-                .review-card {
-                    display: flex;
-                    flex-direction: column;
-                    @include abstracts.vibrancy;
+            .reviews {
+                h1 {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin-bottom: 20px;
                     color: abstracts.$text;
-                    border-radius: 0.5rem;
-                    padding: 1rem;
-                    min-height: 250px;
-                    animation: fadeIn 0.7s ease-in-out;
-                    transition: all 0.2s ease;
-                    gap: 5px;
+                }
 
-                    .review-card-title {
-                        font-size: 1.5rem;
-                        font-weight: 600;
-                        margin-bottom: 0.1rem;
-                    }
+                .review-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                    grid-gap: 1.5rem;
 
-                    .review-card-description {
-                        font-size: 1rem;
-                        font-weight: 400;
-                        margin-bottom: 0.5rem;
-                        color: abstracts.$textSecondary;
-                    }
-
-                    .review-card-author {
-                        color: abstracts.$accent;
-                        font-size: 0.8rem;
-                        font-weight: 500;
-                    }
-
-                    .addon-card-footer {
-                        margin-top: auto;
-                        display: flex;
-                        gap: 5px;
-                        justify-content: flex-end;
-                    }
-
-                    .review-card-hash {
+                    .review-card {
                         display: flex;
                         flex-direction: column;
-                        border: 1px solid abstracts.$border;
-                        border-width: 1px;
-                        color: abstracts.$accent;
+                        @include abstracts.vibrancy;
+                        color: abstracts.$text;
                         border-radius: 0.5rem;
-                        padding: 0.3rem;
-                        font-size: 0.8rem;
+                        padding: 1rem;
+                        min-height: 250px;
                         animation: fadeIn 0.7s ease-in-out;
                         transition: all 0.2s ease;
-                        cursor: pointer;
-                        text-decoration: none;
+                        gap: 5px;
 
-                        &:hover {
-                            color: darken(abstracts.$accent, 5%);
-                            text-decoration: underline;
+                        .review-card-title {
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            margin-bottom: 0.1rem;
+                        }
+
+                        .review-card-description {
+                            font-size: 1rem;
+                            font-weight: 400;
+                            margin-bottom: 0.5rem;
+                            color: abstracts.$textSecondary;
+                        }
+
+                        .review-card-author {
+                            color: abstracts.$accent;
+                            font-size: 0.8rem;
+                            font-weight: 500;
+                        }
+
+                        .addon-card-footer {
+                            margin-top: auto;
+                            display: flex;
+                            gap: 5px;
+                            justify-content: flex-end;
+                        }
+
+                        .review-card-hash {
+                            display: flex;
+                            flex-direction: column;
+                            border: 1px solid abstracts.$border;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            border-width: 1px;
+                            color: abstracts.$accent;
+                            border-radius: 0.5rem;
+                            padding: 0.3rem;
+                            font-size: 0.8rem;
+                            animation: fadeIn 0.7s ease-in-out;
+                            transition: all 0.2s ease;
+                            cursor: pointer;
+                            text-decoration: none;
+
+                            &:hover {
+                                color: darken(abstracts.$accent, 5%);
+                            }
                         }
                     }
                 }

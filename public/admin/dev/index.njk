@@ -15,7 +15,11 @@
         <div class="api-container">
             <div class="backdrop">
                 <section class="content">
-                    <div class="review-grid">
+                    <div class="reviews">
+                        <h1>Awaiting Review</h1>
+                        <div class="review-grid">
+
+                        </div>
                     </div>
                 </section>
                 <aside class="sidebar">
@@ -49,35 +53,18 @@
                             <div class="review-card-header">${addon.type.replace(/^\w/, (c) => c.toUpperCase())} - ${addon.name}</div>
                             <div class="review-card-author">${addon.author}</div>
                             <div class="review-card-description">${addon.description}</div>
-                            <a class="review-card-hash" href="${addon.repository}/commit/${addon.commit}">${addon.commit.substring(0, 7)}</a>
+                            <a target="_blank" class="review-card-hash" href="${addon.repository}/commit/${addon.commit}">${addon.commit.substring(0, 7)} →</a>
                             <div class="addon-card-footer">
-                                <a class="review-card-button review-card-source button look-empty" href="${addon.sourceFile}">Source</a>
-                                <a href="https://velocity-discord.netlify.app/admin/#/collections/${addon.type}/new" class="review-card-button review-card-approve button look-filled">Approve</a>
+                                <a target="_blank" class="review-card-button review-card-source button look-empty" href="${addon.sourceFile}">Source <div class="arrow">→</div></a>
+                                <a target="_blank" href="https://velocity-discord.netlify.app/admin/#/collections/${addon.type}/new" class="review-card-button review-card-approve button look-filled">Approve</a>
                             </div>
                     </div>
                     `));
                 })
+                document.querySelector(".reviews h1").innerHTML = `Awaiting Review - ${document.querySelector(".reviews .review-grid").children.length}`
             }
-            
-            getAddons()
 
-            setTimeout(() => {
-                if (window.netlifyIdentity) {
-                    if (!window.netlifyIdentity?.currentUser()) {
-                        location.href = "/404";
-                    }
-                    if (!window.netlifyIdentity.currentUser()?.app_metadata?.roles?.includes("admin")) {
-                        window.location.href = '/404';
-                    }
-                    window.netlifyIdentity.on("init", (user) => {
-                        if (!user) {
-                            window.netlifyIdentity.on("login", () => {
-                                document.location.href = "/dev/";
-                            });
-                        }
-                    });
-                }
-            }, 100);
+            getAddons()
         </script>
     </body>
 </html>
