@@ -37,9 +37,10 @@
             const createElementFromHTML = (string, tagName) => {
                 const div = document.createElement(tagName || 'div');
                 div.innerHTML = string.trim();
-                return div.firstChild;}
-            }
-            async function getAddons() {
+                return div.firstChild;
+            };
+
+            const getAddons = async () => {
                 const response = await fetch('/admin/dev/approvals.json');
                 const data = await response.json();
                 Object.values(data).forEach(addon => {
@@ -54,9 +55,10 @@
                                 <a href="https://velocity-discord.netlify.app/admin/#/collections/${addon.type}/new" class="review-card-button review-card-approve button look-filled">Approve</a>
                             </div>
                     </div>
-                    `);
+                    `));
                 })
             }
+            
             getAddons()
 
             setTimeout(() => {
