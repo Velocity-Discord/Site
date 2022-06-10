@@ -397,6 +397,11 @@ $font-display: "ABC Ginto Normal", "Helvetica Neue", Helvetica, Arial, sans-seri
                 .username {
                     font-weight: 500;
                     margin-right: 8px;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
 
                     &.role-0 {
                         color: rgb(91, 136, 252);
