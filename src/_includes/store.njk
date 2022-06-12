@@ -28,13 +28,14 @@
 
     {{ content | safe }}
 
-    <h1 class="featured">Featured Addons</h1>
+    {%- if type == "store" -%}
+    <h1 class="featured">Featured Addons</h1> 
+    {%- endif -%}
     <div class="addons-grid">
-        {%- for addon in collections.store -%}
-
+        {%- for addon in collections[type] -%}
             <div class="addon-wrapper">
-                <a tabindex="0" href="{{ addon.url }}" class="addon-link">
-                    <div tabindex="0" class="addon-card">
+                <a tabindex="1" href="{{ addon.url }}" class="addon-link">
+                    <div class="addon-card">
                         {%- if addon.data.image -%}
                             <img class="addon-card-image" src="{{addon.data.image}}" />
                         {%- endif -%}
@@ -43,11 +44,11 @@
                         <div class="addon-card-description"> {{addon.data.description}} </div>
                         <div class="addon-card-footer">
                             {%- if addon.data.module -%}
-                            <a class="button look-filled" onClick="location.href = '{{addon.data.sourceURL }}?download'">
+                            <a class="button look-filled" href="{{addon.data.sourceURL }}">
                                 Download
                             </a>
                             {%- else -%}
-                            <a class="button look-filled" onClick="location.href = '{{addon.url }}?download'">
+                            <a class="button look-filled" href ="{{addon.url }}?download">
                                 Download
                             </a>
                             {%- endif -%}
@@ -55,7 +56,6 @@
                     </div>
                 </a>
             </div>
-
         {%- endfor -%}
     </div>
 </body>
