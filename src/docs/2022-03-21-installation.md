@@ -5,29 +5,62 @@ date: 2022-05-05T22:16:31.479Z
 ---
 # Installation
 
-- - -
+---
 
-# Required Programs
+Prerequisites: [Node.js](https://nodejs.org/en/) v12+, [git](https://git-scm.com/) and [npm](https://www.npmjs.com/).
 
-You will need to install [git](https://git-scm.com/download/) and [node](https://nodejs.org/) (LTS is recommended). 
-<br />
+### 1. Clone the repository.
+```ps
+git clone https://github.com/Velocity-Discord/Velocity.git
+```
 
-# The Actual Installation
+### 2 Run the install script.
+(optionally add `--win` or `--mac` to install for Windows or Mac respectively)
 
-### MacOS
+#### Stable 
+```ps
+npm run install
+```
 
-1. Open Terminal
-2. Paste in 
-   `git clone https://github.com/velocity-discord/Velocity`
-3. Run `npm run install -- --mac` (if you want to install to Canary or PTB add a `--canary` or `--ptb` flag)
+#### PTB
+```ps
+npm run install --ptb
+```
 
-### Windows
+#### Canary
+```ps
+npm run install --canary
+```
 
-1. Open Command Prompt
-2. Paste in 
-   `git clone https://github.com/velocity-discord/Velocity`
-3. Run `npm run install -- --win` (if you want to install to Canary or PTB add a `--canary` or `--ptb` flag)
+---
+## Development
+Prerequisites: [Node.js](https://nodejs.org/en/) v12+, [git](https://git-scm.com/) and [npm](https://www.npmjs.com/).
 
-### Linux
+### 1. Clone the repository.
+```ps
+git clone https://github.com/Velocity-Discord/Velocity.git
+```
 
-Coming Soon
+### 2. Run the install script.
+(optionally add `--win` or `--mac` to install for Windows or Mac respectively)
+
+#### Stable 
+```ps
+npm run install
+```
+
+#### PTB
+```ps
+npm run install --ptb
+```
+
+#### Canary
+```ps
+npm run install --canary
+```
+
+### 3. Development. 
+To automatically compile the asar, run 
+```ps
+npm run watch
+```
