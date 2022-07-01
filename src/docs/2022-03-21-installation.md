@@ -7,10 +7,6 @@ date: 2022-05-05T22:16:31.479Z
 
 - - -
 
-<div class="notice">
-    Velocity is currently a beta project. the instructions labeled here will not work until it is Released.
-</div>
-
 # Required Programs
 
 You will need to install [git](https://git-scm.com/download/) and [node](https://nodejs.org/) (LTS is recommended). 
