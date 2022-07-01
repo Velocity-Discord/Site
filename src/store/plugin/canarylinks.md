@@ -7,7 +7,7 @@ author: TheCommieAxolotl
 source: https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/CanaryLinks/
 sourceFile: https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/CanaryLinks/
 sourceURL: https://github.com/TheCommieAxolotl/Velocity-Plugins/tree/main/CanaryLinks
-readme: "-"
+readme: https://raw.githubusercontent.com/bepvte/bd-addons/main/README.md
 date: 2022-07-01T22:55:41.634Z
 updated: 2022-07-01T22:55:41.647Z
 ---
