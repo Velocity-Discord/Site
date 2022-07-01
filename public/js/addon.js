@@ -3,26 +3,28 @@ let md = new Remarkable({
     breaks: true,
 });
 
-async function getReadme() {
-    let p = document.querySelector("#readme");
+if (readmeURL !== "null") {
+    async function getReadme() {
+        let p = document.querySelector("#readme");
 
-    let input
-    let readme
+        let input
+        let readme
 
-    await fetch(readmeURL)
-        .then((response) => response.text())
-        .then((data) => (readme = data));
+        await fetch(readmeURL)
+            .then((response) => response.text())
+            .then((data) => (readme = data));
 
-    input = '<h1 class="path">'
-    readmeURL
-        .replace("https://raw.githubusercontent.com/", "")
-        .split("/")
-        .forEach((item) => {
-            input += item + " / ";
-        });
-    input += "</h1> \n\n" + readme;
+        input = '<h1 class="path">'
+        readmeURL
+            .replace("https://raw.githubusercontent.com/", "")
+            .split("/")
+            .forEach((item) => {
+                input += item + " / ";
+            });
+        input += "</h1> \n\n" + readme;
 
-    p.innerHTML = md.render(input);
+        p.innerHTML = md.render(input);
+    }
+
+    getReadme()
 }
-
-getReadme()
