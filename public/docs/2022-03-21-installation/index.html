@@ -51,26 +51,42 @@
         <div class="markdown">
             <h1>Installation</h1>
 <hr>
-<h1>Required Programs</h1>
-<p>You will need to install <a href="https://git-scm.com/download/">git</a> and <a href="https://nodejs.org/">node</a> (LTS is recommended).
-<br /></p>
-<h1>The Actual Installation</h1>
-<h3>MacOS</h3>
-<ol>
-<li>Open Terminal</li>
-<li>Paste in
-<code>git clone https://github.com/velocity-discord/Velocity</code></li>
-<li>Run <code>npm run install -- --mac</code> (if you want to install to Canary or PTB add a <code>--canary</code> or <code>--ptb</code> flag)</li>
-</ol>
-<h3>Windows</h3>
-<ol>
-<li>Open Command Prompt</li>
-<li>Paste in
-<code>git clone https://github.com/velocity-discord/Velocity</code></li>
-<li>Run <code>npm run install -- --win</code> (if you want to install to Canary or PTB add a <code>--canary</code> or <code>--ptb</code> flag)</li>
-</ol>
-<h3>Linux</h3>
-<p>Coming Soon</p>
+<p>Prerequisites: <a href="https://nodejs.org/en/">Node.js</a> v12+, <a href="https://git-scm.com/">git</a> and <a href="https://www.npmjs.com/">npm</a>.</p>
+<h3>1. Clone the repository.</h3>
+<pre><code class="language-ps">git clone https://github.com/Velocity-Discord/Velocity.git
+</code></pre>
+<h3>2 Run the install script.</h3>
+<p>(optionally add <code>--win</code> or <code>--mac</code> to install for Windows or Mac respectively)</p>
+<h4>Stable</h4>
+<pre><code class="language-ps">npm run install
+</code></pre>
+<h4>PTB</h4>
+<pre><code class="language-ps">npm run install -- --ptb
+</code></pre>
+<h4>Canary</h4>
+<pre><code class="language-ps">npm run install -- --canary
+</code></pre>
+<hr>
+<h2>Development</h2>
+<p>Prerequisites: <a href="https://nodejs.org/en/">Node.js</a> v12+, <a href="https://git-scm.com/">git</a> and <a href="https://www.npmjs.com/">npm</a>.</p>
+<h3>1. Clone the repository.</h3>
+<pre><code class="language-ps">git clone https://github.com/Velocity-Discord/Velocity.git
+</code></pre>
+<h3>2. Run the install script.</h3>
+<p>(optionally add <code>--win</code> or <code>--mac</code> to install for Windows or Mac respectively)</p>
+<h4>Stable</h4>
+<pre><code class="language-ps">npm run install
+</code></pre>
+<h4>PTB</h4>
+<pre><code class="language-ps">npm run install -- --ptb
+</code></pre>
+<h4>Canary</h4>
+<pre><code class="language-ps">npm run install -- --canary
+</code></pre>
+<h3>3. Development.</h3>
+<p>To automatically compile the asar, run</p>
+<pre><code class="language-ps">npm run watch
+</code></pre>
 
         </div>
     </div>
