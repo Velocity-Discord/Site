@@ -3,7 +3,7 @@ let md = new Remarkable({
     breaks: true,
 });
 
-if (readmeURL !== "null") {
+if (readmeURL !== "") {
     async function getReadme() {
         let p = document.querySelector("#readme");
 
