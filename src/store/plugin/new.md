@@ -1,5 +1,5 @@
 ---
-module: true
+module: false
 name: NoReplyMention
 description: Port of NoReplyMention by somebody1234 to Velocity
 version: 0.0.1
