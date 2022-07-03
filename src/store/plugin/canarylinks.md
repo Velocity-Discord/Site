@@ -7,7 +7,7 @@ author: TheCommieAxolotl
 source: https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/NoCanaryLinks/
 sourceFile: https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/NoCanaryLinks/
 sourceURL: https://github.com/TheCommieAxolotl/Velocity-Plugins/tree/main/NoCanaryLinks
-readme: "null"
+readme: https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/NoCanaryLinks/README.md
 image: /assets/uploads/blank.png
 date: 2022-07-01T22:55:41.634Z
 updated: 2022-07-01T22:55:41.647Z
