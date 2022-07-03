@@ -10,5 +10,5 @@ sourceURL: https://github.com/TheCommieAxolotl/Velocity-Plugins/tree/main/NoCana
 readme: https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/NoCanaryLinks/README.md
 image: /assets/uploads/blank.png
 date: 2022-07-01T22:55:41.634Z
-updated: 2022-07-01T22:55:41.647Z
+updated: 2022-07-03T04:50:52.529Z
 ---
