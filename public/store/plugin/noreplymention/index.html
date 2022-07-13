@@ -59,11 +59,11 @@
                 </div>
                 <div class="separator">|</div>
                 <div class="addon-added-date">
-                    <div class="addon-added-date-time">Added: 2 Jul 2022</div>
+                    <div class="addon-added-date-time">Added: 2 July 2022</div>
                 </div>
                 <div class="separator">|</div>
                 <div class="addon-updated-date">
-                    <div class="addon-updated-date-time">Updated: 2 Jul 2022</div>
+                    <div class="addon-updated-date-time">Updated: 3 July 2022</div>
                 </div>
             </div>
 
@@ -81,9 +81,10 @@
 
     <div class="addon-main">
         <div id="readme"></div>
-        <aside class="addon-actions"><button class="look-filled full" onClick="downloadURL()">
-                Download
-            </button><button class="look-vibrant full external" onClick="location.href = 'https://github.com/TheCommieAxolotl/Velocity-Plugins/blob/main/'">
+        <aside class="addon-actions"><button class="look-filled full" onClick="location.href = 'https://github.com/TheCommieAxolotl/Velocity-Plugins/tree/main/NoReplyMention'">
+                Download on GitHub
+                <div class="arrow">→</div>
+            </button><button class="look-vibrant full external" onClick="location.href = 'https://github.com/TheCommieAxolotl/Velocity-Plugins/tree/main/NoReplyMention'">
                 Source
                 <div class="arrow">→</div>
             </button>
@@ -91,16 +92,16 @@
             <h2>About</h2>
             <div class="addon-author-name">Author: <a href="https://github.com/TheCommieAxolotl">TheCommieAxolotl</a></div>
             <div class="addon-version-name">Version: 0.0.1</div>
-            <div class="addon-added-date-time">Added: 2 Jul 2022</div>
-            <div class="addon-updated-date-time">Updated: 2 Jul 2022</div>
-            <div class="addon-raw">Raw: <a href="https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/NoReplyMention.plugin.js">NoReplyMention</a></div>
+            <div class="addon-added-date-time">Added: 2 July 2022</div>
+            <div class="addon-updated-date-time">Updated: 3 July 2022</div>
+            <div class="addon-raw">Raw: <a href="https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/NoReplyMention">NoReplyMention</a></div>
         </aside>
     </div>
 
     <script>
-        const readmeURL = ""
-        const sourceURL = "https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/"
-        const sourceFileURL = "https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/NoReplyMention.plugin.js"
+        const readmeURL = "https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/NoReplyMention/README.md"
+        const sourceURL = "https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/NoReplyMention"
+        const sourceFileURL = "https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Plugins/main/NoReplyMention"
 
         const downloadURL = async () => {
             const e = await fetch(sourceFileURL)
@@ -116,7 +117,7 @@
             anchor.click();
         }
 
-        if (window.location.search.includes("download") && !"false") {
+        if (window.location.search.includes("download") && !"true") {
             downloadURL()
         }
     </script>
