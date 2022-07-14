@@ -1,5 +1,7 @@
 ---
 title: Installation
+index: 1
+group: Intro
 author: TheCommieAxolotl
 date: 2022-05-05T22:16:31.479Z
 ---
