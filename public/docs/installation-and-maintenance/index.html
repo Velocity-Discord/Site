@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Velocity | Creating Themes</title>
+        <title>Velocity | Installation and Maintenance </title>
         <meta name="description" content="An Upcoming Client Modification for Discord enhanced by Plugins and Themes!">
         <meta name="keywords" content="Velocity, Discord, Velocity Discord, Velocity-Discord, Discord Mod, Client Mod, Discord Hack" />
         <link rel="stylesheet" href="/css/docs.css" />
@@ -37,10 +37,10 @@
             <div class="divider"></div>
         </div>
         <ul><ul class="doc-collection">
-                <li class="doc-header">Intro</li><li  ><a href="/docs/">Getting Started</a></li><li  ><a href="/docs/installation-and-maintenance/">Installation and Maintenance </a></li></ul><ul class="doc-collection">
+                <li class="doc-header">Intro</li><li  ><a href="/docs/">Getting Started</a></li><li class="selected" ><a href="/docs/installation-and-maintenance/">Installation and Maintenance </a></li></ul><ul class="doc-collection">
                 <li class="doc-header">API</li><li  ><a href="/docs/2022-03-21-api/">Introduction</a></li></ul><ul class="doc-collection">
                 <li class="doc-header">Plugins</li><li  ><a href="/docs/2022-03-21-plugins/">Creating Plugins</a></li></ul><ul class="doc-collection">
-                <li class="doc-header">Themes</li><li class="selected" ><a href="/docs/2022-03-21-themes/">Creating Themes</a></li></ul><ul class="doc-collection">
+                <li class="doc-header">Themes</li><li  ><a href="/docs/2022-03-21-themes/">Creating Themes</a></li></ul><ul class="doc-collection">
                 <li class="doc-header">Modules</li><li  ><a href="/docs/2022-05-21-modules/">About Modules</a></li><li  ><a href="/docs/2022-07-15-creating-modules/">Creating Modules</a></li></ul>
         </ul>
     </div>
@@ -48,12 +48,45 @@
 
     <section>
     <div class="background">
-      <div class="timestamp">Themes > Creating Themes</div>
+      <div class="timestamp">Intro > Installation and Maintenance </div>
           
         <div class="markdown">
-            <h1>Themes</h1>
+            <p>Prerequisites: <a href="https://nodejs.org/en/">Node.js</a> v12+, <a href="https://git-scm.com/">git</a> and <a href="https://www.npmjs.com/">npm</a>.</p>
+<h3>1. Clone the repository.</h3>
+<pre><code class="language-ps">git clone https://github.com/Velocity-Discord/Velocity.git
+</code></pre>
+<h3>2 Run the install script.</h3>
+<p>(optionally add <code>--win</code> or <code>--mac</code> to install for Windows or Mac respectively)</p>
+<h4>Stable</h4>
+<pre><code class="language-ps">npm run install
+</code></pre>
+<h4>PTB</h4>
+<pre><code class="language-ps">npm run install -- --ptb
+</code></pre>
+<h4>Canary</h4>
+<pre><code class="language-ps">npm run install -- --canary
+</code></pre>
 <hr>
-<h2>Coming soon</h2>
+<h2>Development</h2>
+<p>Prerequisites: <a href="https://nodejs.org/en/">Node.js</a> v12+, <a href="https://git-scm.com/">git</a> and <a href="https://www.npmjs.com/">npm</a>.</p>
+<h3>1. Clone the repository.</h3>
+<pre><code class="language-ps">git clone https://github.com/Velocity-Discord/Velocity.git
+</code></pre>
+<h3>2. Run the install script.</h3>
+<p>(optionally add <code>--win</code> or <code>--mac</code> to install for Windows or Mac respectively)</p>
+<h4>Stable</h4>
+<pre><code class="language-ps">npm run install
+</code></pre>
+<h4>PTB</h4>
+<pre><code class="language-ps">npm run install -- --ptb
+</code></pre>
+<h4>Canary</h4>
+<pre><code class="language-ps">npm run install -- --canary
+</code></pre>
+<h3>3. Development.</h3>
+<p>To automatically compile the asar, run</p>
+<pre><code class="language-ps">npm run watch
+</code></pre>
 
 
         </div>
