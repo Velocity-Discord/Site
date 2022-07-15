@@ -1,5 +1,5 @@
 ---
-title: "Installation and Maintenance "
+title: "Installation "
 index: 1
 group: Intro
 author: TheCommieAxolotl
