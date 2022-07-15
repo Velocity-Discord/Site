@@ -47,9 +47,19 @@ aside {
         ul {
             padding-inline: 10px;
 
+            .doc-collection + .doc-collection {
+                margin-top: 20px;
+            }
+
             li {
                 list-style: none;
                 margin-bottom: 5px;
+
+                &.doc-header {
+                    font-size: 13px;
+                    color: #fff;
+                    opacity: 0.4;
+                }
 
                 a {
                     outline-color: transparent;
@@ -100,6 +110,13 @@ aside {
                     font-size: 20px;
                     color: #5f6fff;
                 }
+            }
+
+            .divider {
+                width: calc(100% - 18px);
+                height: 1px;
+                background-color: abstracts.$border;
+                margin-block: 5px;
             }
         }
     }

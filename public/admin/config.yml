@@ -13,11 +13,11 @@ collections:
       fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Index", name: "index", widget: "number", default: 0, value_type: int }
-          - { label: "Group", name: "group", widget: "relation", collection: "doc-headers", value_field: "title", search_fields: ["title"] }
+          - { label: "Group", name: "group", widget: "relation", collection: "docheaders", value_field: "title", search_fields: ["title"] }
           - { label: "Author", name: "author", widget: "string" }
           - { label: "Date", name: "date", widget: "datetime" }
           - { label: "Body", name: "body", widget: "markdown" }
-    - name: "doc-headers"
+    - name: "docheaders"
       label: "Documentation Headers"
       folder: "src/docheaders"
       create: true

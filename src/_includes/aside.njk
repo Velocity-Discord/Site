@@ -9,12 +9,25 @@
                 Home
                 <div class="arrow">→</div>
             </button>
+            <div class="divider"></div>
         </div>
         <ul>
-            {%- for post in collections.post -%}
+            {%- for header in collections.docheaders|sort(false, true, 'data.index')-%}
 
-            <li {% if post.data.title in title %}class="selected"{% endif %}  ><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+            <ul class="doc-collection">
+                <li class="doc-header">{{header.data.title}}</li>
 
+                {%- for post in collections.post|sort(false, true, 'data.index') -%}
+
+                {%- if post.data.group == header.data.title -%}
+
+                <li {% if post.url == page.url %}class="selected"{% endif %} ><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+
+                {%- endif -%}
+
+                {%- endfor -%}
+            </ul>
+            
             {%- endfor -%}
 
             {# <li><a href="/docs">Intro</a></li> #}
