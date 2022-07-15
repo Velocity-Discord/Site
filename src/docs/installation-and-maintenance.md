@@ -5,7 +5,7 @@ group: Intro
 author: TheCommieAxolotl
 date: 2022-07-15T01:47:13.427Z
 ---
-Prerequisites: [Node.js](https://nodejs.org/en/) v12+, [git](https://git-scm.com/) and [npm](https://www.npmjs.com/).
+<div class="notice">Prerequisites: <a href="https://nodejs.org/en/">Node.js</a> 12+, <a href="https://git-scm.com/">git</a> and <a href="https://www.npmjs.com/">npm</a>.</div>
 
 ### 1. Clone the repository.
 ```ps
