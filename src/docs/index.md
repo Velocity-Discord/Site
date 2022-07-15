@@ -1,5 +1,5 @@
 ---
-title: Intro
+title: Getting Started
 index: 0
 group: Intro
 author: TheCommieAxolotl
