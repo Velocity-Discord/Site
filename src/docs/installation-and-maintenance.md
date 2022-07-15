@@ -13,7 +13,7 @@ git clone https://github.com/Velocity-Discord/Velocity.git
 ```
 
 ### 2 Run the install script.
-(optionally add `--win` or `--mac` to install for Windows or Mac respectively)
+Velocity should detect your operating system but if it doesn't you can add the `--mac` `--win` or `--linux` flags
 
 #### Stable 
 ```ps
