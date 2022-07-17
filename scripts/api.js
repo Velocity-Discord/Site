@@ -45,7 +45,23 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
         const data = await fs.readFile(obj.path, "utf8");
         const parsed = frontMatter(data);
         const { attributes } = parsed;
-        themesToWrite.push(attributes);
+        themesToWrite.push({
+            NAME: attributes.name,
+            DESCRIPTION: attributes.description,
+            AUTHOR: attributes.author,
+            VERSION: attributes.version,
+            URL: `${URL}/store/theme/${attributes.name}`,
+            SOURCE: {
+                RAW_BASEPATH: attributes.source,
+                RAW_FILE: attributes.sourceFile,
+                RAW_README: attributes.readme,
+                URL: attributes.sourceURL,
+            },
+            IMAGE: attributes.image,
+            TAGS: attributes.tags || ["themes"],
+            DATE_UPLOADED: attributes.date,
+            DATE_UPDATED: attributes.updated,
+        });
         tIndex++;
     });
 
@@ -59,7 +75,23 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
         const data = await fs.readFile(obj.path, "utf8");
         const parsed = frontMatter(data);
         const { attributes } = parsed;
-        pluginsToWrite.push(attributes);
+        pluginsToWrite.push({
+            NAME: attributes.name,
+            DESCRIPTION: attributes.description,
+            AUTHOR: attributes.author,
+            VERSION: attributes.version,
+            URL: `${URL}/store/plugin/${attributes.name}`,
+            SOURCE: {
+                RAW_BASEPATH: attributes.source,
+                RAW_FILE: attributes.sourceFile,
+                RAW_README: attributes.readme,
+                URL: attributes.sourceURL,
+            },
+            IMAGE: attributes.image,
+            TAGS: attributes.tags || ["plugins"],
+            DATE_UPLOADED: attributes.date,
+            DATE_UPDATED: attributes.updated,
+        });
         pIndex++;
     });
 
