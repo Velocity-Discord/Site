@@ -40,10 +40,10 @@
                     Docs
                     <div class="arrow">→</div>
                 </button>
-                <button class="look-filled external" onClick="location.href = './store'">
-                    Store
+                <a class="button look-filled external" id="hero-download-button" href="./docs/installation-and-maintenance">
+                    Install
                     <div class="arrow">→</div>
-                </button>
+                </a>
                 <button class="look-vibrant external" onClick="location.href = './features'">
                     Features
                     <div class="arrow">→</div>
@@ -130,6 +130,7 @@
     year.innerHTML = new Date().getFullYear();
 </script>
 
+        <script src="/js/download.js"></script>
         <script>
             const scrollIndicator = document.querySelector(".scroll-prompt");
 
