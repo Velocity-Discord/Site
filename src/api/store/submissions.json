@@ -1,5 +1,5 @@
-{
-    "0": {
+[
+    {
         "type": "theme",
         "name": "MaterialDesign",
         "description": "A clean theme inspired by Google's Material Design.",
@@ -10,4 +10,4 @@
         "source": "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/MaterialDesign/",
         "sourceFile": "https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/MaterialDesign/MaterialDesign.theme.css"
     }
-}
+]

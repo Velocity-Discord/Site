@@ -6,7 +6,7 @@
     "scripts": {
         "start": "eleventy --serve",
         "build": "eleventy",
-        "build:backend": "node scripts/api.js"
+        "prestart": "node ./scripts/api.js"
     },
     "repository": {
         "type": "git",
@@ -21,6 +21,7 @@
     "homepage": "https://github.com/Velocity-Discord/Site#readme",
     "devDependencies": {
         "@11ty/eleventy": "^1.0.0",
-        "@faker-js/faker": "^6.3.1"
+        "@faker-js/faker": "^6.3.1",
+        "front-matter": "^4.0.2"
     }
 }

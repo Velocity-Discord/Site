@@ -53,9 +53,9 @@
             };
 
             const getAddons = async () => {
-                const response = await fetch('/admin/dev/approvals.json');
+                const response = await fetch('/api/store/submissions.json');
                 const data = await response.json();
-                Object.values(data).forEach(addon => {
+                data.forEach(addon => {
                     if (document.querySelector(`.review-grid .review-card.${addon.name.replace(" ", "-")}`)) {
                         document.querySelector(`.review-grid .review-card.${addon.name.replace(" ", "-")}`).remove();
                     }
