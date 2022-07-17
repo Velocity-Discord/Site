@@ -6,6 +6,7 @@
     "scripts": {
         "start": "eleventy --serve",
         "build": "eleventy",
+        "prebuild": "node ./scripts/api.js",
         "prestart": "node ./scripts/api.js"
     },
     "repository": {
