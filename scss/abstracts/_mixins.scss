@@ -1,20 +1,22 @@
+@use "./variables";
+
 @mixin vibrancy {
-    border: 1px solid rgb(255, 255, 255, 0.1);
-    background-color: rgb(255, 255, 255, 0.05);
+    border: variables.$borderPrimary;
+    background-color: variables.$backgroundVibrant;
     border-width: 1px;
     backdrop-filter: blur(10px);
 }
 
 @mixin vibrancyTop {
-    border-top: 1px solid rgb(255, 255, 255, 0.1);
-    background-color: rgb(255, 255, 255, 0.05);
+    border-top: variables.$borderPrimary;
+    background-color: variables.$backgroundVibrant;
     border-width: 1px;
     backdrop-filter: blur(10px);
 }
 
 @mixin filled {
     color: #fff;
-    border: 1px solid rgb(255, 255, 255, 0.1);
+    border: variables.$borderPrimary;
     background-color: #4653ce;
     border-width: 1px;
 
@@ -25,7 +27,7 @@
 
 @mixin danger {
     color: #fff;
-    border: 1px solid rgb(255, 255, 255, 0.1);
+    border: variables.$borderPrimary;
     background-color: #ce4646;
     border-width: 1px;
 
