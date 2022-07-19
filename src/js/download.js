@@ -22,12 +22,12 @@ fetch("https://api.github.com/repos/Velocity-Discord/Installer/releases").then(a
         case "mac":
             downloadButton.innerHTML = downloadButton.innerHTML.replace("Install", `Download`);
             downloadButton.setAttribute("download", true);
-            downloadButton.setAttribute("href", `https://github.com/Velocity-Discord/Installer/releases/download/${version}/Velocity.Installer-Mac.zip`);
+            downloadButton.setAttribute("href", `https://github.com/Velocity-Discord/Installer/releases/download/${version}/Velocity_Installer-Mac.zip`);
             break;
         case "win":
             downloadButton.innerHTML = downloadButton.innerHTML.replace("Install", `Download`);
             downloadButton.setAttribute("download", true);
-            downloadButton.setAttribute("href", `https://github.com/Velocity-Discord/Installer/releases/download/${version}/Velocity.Installer-Windows.exe`);
+            downloadButton.setAttribute("href", `https://github.com/Velocity-Discord/Installer/releases/download/${version}/Velocity_Installer-Windows.exe`);
             break;
     }
 });
