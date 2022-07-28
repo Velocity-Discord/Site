@@ -38,13 +38,15 @@ section.branding {
         figcaption {
             font-weight: 500;
             font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
             .downloads {
                 @include abstracts.vibrancy;
                 width: fit-content;
                 padding: 2px 4px;
                 border-radius: 4px;
-                margin-top: 5px;
 
                 color: darken(abstracts.$text, 60%);
             }
@@ -59,7 +61,7 @@ section.branding {
 
     .color-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(290px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
         gap: 20px;
         width: 70%;
 
@@ -120,5 +122,19 @@ section.branding {
             gap: 20px;
             width: fit-content;
         }
+    }
+}
+
+@media screen and (max-width: 1268px) {
+    .image-type {
+        flex-direction: column;
+    }
+
+    section.branding .color-grid {
+        width: 90%;
+    }
+
+    section.branding figure img {
+        max-width: 90vw;
     }
 }
