@@ -2,6 +2,10 @@
 
 section.branding {
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 
     > * + * {
         margin-top: 15px;
@@ -16,48 +20,55 @@ section.branding {
         img {
             height: 200px;
             border: 1px solid abstracts.$border;
-            background-color: rgb(255, 255, 255);
+            background-color: transparent;
+            background-image: linear-gradient(45deg, #222427 25%, transparent 0, transparent 75%, #222427 0, #222427),
+                linear-gradient(45deg, #222427 25%, transparent 0, transparent 75%, #222427 0, #222427);
+            background-size: 30px 30px;
+            background-position: 0 0, 45px 45px;
+
             border-radius: 10px;
+
+            &.bg-light {
+                background-color: #ffffff;
+                background-image: linear-gradient(45deg, #f6f6f6 25%, transparent 0, transparent 75%, #f6f6f6 0, #f6f6f6),
+                    linear-gradient(45deg, #f6f6f6 25%, transparent 0, transparent 75%, #f6f6f6 0, #f6f6f6);
+            }
         }
 
         figcaption {
+            font-weight: 500;
+            font-size: 14px;
+
+            .downloads {
+                @include abstracts.vibrancy;
+                width: fit-content;
+                padding: 2px 4px;
+                border-radius: 4px;
+                margin-top: 5px;
+
+                color: darken(abstracts.$text, 60%);
+            }
+
             a {
                 color: abstracts.$accent;
                 text-decoration: none;
                 position: relative;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    left: 0;
-                    bottom: -3px;
-                    background: currentColor;
-                    transform: scaleX(0);
-                    transition: transform 0.2s ease;
-                    transform-origin: right bottom 0px;
-                }
-                &:hover::after {
-                    transform: scaleX(1) !important;
-                    transform-origin: left bottom 0px;
-                }
             }
         }
     }
 
     .color-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(3, minmax(290px, 1fr));
         gap: 20px;
-        width: 80%;
+        width: 70%;
 
         .color-box {
             display: flex;
             flex-direction: column;
             border-radius: 5px;
             padding: 20px;
-            min-height: 150px;
+            min-height: 160px;
             color: #fff;
             position: relative;
 
@@ -71,6 +82,7 @@ section.branding {
                 bottom: 20px;
                 left: 20px;
                 text-transform: uppercase;
+                opacity: 0.8;
             }
 
             &.vb {
@@ -93,6 +105,20 @@ section.branding {
                 background-color: #242121;
                 color: #fff;
             }
+        }
+    }
+
+    .images-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+        .image-type {
+            display: flex;
+            gap: 20px;
+            width: fit-content;
         }
     }
 }
