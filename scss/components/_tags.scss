@@ -1,0 +1,17 @@
+@use "../abstracts";
+
+
+.tag-list {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+
+    .tag {
+        background: hsla(abstracts.$acentHSL, 33%);
+        padding: 6px 16px;
+        color: abstracts.$accent;
+        border-radius: 50px;
+        font-size: 11px;
+        font-weight: 600;
+    }
+}
