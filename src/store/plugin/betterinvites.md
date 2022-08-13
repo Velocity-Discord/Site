@@ -8,7 +8,7 @@ source: https://raw.githubusercontent.com/HypedDomi/BetterDiscordStuff/velocity/
 sourceFile: https://raw.githubusercontent.com/HypedDomi/BetterDiscordStuff/velocity/BetterInvites/
 sourceURL: https://github.com/HypedDomi/BetterDiscordStuff/tree/velocity/BetterInvites/
 readme: https://raw.githubusercontent.com/HypedDomi/BetterDiscordStuff/main/Plugins/BetterInvites/README.md
-image: https://raw.githubusercontent.com/HypedDomi/BetterDiscordStuff/main/Plugins/BetterInvites/images/Preview.png
+image: https://github.com/HypedDomi/BetterDiscordStuff/raw/velocity/BetterInvites/preview.png
 tags:
   - plugins
   - store
