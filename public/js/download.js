@@ -1,4 +1,5 @@
 const downloadButton = document.getElementById("hero-download-button");
+const downloadInfo = document.querySelector(".hero-info");
 
 const getCurrentPlatform = () => {
     if (navigator.userAgent.indexOf("Mac") > -1) {
@@ -23,11 +24,13 @@ fetch("https://api.github.com/repos/Velocity-Discord/Installer/releases").then(a
             downloadButton.innerHTML = downloadButton.innerHTML.replace("Install", `Download`);
             downloadButton.setAttribute("download", true);
             downloadButton.setAttribute("href", `https://github.com/Velocity-Discord/Installer/releases/download/${version}/Velocity_Installer-Mac.zip`);
+            downloadInfo.innerHTML = "Installer for MacOS 10.12+";
             break;
         case "win":
             downloadButton.innerHTML = downloadButton.innerHTML.replace("Install", `Download`);
             downloadButton.setAttribute("download", true);
             downloadButton.setAttribute("href", `https://github.com/Velocity-Discord/Installer/releases/download/${version}/Velocity_Installer-Windows.exe`);
+            downloadInfo.innerHTML = "Download Installer for Windows 10+";
             break;
     }
 });

@@ -52,26 +52,27 @@
                 <div class="preview dim">
                     <pre>
                         <code>
-    .layout-1qmrhw {
-        border-radius: 50px;
-        transition: all 0.2s ease;
-        margin-block: 3px;
-    }
+.layout-1qmrhw {
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    margin-block: 3px;
+}
 
-    .wrapper-NhbLHG .content-1gYQeQ {
-        border-radius: 50px;
-        transition: all 0.2s ease;
-        margin-block: 3px;
-    }
+.wrapper-NhbLHG .content-1gYQeQ {
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    margin-block: 3px;
+}
 
-    .panels-3wFtMD {
-        border-radius: 4px;
-        margin: 0 7px 7px 7px;
-    }
+.panels-3wFtMD {
+    border-radius: 4px;
+    margin: 0 7px 7px 7px;
+}
                         </code>
                     </pre>
                 </div>
                 <div class="desc">
+                    <div class="tag-list"><div class="tag">Customisable</div></div>
                     <h1>Themes</h1>
                     <p>
                         Our Theme system allow you to customise the look of your Discord however you want, just using plain CSS. Velocity lets you import styles from almost everywhere! Our Custom <code>@var</code> and <code>@if</code> allow you extend Native CSS!
@@ -80,21 +81,22 @@
             </section>
             <section class="feature fade-in right" id="plugins">
                 <div class="desc">
+                    <div class="tag-list"><div class="tag">Extendable</div></div>
                     <h1>Plugins</h1>
                     <p>Plugins can make use of <code>VApi</code> and Discord's internal functions to extend what Discord can do and add functionality.</p>
                 </div>
                 <div class="preview dim">
                     <pre>
                         <code class="language-javascript">
-    const { React, showToast } = VApi 
+const { React, showToast } = VApi 
 
-    React.createElement("button", {
-        className: "my-cool-button",
-        style: {width: "20px"},
-        onClick: () => {
-            showToast("Clicked", {type: "info"})
-        },
-    }, "text!")
+React.createElement("button", {
+    className: "my-cool-button",
+    style: {width: "20px"},
+    onClick: () => {
+        showToast("Clicked", {type: "info"})
+    },
+}, "text!")
                         </code>
                     </pre>
                 </div>
@@ -103,19 +105,22 @@
                 <div class="preview dim">
                     <pre>
                         <code class="language-javascript">
-    const win = new BrowserWindow({
-        webPreferences: {
-            preload: path.join(__dirname, "preload.js"),
-            nodeIntegration: true,
-            transparent: true,
-            backgroundColor: "#00000000",
-            vibrancy: "dark",
-        },
-    });
+const win = new BrowserWindow({
+    webPreferences: {
+        preload: path.join(__dirname, "preload.js"),
+        nodeIntegration: true,
+        transparent: true,
+        backgroundColor: "#00000000",
+        vibrancy: "dark",
+    },
+});
                         </code>
                     </pre>
                 </div>
                 <div class="desc">
+                    <div class="tag-list">
+                        <div class="tag">Flexible</div>
+                    </div>
                     <h1>Custom Window</h1>
                     <p>Velocity adds a selection of settings that customise the DIscord window itself. On MacOS, you can even use Vibrancy effects!</p>
                 </div>

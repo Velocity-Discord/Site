@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Velocity | BetterInvites</title>
+        <meta name="description" content="Shows some useful information in the invitation">
+        <link rel="stylesheet" href="/css/style.css" />
+        <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="/assets/icon.png" />
+
+        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+        <meta property="og:url" content="https://velocity-discord.netlify.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Velocity | BetterInvites" />
+        <meta property="og:site_name" content="Velocity">
+        <meta property="twitter:site" content="Velocity">
+        <meta property="og:description" content="Shows some useful information in the invitation" /><meta name="twitter:card" content="summary_large_image">
+        <meta property="og:image" content="https://github.com/HypedDomi/BetterDiscordStuff/raw/velocity/BetterInvites/preview.png">
+        <meta property="og:image:alt" content="Thumbnail">
+        <meta property="og:image:width" content="1080"><meta name="theme-color" content="#5b88fc" />
+    </head>
+<body>
+    
+    <header>
+    <img src="/assets/logo/Velocity-Blue.png" alt="logo" width="40">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/branding">Branding</a></li>
+            <li><a href="/docs">Docs</a></li>
+        </ul>
+    </nav>
+</header>
+
+    
+
+    <div id="hero" class="hero absolute features">
+    </div>
+    <div class="addon-header">
+        <div>
+            <div class="addon-title">BetterInvites</div>
+            <div class="addon-description">
+                <div class="addon-description-text">Shows some useful information in the invitation</div>
+            </div>
+            <div class="addon-data">
+                <div class="addon-author">
+                    <div class="addon-author-name">By <a href="https://github.com/HypedDomi">HypedDomi</a></div>
+                </div>
+                <div class="separator">|</div>
+                <div class="addon-version">
+                    <div class="addon-version-name">Version: v1.6.2</div>
+                </div>
+                <div class="separator">|</div>
+                <div class="addon-added-date">
+                    <div class="addon-added-date-time">Added: 13 Aug 2022</div>
+                </div>
+                <div class="separator">|</div>
+                <div class="addon-updated-date">
+                    <div class="addon-updated-date-time">Updated: 13 Aug 2022</div>
+                </div>
+            </div>
+
+            <div class="addon-button-container">
+                <button class="look-vibrant external" onClick="location.href = '/store/themes'">
+                    Themes
+                    <div class="arrow">→</div>
+                </button>
+                <button class="look-vibrant external" onClick="location.href = '/store/plugins'">
+                    Plugins
+                    <div class="arrow">→</div>
+                </button>
+            </div>
+        </div><img class="addon-header-image" src="https://github.com/HypedDomi/BetterDiscordStuff/raw/velocity/BetterInvites/preview.png" /></div>
+
+    <div class="addon-main">
+        <div id="readme"></div>
+        <aside class="addon-actions"><button class="look-filled full" onClick="location.href = 'https://github.com/HypedDomi/BetterDiscordStuff/tree/velocity/BetterInvites/'">
+                Download on GitHub
+                <div class="arrow">→</div>
+            </button><button class="look-vibrant full external" onClick="location.href = 'https://github.com/HypedDomi/BetterDiscordStuff/tree/velocity/BetterInvites/'">
+                Source
+                <div class="arrow">→</div>
+            </button>
+
+            <h2>About</h2>
+            <div class="addon-author-name">Author: <a href="https://github.com/HypedDomi">HypedDomi</a></div>
+            <div class="addon-version-name">Version: v1.6.2</div>
+            <div class="addon-added-date-time">Added: 13 Aug 2022</div>
+            <div class="addon-updated-date-time">Updated: 13 Aug 2022</div>
+            <div class="addon-raw">Raw: <a href="https://raw.githubusercontent.com/HypedDomi/BetterDiscordStuff/velocity/BetterInvites/">BetterInvites</a></div>
+        </aside>
+    </div>
+
+    <script>
+        const readmeURL = "https://raw.githubusercontent.com/HypedDomi/BetterDiscordStuff/main/Plugins/BetterInvites/README.md"
+        const sourceURL = "https://raw.githubusercontent.com/HypedDomi/BetterDiscordStuff/velocity/BetterInvites/"
+        const sourceFileURL = "https://raw.githubusercontent.com/HypedDomi/BetterDiscordStuff/velocity/BetterInvites/"
+
+        const downloadURL = async () => {
+            const e = await fetch(sourceFileURL)
+
+            const dataBlob = new Blob([await e.text()], {type: 'application/octet-stream'});
+            const dataURL = URL.createObjectURL(dataBlob);
+            const anchor = document.createElement("a")
+
+            anchor.href = dataURL;
+            
+            if (sourceFileURL.includes(".plugin.js")) anchor.download = "BetterInvites.plugin.js";
+            else if (sourceFileURL.includes(".theme.css")) anchor.download = "BetterInvites.theme.css";
+            anchor.click();
+        }
+
+        if (window.location.search.includes("download") && !"true") {
+            downloadURL()
+        }
+    </script>
+    <script src="/js/addon.js"></script>
+</body>
+</html>

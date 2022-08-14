@@ -1,13 +1,12 @@
 @use "../abstracts";
 
-
 .tag-list {
     width: 100%;
     display: flex;
     gap: 10px;
 
     .tag {
-        background: hsla(abstracts.$acentHSL, 33%);
+        background: abstracts.$accentHSL20;
         padding: 6px 16px;
         color: abstracts.$accent;
         border-radius: 50px;

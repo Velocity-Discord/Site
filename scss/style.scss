@@ -169,7 +169,6 @@ html {
         a {
             opacity: 0;
             animation: fadeIn 1s ease-in forwards;
-            animation-delay: 2s;
         }
     }
 
@@ -186,6 +185,17 @@ html {
             transition: fill 0.3s ease;
         }
     }
+
+    .hero-info {
+        margin-top: 5px;
+        font-size: 0.6rem;
+        color: darken(abstracts.$text, 30%);
+        margin-top: 10px;
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+        animation-delay: 0.5s;
+    }
+
     .hero-title {
         transition: all 0.2s ease;
         margin-bottom: 5px;
@@ -199,16 +209,19 @@ html {
             font-size: 85px;
         }
     }
+
     .hero-subtitle {
         transition: all 0.2s ease;
-        animation: fadeIn 1.5s ease-out forwards 1.8s;
+        animation: fadeIn 1.5s ease-out forwards 0.2s;
         opacity: 0;
         margin-bottom: 20px;
 
         h2 {
+            opacity: 0.8;
             transition: all 0.2s ease;
-            color: abstracts.$accent;
+            color: abstracts.$text;
             font-size: 25px;
+            font-weight: 550;
             text-align: center;
         }
     }

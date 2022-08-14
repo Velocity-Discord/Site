@@ -6,7 +6,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px;
+    padding: 12px 10%;
+    width: 100%;
+
+    @media screen and (min-width: 850px) {
+        gap: 20px;
+        justify-content: space-between;
+    }
 
     h1 {
         color: abstracts.$text;
@@ -15,7 +21,8 @@
     p {
         color: #95989d;
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 400;
+        max-inline-size: 500px;
     }
 
     code {
@@ -24,6 +31,11 @@
 
     .desc {
         transition: all 0.2s ease;
+        max-width: 450px;
+        margin-block: 50px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
 
         code {
             background-color: #34343a;
@@ -39,14 +51,9 @@
         }
 
         h1 {
-            font-size: 50px;
+            font-size: 35px;
+            font-weight: 700;
         }
-
-        max-width: 450px;
-        margin: 50px;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
     }
 
     &#promo {
@@ -65,7 +72,7 @@
         flex-direction: column;
         min-width: fit-content;
 
-        &.dim {
+        &.dim:not(section:hover *) {
             opacity: 0.7;
         }
 
@@ -106,10 +113,11 @@
 
         pre {
             width: fit-content;
-            min-width: 350px;
+            min-width: 400px;
 
             code {
                 border-radius: 15px;
+                padding: 1em 2em !important;
             }
         }
     }

@@ -21,7 +21,6 @@
         <meta name="theme-color" content="#5b88fc" />
     </head>
     <body>
-        
         <div id="hero" class="hero">
             <svg tag="svg" viewBox="0 0 22 22" width="430" class="hero-logo" height="430">
                 <path
@@ -36,10 +35,6 @@
                 <h2>Supercharge your Discord today.</h2>
             </div>
             <div class="hero-buttons">
-                <button class="look-vibrant external" onClick="location.href = './docs'">
-                    Docs
-                    <div class="arrow">→</div>
-                </button>
                 <a class="button look-filled external" id="hero-download-button" href="./docs/installation-and-maintenance">
                     Install
                     <div class="arrow">→</div>
@@ -49,9 +44,7 @@
                     <div class="arrow">→</div>
                 </button>
             </div>
-            <div tabindex="0" class="scroll-prompt">
-                <div class="mouse-wheel"></div>
-            </div>
+            <div class="hero-info"></div>
         </div>
         <section id="details" class="details">
             <div class="details-header">
@@ -132,18 +125,6 @@
 
         <script src="/js/download.js"></script>
         <script>
-            const scrollIndicator = document.querySelector(".scroll-prompt");
-
-            scrollIndicator.addEventListener("click", () => {
-                details.scrollIntoView()
-            })
-            
-            scrollIndicator.addEventListener("keydown", (e) => {
-                if (e.key === "Enter") {
-                    details.scrollIntoView()
-                }
-            })
-
             if (window.netlifyIdentity) {
                 window.netlifyIdentity.on("init", (user) => {
                     if (!user) {
