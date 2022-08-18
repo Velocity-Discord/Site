@@ -68,11 +68,11 @@
             </div>
 
             <div class="addon-button-container">
-                <button class="look-vibrant external" onClick="location.href = '/store/themes'">
+                <button class="look-vibrant external" xeon-include href="/store/themes">
                     Themes
                     <div class="arrow">→</div>
                 </button>
-                <button class="look-vibrant external" onClick="location.href = '/store/plugins'">
+                <button class="look-vibrant external" xeon-include href="/store/plugins">
                     Plugins
                     <div class="arrow">→</div>
                 </button>
@@ -81,10 +81,10 @@
 
     <div class="addon-main">
         <div id="readme"></div>
-        <aside class="addon-actions"><button class="look-filled full" onClick="location.href = 'https://github.com/TheCommieAxolotl/Velocity-Plugins/tree/main/NoCanaryLinks'">
+        <aside class="addon-actions"><button class="look-filled full" xeon-include href="https://github.com/TheCommieAxolotl/Velocity-Plugins/tree/main/NoCanaryLinks">
                 Download on GitHub
                 <div class="arrow">→</div>
-            </button><button class="look-vibrant full external" onClick="location.href = 'https://github.com/TheCommieAxolotl/Velocity-Plugins/tree/main/NoCanaryLinks'">
+            </button><button class="look-vibrant full external" xeon-include href="https://github.com/TheCommieAxolotl/Velocity-Plugins/tree/main/NoCanaryLinks">
                 Source
                 <div class="arrow">→</div>
             </button>
@@ -122,5 +122,9 @@
         }
     </script>
     <script src="/js/addon.js"></script>
+    <script type="module">
+    import { initialiseRouter } from "/assets/xeonic/xeonic.mjs";
+    initialiseRouter({logs: true});
+</script>
 </body>
 </html>

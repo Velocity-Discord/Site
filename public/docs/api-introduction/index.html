@@ -30,7 +30,7 @@
                 <h1>Velocity</h1>
                 Docs
             </div>
-            <button class="look-empty external" onClick="location.href = '/'">
+            <button class="look-empty external" xeon-include href="/">
                 Home
                 <div class="arrow">→</div>
             </button>
@@ -60,30 +60,34 @@
 </section>
 <script defer src="/js/docs.js"></script>
 
-<script>
-  hljs.highlightAll()
-  document.querySelectorAll(".markdown h1").forEach((e) => {
-    e.id = e.innerHTML.replace(/^[^a-z]+|[^\w-]+/gi, "").toLowerCase();
-    e.innerHTML = `<a href="#${e.id}">${e.innerHTML}</a>`
-  })
-  document.querySelectorAll(".markdown h2").forEach((e) => {
-    e.id = e.innerHTML.replace(/^[^a-z]+|[^\w-]+/gi, "").toLowerCase();
-    e.innerHTML = `<a href="#${e.id}">${e.innerHTML}</a>`
-  })
-  document.querySelectorAll(".markdown h3").forEach((e) => {
-    e.id = e.innerHTML.replace(/^[^a-z]+|[^\w-]+/gi, "").toLowerCase();
-    e.innerHTML = `<a href="#${e.id}">${e.innerHTML}</a>`
-  })
+  <script>
+    hljs.highlightAll()
+    document.querySelectorAll(".markdown h1").forEach((e) => {
+      e.id = e.innerHTML.replace(/^[^a-z]+|[^\w-]+/gi, "").toLowerCase();
+      e.innerHTML = `<a href="#${e.id}">${e.innerHTML}</a>`
+    })
+    document.querySelectorAll(".markdown h2").forEach((e) => {
+      e.id = e.innerHTML.replace(/^[^a-z]+|[^\w-]+/gi, "").toLowerCase();
+      e.innerHTML = `<a href="#${e.id}">${e.innerHTML}</a>`
+    })
+    document.querySelectorAll(".markdown h3").forEach((e) => {
+      e.id = e.innerHTML.replace(/^[^a-z]+|[^\w-]+/gi, "").toLowerCase();
+      e.innerHTML = `<a href="#${e.id}">${e.innerHTML}</a>`
+    })
 
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  <script type="module">
+    import { initialiseRouter } from "/assets/xeonic/xeonic.mjs";
+    initialiseRouter({logs: true});
 </script>
 
 </body>

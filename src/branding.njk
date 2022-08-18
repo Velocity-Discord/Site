@@ -30,7 +30,7 @@
                 <h2>Velocity's Organisation Image.</h2>
             </div>
             <div class="hero-buttons">
-                <button class="look-vibrant external" onClick="location.href = '/'">
+                <button class="look-vibrant external" xeon-include href="/">
                     Home
                     <div class="arrow">→</div>
                 </button>
@@ -112,5 +112,6 @@
         <script defer>
             hljs.highlightAll();
         </script>
+        {% include "router.njk"%}
     </body>
 </html>

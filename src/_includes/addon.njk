@@ -61,11 +61,11 @@
             </div>
 
             <div class="addon-button-container">
-                <button class="look-vibrant external" onClick="location.href = '/store/themes'">
+                <button class="look-vibrant external" xeon-include href="/store/themes">
                     Themes
                     <div class="arrow">→</div>
                 </button>
-                <button class="look-vibrant external" onClick="location.href = '/store/plugins'">
+                <button class="look-vibrant external" xeon-include href="/store/plugins">
                     Plugins
                     <div class="arrow">→</div>
                 </button>
@@ -81,7 +81,7 @@
         <div id="readme"></div>
         <aside class="addon-actions">
             {%- if module -%}
-            <button class="look-filled full" onClick="location.href = '{{ sourceURL }}'">
+            <button class="look-filled full" xeon-include href="{{sourceURL}}">
                 Download on GitHub
                 <div class="arrow">→</div>
             </button>
@@ -90,7 +90,7 @@
                 Download
             </button>
             {%- endif -%}
-            <button class="look-vibrant full external" onClick="location.href = '{{ sourceURL }}'">
+            <button class="look-vibrant full external" xeon-include href="{{sourceURL}}">
                 Source
                 <div class="arrow">→</div>
             </button>
@@ -128,5 +128,6 @@
         }
     </script>
     <script src="/js/addon.js"></script>
+    {% include "router.njk"%}
 </body>
 </html>

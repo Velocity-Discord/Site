@@ -35,11 +35,11 @@
                 <h2>Supercharge your Discord today.</h2>
             </div>
             <div class="hero-buttons">
-                <a class="button look-filled external" id="hero-download-button" href="./docs/installation-and-maintenance">
+                <a class="button look-filled external" id="hero-download-button" href="/docs/installation-and-maintenance">
                     Install
                     <div class="arrow">→</div>
                 </a>
-                <button class="look-vibrant external" onClick="location.href = './features'">
+                <button class="look-vibrant external" xeon-include href="/features">
                     Features
                     <div class="arrow">→</div>
                 </button>
@@ -135,5 +135,9 @@
                 });
             }
         </script>
+        <script type="module">
+    import { initialiseRouter } from "/assets/xeonic/xeonic.mjs";
+    initialiseRouter({logs: true});
+</script>
     </body>
 </html>

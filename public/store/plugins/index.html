@@ -47,7 +47,7 @@
             <h2>Velocity Plugins.</h2>
         </div>
         <div class="hero-buttons">
-            <button class="look-vibrant external" onClick="location.href = '/store'">
+            <button class="look-vibrant external" xeon-include href="/store">
                 Store
                 <div class="arrow">→</div>
             </button>
@@ -94,5 +94,9 @@
                     </div>
                 </a>
             </div></div>
+    <script type="module">
+    import { initialiseRouter } from "/assets/xeonic/xeonic.mjs";
+    initialiseRouter({logs: true});
+</script>
 </body>
 </html>
