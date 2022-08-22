@@ -114,7 +114,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
     await fs.writeFile(pluginFile, JSON.stringify(pluginsToWrite));
     await fs.writeFile(themeFile, JSON.stringify(themesToWrite));
-    await fs.writeFile(bothFile, JSON.stringify({ ...pluginsToWrite, ...themesToWrite }));
+    await fs.writeFile(bothFile, JSON.stringify([...pluginsToWrite, ...themesToWrite]));
 
     console.log(`Done`);
 })();
