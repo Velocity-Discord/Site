@@ -6,6 +6,7 @@ const baseApiPath = path.resolve(__dirname, "../src/api");
 const baseAddonPath = path.resolve(__dirname, "../src/store");
 const baseApiAddonPath = path.resolve(__dirname, "../src/api/store");
 const storeFile = path.join(baseApiPath, "store.json");
+const bothFile = path.join(baseApiAddonPath, "addons.json");
 const pluginFile = path.join(baseApiAddonPath, "plugins.json");
 const themeFile = path.join(baseApiAddonPath, "themes.json");
 
@@ -26,6 +27,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
             STORE_URL: `${URL}/api/store.json`,
             PLUGINS_URL: `${URL}/api/store/plugins.json`,
             THEMES_URL: `${URL}/api/store/themes.json`,
+            ADDONS_URL: `${URL}/api/store/addons.json`,
             SUBMUSSIONS_URL: `${URL}/api/store/submissions.json`,
         })
     );
@@ -110,6 +112,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
     await fs.writeFile(pluginFile, JSON.stringify(pluginsToWrite));
     await fs.writeFile(themeFile, JSON.stringify(themesToWrite));
+    await fs.writeFile(bothFile, JSON.stringify({ ...pluginsToWrite, ...themesToWrite }));
 
     console.log(`Done`);
 })();
