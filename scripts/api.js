@@ -48,6 +48,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
         const parsed = frontMatter(data);
         const { attributes } = parsed;
         themesToWrite.push({
+            TYPE: "theme",
             MODULE: attributes.module,
             NAME: attributes.name,
             DESCRIPTION: attributes.description,
@@ -79,6 +80,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
         const parsed = frontMatter(data);
         const { attributes } = parsed;
         pluginsToWrite.push({
+            TYPE: "plugin",
             MODULE: attributes.module,
             NAME: attributes.name,
             DESCRIPTION: attributes.description,
