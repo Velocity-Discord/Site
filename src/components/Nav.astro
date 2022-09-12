@@ -1,0 +1,88 @@
+---
+import Button from "./Button.astro";
+
+const { expanded } = Astro.props;
+---
+
+<nav>
+    <a class="logo-text" href="/">Velocity</a>
+    <div class="nav-links">
+        <ul>
+            {
+                expanded ? (
+                    <>
+                        <li>
+                            <a href="/branding">Branding</a>
+                        </li>
+                        <li>
+                            <a href="/docs">Docs</a>
+                        </li>
+                        <li>
+                            <a href="/store">Store</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Velocity-Discord/">GitHub</a>
+                        </li>
+                    </>
+                ) : (
+                    <li>
+                        <Button label="Install" href="/docs/installation" />
+                    </li>
+                )
+            }
+        </ul>
+    </div>
+</nav>
+
+<style>
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding: 2em 5em;
+        width: 100%;
+    }
+
+    .logo-text {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--brand);
+        text-decoration: none;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 1.2em;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: var(--color-primary);
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    @media (max-width: 573px) {
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 2em 2em;
+        }
+
+        .logo-text {
+            margin-bottom: 0.3em;
+        }
+    }
+</style>

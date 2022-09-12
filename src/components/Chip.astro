@@ -1,0 +1,16 @@
+---
+const { label } = Astro.props;
+---
+
+<div class="chip">{label}</div>
+
+<style>
+    .chip {
+        background-color: var(--brand-transparent);
+        color: var(--brand);
+        border-radius: 50px;
+        padding: 0.5rem 1.5rem;
+        font-weight: 500;
+        width: fit-content;
+    }
+</style>

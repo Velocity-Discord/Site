@@ -1,0 +1,236 @@
+---
+import Layout from "../layouts/Main.astro";
+import Nav from "../components/Nav.astro";
+import Button from "../components/Button.astro";
+import Banner from "../components/Banner.astro";
+import Feature from "../components/Feature.astro";
+---
+
+<Layout title="Branding">
+    <Nav expanded={true} />
+    <div class="page-header">Branding</div>
+    <main>
+        <section class="branding-section">
+            <div class="branding-section-title">Colour</div>
+            <div class="palette-grid">
+                <div style="--palette-colour: #5B88FC" class="palette-colour large">
+                    <div class="palette-info">
+                        <div class="palette-colour-hex">#5B88FC</div>
+                    </div>
+                </div>
+                <div style="--palette-colour: #F2E047" class="palette-colour">
+                    <div class="palette-info">
+                        <div class="palette-colour-hex">#F2E047</div>
+                    </div>
+                </div>
+                <div style="--palette-colour: #D46060" class="palette-colour">
+                    <div class="palette-info">
+                        <div class="palette-colour-hex">#D46060</div>
+                    </div>
+                </div>
+                <div style="--palette-colour: #FFFFFF" class="palette-colour">
+                    <div class="palette-info">
+                        <div class="palette-colour-hex">#FFFFFF</div>
+                    </div>
+                </div>
+                <div style="--palette-colour: #62ED9A" class="palette-colour">
+                    <div class="palette-info">
+                        <div class="palette-colour-hex">#62ED9A</div>
+                    </div>
+                </div>
+                <div style="--palette-colour: #232121" class="palette-colour large">
+                    <div class="palette-info">
+                        <div class="palette-colour-hex">#232121</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="branding-section">
+            <div class="branding-section-title">Logos</div>
+            <div class="logo-grid">
+                <img src="/assets/logos/Blue.svg" alt="Blue" />
+                <img src="/assets/logos/Text-Blue.svg" class="large" alt="Blue Text" />
+                <img src="/assets/logos/Black.svg" class="light" alt="Black" />
+                <img src="/assets/logos/Text-Black.svg" class="large light" alt="Black Text" />
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .page-header {
+        display: flex;
+        width: 100%;
+        font-size: 3rem;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .branding-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        width: 100%;
+        padding: 2em 3em;
+    }
+
+    .branding-section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .palette-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        width: fit-content;
+        background-color: var(--background-floating);
+        border: 1px solid var(--border-floating);
+        border-radius: 13px;
+        padding: 20px;
+        box-sizing: content-box;
+    }
+
+    .palette-colour {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 130px;
+        padding: 1em;
+        border-radius: 10px;
+        background-color: var(--palette-colour);
+        min-width: 200px;
+        border: 1px solid var(--border-floating);
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .palette-colour.large {
+        grid-column: span 2;
+        min-width: 400px;
+    }
+
+    .palette-info {
+        background-color: #1d1d1e;
+        border-radius: 5px;
+        padding: 0.5em;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--border-floating);
+        width: fit-content;
+    }
+
+    .palette-colour-name {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+
+    .palette-colour-hex {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .logo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        width: fit-content;
+        background-color: var(--background-floating);
+        border: 1px solid var(--border-floating);
+        border-radius: 13px;
+        padding: 20px;
+        box-sizing: content-box;
+    }
+
+    .logo-grid img {
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+        background-image: linear-gradient(45deg, #202020 25%, transparent 0, transparent 75%, #202020 0, #202020),
+            linear-gradient(45deg, #202020 25%, transparent 0, transparent 75%, #202020 0, #202020);
+        background-size: 30px 30px;
+        background-position: 0 0, 45px 45px;
+        border: 1px solid var(--border-floating);
+        border-radius: 10px;
+        background-color: var(--background-primary);
+    }
+
+    .logo-grid img.large {
+        grid-column: span 2;
+        width: 500px;
+    }
+
+    .logo-grid img.light {
+        background-color: #fff;
+        background-image: linear-gradient(45deg, #f6f6f6 25%, transparent 0, transparent 75%, #f6f6f6 0, #f6f6f6),
+            linear-gradient(45deg, #f6f6f6 25%, transparent 0, transparent 75%, #f6f6f6 0, #f6f6f6);
+    }
+
+    @media (max-width: 1068px) {
+        .palette-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .palette-colour.large {
+            grid-column: span 1;
+            min-width: 200px;
+        }
+
+        .logo-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .logo-grid img.large {
+            grid-column: span 1;
+            width: 250px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .palette-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .palette-colour.large {
+            grid-column: span 1;
+            min-width: 200px;
+        }
+
+        .logo-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .logo-grid img.large {
+            grid-column: span 1;
+            width: 250px;
+        }
+    }
+
+    @media (max-width: 573px) {
+        .branding-section {
+            align-items: center;
+        }
+
+        .palette-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .palette-colour.large {
+            grid-column: span 1;
+            min-width: 200px;
+        }
+
+        .logo-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .logo-grid img.large {
+            grid-column: span 1;
+            width: 250px;
+        }
+    }
+</style>

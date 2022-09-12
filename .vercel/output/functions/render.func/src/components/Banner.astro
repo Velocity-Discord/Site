@@ -1,0 +1,50 @@
+---
+const { title, content, type } = Astro.props;
+---
+
+<div class={`banner type-${type}`}>
+    <div class="icon">
+        <div class="title">
+            <svg class="icon" width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12 1.999c5.524 0 10.002 4.478 10.002 10.002 0 5.523-4.478 10.001-10.002 10.001-5.524 0-10.002-4.478-10.002-10.001C1.998 6.477 6.476 1.999 12 1.999Zm0 1.5a8.502 8.502 0 1 0 0 17.003A8.502 8.502 0 0 0 12 3.5Zm-.004 7a.75.75 0 0 1 .744.648l.007.102.003 5.502a.75.75 0 0 1-1.493.102l-.007-.101-.003-5.502a.75.75 0 0 1 .75-.75ZM12 7.003a.999.999 0 1 1 0 1.997.999.999 0 0 1 0-1.997Z"
+                    fill="currentColor"></path>
+            </svg>
+            {title}
+        </div>
+        <div class="content">
+            {content}
+        </div>
+    </div>
+</div>
+
+<style>
+    .banner {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        padding: 1em 4em;
+        background-color: #f4c03d42;
+        border-block: 1px solid #fed671;
+    }
+
+    .icon {
+        margin-right: 5px;
+    }
+
+    .title {
+        font-size: 1.3em;
+        font-weight: 500;
+        color: #fed671;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .content {
+        font-size: 1em;
+        color: #fed671;
+        display: flex;
+        align-items: center;
+    }
+</style>

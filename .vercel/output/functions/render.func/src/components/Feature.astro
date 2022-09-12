@@ -1,0 +1,67 @@
+---
+import Chip from "./Chip.astro";
+import { Code } from "astro/components";
+
+const { decoration, title, content, code = "", lang } = Astro.props;
+---
+
+<div class="feature">
+    <Chip label={decoration} />
+    <h2 class="title">{title}</h2>
+    <p class="content">{content}</p>
+    <Code lang={lang} code={code} theme="github-dark" />
+</div>
+
+<style>
+    .feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2.5rem 6em;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: 3.5rem;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    .content {
+        font-size: 1.6rem;
+        color: var(--color-text-secondary);
+        margin-block: 10px 20px;
+        width: 50%;
+    }
+
+    @media (max-width: 768px) {
+        .content {
+            font-size: 1.4rem;
+            width: 100%;
+        }
+
+        .title {
+            font-size: 2.5rem;
+        }
+
+        .feature {
+            padding: 2.5rem 2em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .content {
+            width: 100%;
+        }
+
+        .title {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .title {
+            font-size: 1.8rem;
+        }
+    }
+</style>

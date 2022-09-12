@@ -1,28 +1,23 @@
 {
     "name": "velocity-site",
-    "version": "1.0.0",
-    "description": "Velocity website.",
-    "main": "index.js",
+    "version": "0.0.1",
+    "private": true,
     "scripts": {
-        "start": "eleventy --serve",
-        "build": "eleventy",
-        "prebuild": "node ./scripts/api.js",
-        "prestart": "node ./scripts/api.js"
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Velocity-Discord/Site.git"
+    "dependencies": {
+        "@astrojs/react": "^1.1.2",
+        "@astrojs/vercel": "^1.0.2",
+        "astro": "^1.2.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
-    "keywords": [],
-    "author": "",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Velocity-Discord/Site/issues"
-    },
-    "homepage": "https://github.com/Velocity-Discord/Site#readme",
     "devDependencies": {
-        "@11ty/eleventy": "^1.0.0",
-        "@faker-js/faker": "^6.3.1",
-        "front-matter": "^4.0.2"
+        "@types/react": "^18.0.19",
+        "@types/react-dom": "^18.0.6"
     }
 }
