@@ -19,6 +19,12 @@ const { frontmatter } = Astro.props;
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>{frontmatter.title}</title>
+        <meta name="description" content="Velocity is a Discord Client modification that allows you to extend discord's functionality and capabilities however you want." />
+        <meta name="og:description" content="Velocity is a Discord Client modification that allows you to extend discord's functionality and capabilities however you want." />
+        <meta property="og:title" content="Velocity" />
+        <meta property="og:type" content="website" />
+        <meta name="theme-color" content="#5b88fc" />
+        <meta property="og:image" content="https://velocity-discord.netlify.app/assets/logos/Blue.svg" />
     </head>
     <body>
         <Nav expanded={true} />
