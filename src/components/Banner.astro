@@ -24,8 +24,15 @@ const { title, content, type } = Astro.props;
         display: flex;
         padding: 10px;
         padding: 1em 4em;
+        border-radius: 8px;
         background-color: #f4c03d42;
-        border-block: 1px solid #fed671;
+        border: 1px solid #fed671;
+    }
+
+    @media screen and (max-width: 768px) {
+        .banner {
+            padding: 1em 2em;
+        }
     }
 
     .icon {

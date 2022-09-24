@@ -7,9 +7,9 @@ import Feature from "../components/Feature.astro";
 ---
 
 <Layout title="Velocity">
+    <Nav expanded={false} />
     <div class="hero">
         <div class="hero-backdrop">
-            <Nav expanded={false} />
             <Banner type="info" title="End of Life" content="Velocity version 1.x.x is now deprecated. For more information, join the official Discord Server." />
             <div class="hero-content">
                 <div class="quote"></div>
@@ -53,15 +53,11 @@ import Feature from "../components/Feature.astro";
     }
 
     .hero-backdrop {
-        background-color: var(--background-floating);
-        border: 1px solid var(--border-floating);
-        border-radius: 8px;
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         position: relative;
-        overflow: auto;
     }
 
     .hero-content {
@@ -141,6 +137,7 @@ import Feature from "../components/Feature.astro";
         .hero-content {
             padding-inline: 2em;
             margin-top: 10%;
+            width: 100%;
         }
 
         .title {
@@ -172,7 +169,7 @@ import Feature from "../components/Feature.astro";
         }
 
         .hero-content {
-            padding-inline: 0em;
+            padding-inline: 1em;
             margin-top: 5%;
         }
 
