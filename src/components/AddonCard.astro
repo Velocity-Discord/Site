@@ -24,7 +24,10 @@ import Button from "./Button.astro";
         </div>
         <div class="addon-actions">
             <Button label="Source" href={`${git.url}/tree/${git.branch}/${git.basePath}`} color="outline" />
-            {git.download && <Button label="Download" href={git.download} />}
+            <Button
+                label="Download"
+                href={git.download ?? `https://download-directory.github.io/?url=${git.url}/tree/${git.branch}${git.basePath.startsWith("/") ? git.basePath : `/${git.basePath}`}`}
+            />
         </div>
     </div>
 
