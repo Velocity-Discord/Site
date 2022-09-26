@@ -1,0 +1,13 @@
+{
+    "name": "OSX",
+    "identifier": "osx",
+    "version": "1.0.1",
+    "description": "Bring the best and most memorable parts of MacOS and OSX into 1 theme",
+    "author": { "name": "TheCommieAxolotl", "avatar": "https://avatars1.githubusercontent.com/u/87679354" },
+    "git": {
+        "url": "https://github.com/TheCommieAxolotl/BetterDiscord-Stuff",
+        "branch": "main",
+        "basePath": "/OSX"
+    },
+    "tags": ["macos", "osx", "apple"]
+}

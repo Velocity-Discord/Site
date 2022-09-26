@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Main.astro";
+import Nav from "../components/Nav.astro";
+---
+
+<Layout title="404">
+    <Nav expanded={true} />
+    <div class="page-header">Oops - Not Found!</div>
+</Layout>
+
+<style>
+    .page-header {
+        display: flex;
+        width: 100%;
+        font-size: 3rem;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+</style>

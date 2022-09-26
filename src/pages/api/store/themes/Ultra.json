@@ -1,0 +1,13 @@
+{
+    "name": "Ultra",
+    "identifier": "ultra",
+    "version": "1.0.0",
+    "description": "Ultra is a simple dark theme.",
+    "author": { "name": "TheCommieAxolotl", "avatar": "https://avatars1.githubusercontent.com/u/87679354" },
+    "git": {
+        "url": "https://github.com/TheCommieAxolotl/Velocity-Addons",
+        "branch": "main",
+        "basePath": "/Themes/Ultra"
+    },
+    "tags": ["dark", "simple"]
+}

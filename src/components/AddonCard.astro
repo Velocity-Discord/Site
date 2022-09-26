@@ -1,0 +1,140 @@
+---
+const { name, version, description, author, tags, git } = Astro.props;
+
+import Button from "./Button.astro";
+---
+
+<div class="addon">
+    <div class="addon-header">
+        <div class="addon-title">{name}</div>
+        <div class="addon-subtitle">
+            <div class="addon-version">
+                {version}
+            </div>
+            <div class="addon-author">
+                <img src={author.avatar} alt={author.name} class="addon-author-avatar" />
+                {author.name}
+            </div>
+        </div>
+    </div>
+    <div class="addon-description">{description}</div>
+    <div class="addon-footer">
+        <div class="addon-tags">
+            {tags?.map((tag: string) => <div class="addon-tag">{tag}</div>)}
+        </div>
+        <div class="addon-actions">
+            <Button label="Source" href={`${git.url}/tree/${git.branch}/${git.basePath}`} color="outline" />
+            {git.download && <Button label="Download" href={git.download} />}
+        </div>
+    </div>
+
+    <style>
+        .addon {
+            background-color: var(--background-floating);
+            border: 1px solid var(--border-floating);
+            border-radius: 18px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 10px;
+        }
+
+        .addon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .addon-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .addon-subtitle {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .addon-version {
+            font-size: 1rem;
+            color: var(--color-secondary);
+        }
+
+        .addon-author {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            color: var(--brand);
+        }
+
+        .addon-author-avatar {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+        }
+
+        .addon-description {
+            font-size: 1rem;
+            color: var(--color-primary);
+            max-width: 60%;
+            min-height: 3rem;
+        }
+
+        .addon-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .addon-tags {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .addon-tag {
+            background-color: var(--brand-transparent);
+            color: var(--brand);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            width: fit-content;
+            font-size: 0.8rem;
+        }
+
+        .addon-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .addon-description {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .addon {
+                padding: 1rem;
+            }
+
+            .addon-title {
+                font-size: 1.25rem;
+            }
+
+            .addon-version {
+                font-size: 0.8rem;
+            }
+
+            .addon-author {
+                font-size: 0.8rem;
+            }
+
+            .addon-author-avatar {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    </style>
+</div>

@@ -1,0 +1,13 @@
+{
+    "name": "BetterSyntax",
+    "identifier": "bettersyntax",
+    "version": "2.0.2",
+    "description": "Lets you edit Syntax Highlighting with an easy interface and adds some useful buttons.",
+    "author": { "name": "TheCommieAxolotl", "avatar": "https://avatars1.githubusercontent.com/u/87679354" },
+    "git": {
+        "url": "https://github.com/TheCommieAxolotl/Velocity-Addons",
+        "branch": "main",
+        "basePath": "/Plugins/BetterSyntax"
+    },
+    "tags": ["developer", "codeblocks"]
+}

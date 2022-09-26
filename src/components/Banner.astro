@@ -29,6 +29,11 @@ const { title, content, type } = Astro.props;
         border: 1px solid #fed671;
     }
 
+    .banner:not(div > *) {
+        margin-inline: 15px;
+        width: calc(100% - 30px);
+    }
+
     @media screen and (max-width: 768px) {
         .banner {
             padding: 1em 2em;

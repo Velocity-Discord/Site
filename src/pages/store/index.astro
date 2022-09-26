@@ -1,14 +1,49 @@
 ---
 import Layout from "../../layouts/Main.astro";
 import Nav from "../../components/Nav.astro";
-import Banner from "../../components/Banner.astro";
+import AddonCard from "../../components/AddonCard.astro";
+
+let addons;
+let themes: any[];
+let plugins: any[];
+let addonTags: string[] = [];
+
+try {
+    themes = await Astro.glob("../api/store/themes/*.json");
+} catch {
+    themes = [];
+}
+
+try {
+    plugins = await Astro.glob("../api/store/plugins/*.json");
+} catch {
+    plugins = [];
+}
+
+addons = [...themes, ...plugins];
+
+addons.forEach((addon) => {
+    addon.tags?.forEach((tag: string) => {
+        if (!addonTags.includes(tag)) {
+            addonTags.push(tag);
+        }
+    });
+});
 ---
 
 <Layout title="Store">
     <Nav expanded={true} />
     <div class="page-header">Store</div>
-    <Banner title="Hey there, this page isn't ready!" content="Come back soon! You can follow this site's development from our GitHub." />
-    <main></main>
+    <main>
+        <div class="store-type">
+            <h2>Themes - {themes.length}</h2>
+            {themes.map((theme) => <AddonCard {...theme} />)}
+        </div>
+        <div class="store-type">
+            <h2>Plugins - {plugins.length}</h2>
+            {plugins.map((plugin) => <AddonCard {...plugin} />)}
+        </div>
+    </main>
 </Layout>
 
 <style>
@@ -19,6 +54,14 @@ import Banner from "../../components/Banner.astro";
         font-weight: 600;
         justify-content: center;
         align-items: center;
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .store-type {
         margin-bottom: 50px;
     }
 </style>
