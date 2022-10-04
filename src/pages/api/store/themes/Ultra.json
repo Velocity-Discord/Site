@@ -7,7 +7,8 @@
     "git": {
         "url": "https://github.com/TheCommieAxolotl/Velocity-Addons",
         "branch": "main",
-        "basePath": "/Themes/Ultra"
+        "basePath": "/Themes/Ultra",
+        "rawBase": "https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Addons/main/Themes/Ultra/"
     },
     "tags": ["dark", "simple"]
 }

@@ -1,0 +1,37 @@
+.button {
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid var(--border-floating);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.color-brand {
+    background-color: var(--btn-brand-bg);
+    color: var(--btn-brand-color);
+}
+
+.color-outline {
+    background-color: var(--background-floating);
+    color: var(--color-primary);
+}
+
+.color-danger {
+    background-color: var(--btn-danger-bg);
+    color: var(--btn-danger-color);
+}
+
+.color-success {
+    background-color: var(--btn-success-bg);
+    color: var(--btn-success-color);
+}
+
+.size-small {
+    font-size: 14px;
+}
+
+.size-large {
+    font-size: 20px;
+    padding: 12px 24px;
+}

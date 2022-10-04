@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.install-badge {
+    background-color: #1a191c;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    /* padding: 9px 16px; */
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 120px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}

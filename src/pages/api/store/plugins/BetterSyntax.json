@@ -7,7 +7,8 @@
     "git": {
         "url": "https://github.com/TheCommieAxolotl/Velocity-Addons",
         "branch": "main",
-        "basePath": "/Plugins/BetterSyntax"
+        "basePath": "/Plugins/BetterSyntax",
+        "rawBase": "https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Addons/main/Plugins/BetterSyntax/"
     },
     "tags": ["developer", "codeblocks"]
 }

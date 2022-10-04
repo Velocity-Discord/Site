@@ -1,7 +1,7 @@
 ---
 const { name, version, description, author, tags, git } = Astro.props;
 
-import Button from "./Button.astro";
+import Button from "./Button";
 ---
 
 <div class="addon">
@@ -24,10 +24,7 @@ import Button from "./Button.astro";
         </div>
         <div class="addon-actions">
             <Button label="Source" href={`${git.url}/tree/${git.branch}/${git.basePath}`} color="outline" />
-            <Button
-                label="Download"
-                href={git.download ?? `https://download-directory.github.io/?url=${git.url}/tree/${git.branch}${git.basePath.startsWith("/") ? git.basePath : `/${git.basePath}`}`}
-            />
+            <Button client:load label="Install" actionType="install-addon" actionProps={git.rawBase} />
         </div>
     </div>
 
