@@ -22,7 +22,7 @@ export default (props: any) => {
 
                 switch (actionType) {
                     case "install-addon":
-                        const e = `velocity:install-addon:${props.actionProps}`;
+                        const e = `velocity:install-addon|${props.actionProps}`;
 
                         while (window.ws.readyState === 0) {
                             await new Promise((resolve) => setTimeout(resolve, 100));

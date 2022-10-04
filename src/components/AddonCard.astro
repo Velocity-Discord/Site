@@ -24,7 +24,7 @@ import Button from "./Button";
         </div>
         <div class="addon-actions">
             <Button label="Source" href={`${git.url}/tree/${git.branch}/${git.basePath}`} color="outline" />
-            <Button client:load label="Install" actionType="install-addon" actionProps={`${git.rawBase}:${name}`} />
+            <Button client:load label="Install" actionType="install-addon" actionProps={`${git.rawBase}|${name}`} />
         </div>
     </div>
 
