@@ -18,9 +18,10 @@ export default () => {
             }}
             className="install-badge"
             onClick={async () => {
+                const s = new URLSearchParams(location.search);
                 if (!window.ws) window.ws = new WebSocket("ws:localhost:1842");
 
-                const e = `velocity:install-addon:${new URLSearchParams(location.search).get("url")}`;
+                const e = `velocity:install-addon:${s.get("url")}:${s.get("name")}`;
 
                 while (window.ws.readyState === 0) {
                     await new Promise((resolve) => setTimeout(resolve, 100));
