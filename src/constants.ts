@@ -44,4 +44,19 @@ export const DOC_OUTLINE = [
         label: "Creating Themes",
         path: "/docs/creating-themes",
     },
+    {
+        type: "title",
+        label: "API Reference",
+        path: "",
+    },
+    {
+        type: "item",
+        label: "VelocityCore",
+        path: "/docs/core",
+    },
+    {
+        type: "item",
+        label: "Velocity",
+        path: "/docs/api",
+    },
 ];

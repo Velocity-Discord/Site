@@ -25,7 +25,7 @@ import Feature from "../components/Feature.astro";
     </div>
     <main>
         <Feature
-            code={`const { WebpackModules, Notifications } = Velocity;\n\nconst { Components, React } = WebpackModules.common;\n\nconst ButtonModules = Components.ButtonModules;\n\nReact.createElement(ButtonModules.default, {\n    children: "Click me!",\n    color: ButtonModules.ButtonColors.GREEN,\n    onClick: () => Notifications.showToast("Clicked!")\n})`}
+            code={`const { WebpackModules, Notifications } = Velocity;\n\nconst { Components, React } = WebpackModules.common;\n\nconst ButtonModules = Components.ButtonModules;\n\n<ButtonModules.default\n   color={ButtonModules.ButtonColors.GREEN}\n   onClick={() => \n      Notifications.showToast("Clicked!")\n   }\n>\n    Click Me!\n</ButtonModules.default>`}
             lang="js"
             decoration="Extendable"
             title="Plugins"
