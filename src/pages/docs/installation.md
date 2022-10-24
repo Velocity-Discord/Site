@@ -10,64 +10,35 @@ This page will cover the installation and maintenance of Velocity.
 ## Installation
 
 #### Prerequisites
-[Node.js](https://nodejs.org/en/) v12+, [git](https://git-scm.com/) and [npm](https://www.npmjs.com/).
+[Node.js](https://nodejs.org/en/) v12+, [git](https://git-scm.com/) and [pnpm](https://pnpm.io/).
 
 ---
 
-### 1. Clone the repository.
-```ps
+### Clone the repository
+```bash
 git clone https://github.com/Velocity-Discord/Velocity.git
 ```
 
-### 2. Run the install script.
+For the `v2` branch use `git clone -b v2 ...`
 
-#### Stable 
-```ps
-npm run install
-```
+--- 
 
-#### PTB
-```ps
-npm run install -- --ptb
-```
-
-#### Canary
-```ps
-npm run install -- --canary
+### Install dependencies
+```bash
+pnpm install
 ```
 
 ---
-## Development
 
-### 1. Clone the repository.
-```ps
-git clone https://github.com/Velocity-Discord/Velocity.git
+### Build the project
+```bash
+pnpm build
+pnpm bundle
 ```
 
-### 2. Run the install script.
+---
 
-#### Stable 
-```ps
-npm run install
-```
-
-#### PTB
-```ps
-npm run install -- --ptb
-```
-
-#### Canary
-```ps
-npm run install -- --canary
-```
-### 3. Build.
-To use latest changes, run
-```ps
-npm run dist
-```
-
-### 4. Watch.
-To automatically compile the asar, run 
-```ps
-npm run watch
+### Inject
+```bash
+pnpm inject <channel?>
 ```

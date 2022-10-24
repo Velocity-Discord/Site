@@ -197,7 +197,7 @@ const { title, dev, selected } = Astro.props;
         border-right: none;
     }
 
-    .markdown code {
+    .markdown code:not(pre *) {
         font-weight: 400;
         color: var(--color-primary);
         background-color: var(--background-floating);
