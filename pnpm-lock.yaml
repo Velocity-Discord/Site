@@ -1,4 +1,4 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
   '@astrojs/netlify': ^1.0.2
@@ -16,7 +16,7 @@ dependencies:
   vscode-oniguruma: 1.6.2
 
 devDependencies:
-  '@astrojs/react': 1.2.1_5uumaiclxbdbzaqafclbf6maf4
+  '@astrojs/react': 1.2.1_ed28c0204bb8461c8200289612f9802f
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   react: 18.2.0
@@ -116,7 +116,7 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/react/1.2.1_5uumaiclxbdbzaqafclbf6maf4:
+  /@astrojs/react/1.2.1_ed28c0204bb8461c8200289612f9802f:
     resolution: {integrity: sha512-EoW7coV/35ak1fPoVNrL1OyYGOnJSnRJsgIc8WtkLv5aDrMpviS6+9vmqOHEiJwab8wNh+zSphx8a9nC2Q3zAg==}
     engines: {node: ^14.18.0 || >=16.12.0}
     peerDependencies:

@@ -10,7 +10,7 @@ import Feature from "../components/Feature.astro";
     <Nav expanded={false} />
     <div class="hero">
         <div class="hero-backdrop">
-            <Banner type="info" title="End of Life" content="Velocity version 1.x.x is now deprecated. For more information, join the official Discord Server." />
+            <!-- <Banner type="info" title="End of Life" content="Velocity version 1.x.x is now deprecated. For more information, join the official Discord Server." /> -->
             <div class="hero-content">
                 <div class="quote"></div>
                 <div class="title">Supercharge your Discord today.</div>
@@ -58,6 +58,9 @@ import Feature from "../components/Feature.astro";
         display: flex;
         flex-direction: column;
         position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
     }
 
     .hero-content {
