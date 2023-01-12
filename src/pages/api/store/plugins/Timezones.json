@@ -1,0 +1,14 @@
+{
+    "name": "Timezones",
+    "identifier": "timezones",
+    "version": "1.0.0",
+    "description": "Allows you to display other Users' local times.",
+    "author": { "name": "TheCommieAxolotl", "avatar": "https://avatars1.githubusercontent.com/u/87679354" },
+    "git": {
+        "url": "https://github.com/TheCommieAxolotl/Velocity-Addons",
+        "branch": "main",
+        "basePath": "/Plugins/Timezones",
+        "rawBase": "https://raw.githubusercontent.com/TheCommieAxolotl/Velocity-Addons/main/Plugins/Timezones/"
+    },
+    "tags": ["time", "timezones", "utilities"]
+}
